@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.max-w-8xl{
+  max-width: 90rem;
+}
+
+@layer utilities {
+  .bg-gradient {
+      background:linear-gradient(#c6c6c6 calc(100% - 6rem), transparent);
+  }
+  .dark-bg-gradient {
+    background: linear-gradient(#374151 calc(100% - 6rem), transparent);
+  }
+}
