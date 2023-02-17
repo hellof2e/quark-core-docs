@@ -4,18 +4,26 @@ export default {
     {
       name: "Introduction",
       cName: "指南",
-      type:"Introduction",
+      type: "Introduction",
       path: "#/guide/introduction",
       pathName: "#/zh-CN/guide/introduction",
       pathEnName: "#/en-US/guide/introduction", // TODO: 临时方案
     },
-    {
-      name: "Components",
-      cName: "组件",
-      type: "component",
-      path: "#/component/button",
-      pathName: "#/zh-CN/component/button",
-      pathEnName: "#/en-US/component/button", // TODO: 临时方案
-    },
+    // {
+    //   name: "Components",
+    //   cName: "组件库",
+    //   type: "component",
+    //   path: "#/component/button",
+    //   pathName: "#/zh-CN/component/button",
+    //   pathEnName: "#/en-US/component/button", // TODO: 临时方案
+    // },
+    // {
+    //   name: "Playground",
+    //   cName: "Playground",
+    //   type: "Playground",
+    //   path: "#/component/button",
+    //   pathName: "#/zh-CN/component/button",
+    //   pathEnName: "#/en-US/component/button", // TODO: 临时方案
+    // },
   ],
 };

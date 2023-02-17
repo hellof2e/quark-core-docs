@@ -1,4 +1,4 @@
-# Quark design website for quark-design.hellobike.com
+# Quark website
 
 ## Available Scripts
 

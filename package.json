@@ -1,5 +1,5 @@
 {
-  "name": "quark-design-docs",
+  "name": "quark-docs",
   "version": "1.0.0",
   "description": "Mobile UI Components built on Web Components.",
   "keywords": [
@@ -74,6 +74,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hellof2e/quark-design-docs.git"
+    "url": "https://github.com/hellof2e/quark-docs.git"
+  },
+  "engines": {
+    "node": ">=16"
   }
 }
