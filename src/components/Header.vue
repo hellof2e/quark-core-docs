@@ -206,7 +206,7 @@
 <script lang="ts">
 import { defineComponent, reactive, computed, onBeforeMount, ref } from "vue";
 import Search from "./Search.vue";
-import { header, versions, nav, docs } from "@/config/index";
+import { header, versions, docs } from "@/config/index";
 import { version as defaultVersion } from "@/docs_vue/config.json";
 import { useRoute } from "vue-router";
 const sdk = window.HBConfigSDKclient.default;
@@ -224,13 +224,6 @@ export default defineComponent({
     const version = ref();
     const isZhLang = localStorage.getItem("language") === "zh-CN";
     const route = useRoute();
-    let packages = [];
-    nav.forEach((item) => {
-      packages.push(...item.packages);
-    });
-
-    let docsList = [];
-    docsList = docs.packages.map((item) => item.name.toLowerCase());
 
     const data = reactive({
       navIndex: 0,

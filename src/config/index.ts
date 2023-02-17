@@ -1,4 +1,4 @@
-import vueConfig from "../docs_vue/config.json";
+import vueConfig from "./config.json";
 import baseConfig from "./baseConfig";
 
 let config: any = {};
