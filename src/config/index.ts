@@ -1,20 +1,11 @@
-import vueConfig from "./config.json";
-import baseConfig from "./baseConfig";
+import navConfig from "./config.json";
+import headeNavConfig from "./headeNavConfig";
 
 let config: any = {};
 
 config = {
-  ...vueConfig,
-  ...baseConfig,
+  ...navConfig,
+  ...headeNavConfig,
 };
 
-export const {
-  nav,
-  docs,
-  version,
-  demoUrl,
-  homePage,
-  versions,
-  header,
-  repository,
-} = config;
+export const { docs, header } = config;

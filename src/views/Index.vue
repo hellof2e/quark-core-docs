@@ -3,23 +3,18 @@
 
   <doc-nav :fixed="fixed"></doc-nav>
 
-  <div :class="{ 'pr-[390px]': isShow() }" class="flex flex-col ml-[260px] doc-content" id="doc-content">
-    <div class="min-h-[800px] bg-white dark:bg-gray-900 doc-content-document" >
+  <div
+    :class="{ 'pr-[390px]': isShow() }"
+    class="flex flex-col ml-[260px] doc-content"
+    id="doc-content"
+  >
+    <div class="min-h-[800px] bg-white dark:bg-gray-900 doc-content-document">
       <router-view />
     </div>
-
-    <doc-demo-preview
-      v-show="isShow()"
-      :url="demoUrl"
-      :class="{ 'fixed': fixed }"
-      :fixed="fixed"
-      type="vue"
-    ></doc-demo-preview>
   </div>
 </template>
 <script lang="ts">
 import { defineComponent, onMounted, reactive, toRefs } from "vue";
-import { demoUrl as defaultUrl,  nav } from "@/config/index";
 import {
   onBeforeRouteUpdate,
   RouteLocationNormalized,
@@ -38,8 +33,7 @@ export default defineComponent({
     [DemoPreview.name]: DemoPreview,
   },
   setup() {
-    const isZhLang =
-      localStorage.getItem("language") === "zh-CN";
+    const isZhLang = localStorage.getItem("language") === "zh-CN";
     const docMd = localStorage.getItem("docMd");
     const route = useRoute();
     // const router = useRouter();
@@ -72,22 +66,7 @@ export default defineComponent({
       return !(route.path.includes("guide") || route.path.includes("pages"));
     };
 
-    const watchDemoUrl = (router: RouteLocationNormalized) => {
-      data.demoUrl = `${demoUrl}/${router.path
-        .toLocaleLowerCase()
-        .split("/")
-        .pop()}?lang=${localStorage.getItem("language")}`;
-    };
-
-
-    const isReact = (router: RouteLocationNormalized) => {
-      return router.path.indexOf("react") > -1;
-    };
-
     onMounted(async () => {
-      componentTitle();
-      watchDemoUrl(route);
-      data.curKey = isReact(route) ? "react" : "vue";
       document.addEventListener("scroll", scrollTitle);
     });
 
@@ -106,37 +85,11 @@ export default defineComponent({
       }
     };
 
-    // 获得组件名称
-    const componentTitle = (to?: any) => {
-      let routename = "";
-      if (to?.name) {
-        routename = to.path.toLocaleLowerCase().split("/").pop() || "";
-      } else {
-        routename = route.path.toLocaleLowerCase().split("/").pop() || "";
-      }
-
-      state.componentName.name = routename.indexOf("-react")
-        ? routename.split("-").shift()
-        : routename;
-      nav.forEach((i: any) => {
-        i.packages.forEach((item: any) => {
-          if (item.name.toLowerCase() == state.componentName.name) {
-            state.componentName.name = item.name;
-            state.componentName.cName = item.cName;
-            return;
-          }
-        });
-      });
-    };
-
     onBeforeRouteUpdate((to) => {
-      watchDemoUrl(to);
-      data.curKey = isReact(to) ? "react" : "vue";
-      componentTitle(to);
-      document.getElementById('doc-content')?.scrollTo({ top: 0 });
+     
+      
+      document.getElementById("doc-content")?.scrollTo({ top: 0 });
     });
-    const demoUrl = import.meta.env.VITE_ENV === 'dev' ? 'https://quark-design.hellobike.com/demo/demo.html#' : defaultUrl
-    console.log(import.meta.env, 'ENV')
     return {
       ...toRefs(state),
       ...toRefs(data),

@@ -206,8 +206,7 @@
 <script lang="ts">
 import { defineComponent, reactive, computed, onBeforeMount, ref } from "vue";
 import Search from "./Search.vue";
-import { header, versions, docs } from "@/config/index";
-import { version as defaultVersion } from "@/docs_vue/config.json";
+import { header } from "@/config/index";
 import { useRoute } from "vue-router";
 const sdk = window.HBConfigSDKclient.default;
 const client = new sdk({
@@ -289,7 +288,6 @@ export default defineComponent({
       docMd: localStorage.getItem("docMd"),
       isZhLang,
       header,
-      versions,
       version,
       data,
       isActive,
