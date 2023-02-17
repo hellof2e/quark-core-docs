@@ -12,14 +12,14 @@ const guideRouters: Array<RouteRecordRaw> = [];
 const guideEnRouters: Array<RouteRecordRaw> = [];
 
 /** 指南部分: 本工程 src/docs 文档 */
-const modulesDocs = (import.meta as any).glob("/src/docs/*.zh-CN.md");
+const modulesDocs = (import.meta as any).glob("/src/docs/**/*.zh-CN.md");
 for (const path in modulesDocs) {
   const name = (/docs\/(.*).zh-CN.md/.exec(path) as any[])[1];
 
   guideRouters.push({
-    path: `/zh-CN/guide/${name}`,
+    path: `/zh-CN/${name}`,
     component: modulesDocs[path],
-    name: `zh-CN/guide/${name}`,
+    name: `zh-CN/${name}`,
   });
 }
 const modulesEnDocs = (import.meta as any).glob("/src/docs/*.en-US.md");
@@ -27,9 +27,9 @@ for (const path in modulesEnDocs) {
   const name = (/docs\/(.*).en-US.md/.exec(path) as any[])[1];
 
   guideEnRouters.push({
-    path: `/en-US/guide/${name}`,
+    path: `/en-US/${name}`,
     component: modulesEnDocs[path],
-    name: `en-US/guide/${name}`,
+    name: `en-US/${name}`,
   });
 }
 

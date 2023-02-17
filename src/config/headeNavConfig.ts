@@ -5,9 +5,9 @@ export default {
       name: "Introduction",
       cName: "指南",
       type: "Introduction",
-      path: "#/guide/introduction",
-      pathName: "#/zh-CN/guide/introduction",
-      pathEnName: "#/en-US/guide/introduction", // TODO: 临时方案
+      path: "#/introduction",
+      pathName: "#/zh-CN/introduction",
+      pathEnName: "#/en-US/introduction", // TODO: 临时方案
     },
   ],
 };
