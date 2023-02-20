@@ -6,39 +6,71 @@ module.exports = {
             '/': {
                 lang: 'en-US',
                 nav: [
-                    { text: 'Guide', link: '/guide/introduc/' },
+                    { text: '指南', link: '/guide/introduce/' },
                     { text: 'Quark Design', link: 'https://quark-design.hellobike.com/' },
                     { text: 'Playground', link: 'https://quark-design.hellobike.com/' },
                 ],
                 sidebar: {
-                    '/guide/': [
+                    '/': [
                         {
                             title: 'Quark',
                             children: [
-                                ['introduc', 'Introduc'],
-                                ['install', 'Install']
+                                ['guide/introduce', 'Introduce'],
+                                ['guide/install', 'Install']
+                            ]
+                        },
+                        {
+                            title: 'Base',
+                            children: [
+                                ['basic/overview', 'Overview'],
+                                ['basic/defining', 'Defining'],
+                                ['basic/rendering', 'Rendering'],
+                                ['basic/properties', 'Reactive Properties'],
+                                ['basic/state', 'Reactive State'],
+                                ['basic/styles', 'Styles'],
+                                ['basic/lifecycle', 'Lifecycle'],
+                                ['basic/events', 'Events'],
+                                ['basic/ref', 'Ref'],
+                                ['basic/fragement', 'Fragement']
                             ]
                         }
+
                     ]
                 }
             },
             '/zh/': {
                 lang: 'zh-CN',
                 nav: [
-                    { text: '指南', link: '/guide/introduc/' },
+                    { text: '指南', link: '/guide/introduce/' },
                     { text: 'Quark Design', link: 'https://quark-design.hellobike.com/' },
                     { text: 'Playground', link: 'https://quark-design.hellobike.com/' },
                 ],
                 sidebar: {
-                    '/guide/': [
+                    '/': [
                         {
                             title: 'Quark',
                             children: [
-                                ['introduc', '简介'],
-                                ['install', '安装']
+                                ['guide/introduce', 'Introduce'],
+                                ['guide/install', 'Install']
+                            ]
+                        },
+                        {
+                            title: '基础',
+                            children: [
+                                ['basic/overview', 'Overview'],
+                                ['basic/defining', 'Defining'],
+                                ['basic/rendering', 'Rendering'],
+                                ['basic/properties', 'Reactive Properties'],
+                                ['basic/state', 'Reactive State'],
+                                ['basic/styles', 'Styles'],
+                                ['basic/lifecycle', 'Lifecycle'],
+                                ['basic/events', 'Events'],
+                                ['basic/ref', 'Ref'],
+                                ['basic/fragement', 'Fragement']
                             ]
                         }
-                    ]
+
+                    ],
                 }
             },    
         }
