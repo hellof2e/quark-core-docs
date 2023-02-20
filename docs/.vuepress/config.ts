@@ -14,6 +14,7 @@ module.exports = {
                     '/': [
                         {
                             title: 'Quark',
+                            collapsable: false,
                             children: [
                                 ['guide/introduce', 'Introduce'],
                                 ['guide/install', 'Install']
@@ -21,6 +22,7 @@ module.exports = {
                         },
                         {
                             title: 'Base',
+                            collapsable: false,
                             children: [
                                 ['basic/overview', 'Overview'],
                                 ['basic/defining', 'Defining'],
@@ -32,6 +34,13 @@ module.exports = {
                                 ['basic/events', 'Events'],
                                 ['basic/ref', 'Ref'],
                                 ['basic/fragement', 'Fragement']
+                            ]
+                        },
+                        {
+                            title: 'Other',
+                            collapsable: false,
+                            children: [
+                                ['other/changelog', 'Changelog'],
                             ]
                         }
 
