@@ -7,7 +7,7 @@ npm i quarkc --save
 ### 快速开始  
 
 Define custom element.
-```jsx
+```tsx
 import QuarkElement, { property, customElement } from "quarkc";
 
 @customElement({ tag: "quark-count" })
