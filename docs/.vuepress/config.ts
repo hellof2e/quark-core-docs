@@ -32,8 +32,7 @@ module.exports = {
                                 ['basic/slot', 'Slot'],
                                 ['basic/lifecycle', 'Lifecycle'],
                                 ['basic/events', 'Events'],
-                                ['basic/ref', 'Ref'],
-                                ['basic/fragement', 'Fragement']
+                                ['basic/ref', 'Ref']
                             ]
                         },
                         {
@@ -74,8 +73,7 @@ module.exports = {
                                 ['basic/slot', 'Slot'],
                                 ['basic/lifecycle', 'Lifecycle'],
                                 ['basic/events', 'Events'],
-                                ['basic/ref', 'Ref'],
-                                ['basic/fragement', 'Fragement']
+                                ['basic/ref', 'Ref']
                             ]
                         }
 
