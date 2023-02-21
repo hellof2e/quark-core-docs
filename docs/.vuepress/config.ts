@@ -16,30 +16,29 @@ module.exports = {
                             title: 'Quark',
                             collapsable: false,
                             children: [
-                                ['guide/introduce', 'Introduce'],
-                                ['guide/install', 'Install']
+                                ['guide/introduce', '简介'],
+                                ['guide/install', '安装']
                             ]
                         },
                         {
                             title: 'Base',
                             collapsable: false,
                             children: [
-                                ['basic/overview', 'Overview'],
-                                ['basic/defining', 'Defining'],
-                                ['basic/rendering', 'Rendering'],
-                                ['basic/properties', 'Reactive Properties'],
-                                ['basic/styles', 'Styles'],
-                                ['basic/slot', 'Slot'],
-                                ['basic/lifecycle', 'Lifecycle'],
-                                ['basic/events', 'Events'],
-                                ['basic/ref', 'Ref']
+                                ['basic/defining', '自定义元素 Defining'],
+                                ['basic/rendering', '渲染 Rendering'],
+                                ['basic/properties', '响应式属性 Reactive properties'],
+                                ['basic/styles', '样式 Styles'],
+                                ['basic/slot', '插槽 Slot'],
+                                ['basic/lifecycle', '生命周期 Lifecycle'],
+                                ['basic/events', '事件 Events'],
+                                ['basic/ref', '引用 Ref']
                             ]
                         },
                         {
                             title: 'Other',
                             collapsable: false,
                             children: [
-                                ['other/changelog', 'Changelog'],
+                                ['other/changelog', '更新日志'],
                             ]
                         }
 
@@ -65,7 +64,6 @@ module.exports = {
                         {
                             title: '基础',
                             children: [
-                                ['basic/overview', 'Overview'],
                                 ['basic/defining', 'Defining'],
                                 ['basic/rendering', 'Rendering'],
                                 ['basic/properties', 'Reactive Properties'],
