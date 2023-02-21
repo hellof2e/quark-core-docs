@@ -1,4 +1,4 @@
-## npm 安装
+## 安装
 
 ```shell
 npm i quarkc --save
@@ -6,7 +6,8 @@ npm i quarkc --save
 
 ### 快速开始  
 
-Define custom element.
+自定义元素：
+
 ```tsx
 import QuarkElement, { property, customElement } from "quarkc";
 
@@ -27,9 +28,9 @@ export default class Count extends QuarkElement {
 }
 ```
 
-Use it.
+开始使用：
 ```html
- <quark-count></quark-count>
+ <quark-count count="6"></quark-count>
 ```
 
 恭喜，你已经入门了！

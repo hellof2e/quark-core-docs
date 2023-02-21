@@ -8,11 +8,11 @@
 
 ### 介绍  
 
-Quark 是一个拥有完美开发体验的 web components 框架。
+`Quark`(读音 /kwɑːk/ ) 是一个拥有完美开发体验的 `Web Components` 框架, 它使用 `TSX` 来写 `HTML` 结构。
 
 
 ### 特性
 
-* 可以在任何框架或者无框架使用 QuarkC 自定义元素
-* 小巧的尺寸和高性能设计
-* Web Components + TSX 融合  
+* 可以在任何框架或者无框架使用 `Quark` 自定义元素
+* 高性能设计，`Shadow DOM` 与 `Virtual DOM` 融合 
+* `Web Components + TSX` 融合  
