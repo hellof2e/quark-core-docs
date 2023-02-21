@@ -1,7 +1,10 @@
 module.exports = {
-    title: 'Quark',
     description: 'Just playing around',
+    head: [
+        ['link', { rel: 'shortcut icon', type: "image/x-icon", href: "/assets/img/quark-logo.ico" }]
+    ],
     themeConfig: {
+        logo: '/assets/img/quark-logo.png',
         locales: {
             '/': {
                 lang: 'en-US',
@@ -21,7 +24,7 @@ module.exports = {
                             ]
                         },
                         {
-                            title: 'Base',
+                            title: '基础',
                             collapsable: false,
                             children: [
                                 ['basic/defining', '自定义元素 Defining'],
@@ -35,7 +38,7 @@ module.exports = {
                             ]
                         },
                         {
-                            title: 'Other',
+                            title: '其它',
                             collapsable: false,
                             children: [
                                 ['other/changelog', '更新日志'],
