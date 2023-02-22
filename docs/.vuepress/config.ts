@@ -1,10 +1,11 @@
 module.exports = {
+    title: 'Quark',
     description: 'Just playing around',
     head: [
-        ['link', { rel: 'shortcut icon', type: "image/x-icon", href: "/assets/img/quark-logo.ico" }]
+        ['link', { rel: 'shortcut icon', type: "image/x-icon", href: "/assets/img/logo.png" }]
     ],
     themeConfig: {
-        logo: '/assets/img/quark-logo.png',
+        logo: '/assets/img/logo.png',
         locales: {
             '/': {
                 lang: 'en-US',
