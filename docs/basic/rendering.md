@@ -5,9 +5,9 @@ import QuarkElement, { customElement } from "quarkc";
 @customElement({ tag: "quark-count" })
 export default class Count extends QuarkElement {
    render() {
-        return (
-            <button>Count</button>
-        );
+     return (
+        <button>Count</button>
+     );
   } 
 }
 ```
@@ -27,10 +27,10 @@ export default class Count extends QuarkElement {
      return null
    }
    render() {
-        return (
-            <button>Click</button>
-            {this.renderItem()}
-        );
+     return (
+        <button>Click</button>
+        {this.renderItem()}
+     );
   } 
 }
 ```
@@ -42,9 +42,9 @@ import QuarkElement, { customElement } from "quarkc";
 export default class Count extends QuarkElement {
    count = 0
    render() {
-        return (
-            <div>{this.count > 0 ? "More" : "Less"}</div>
-        );
+     return (
+        <div>{this.count > 0 ? "More" : "Less"}</div>
+     );
   } 
 }
 ```
@@ -56,15 +56,15 @@ import QuarkElement, { customElement } from "quarkc";
 export default class Count extends QuarkElement {
    list = [{key: 1, value: 1}, {key: 2, value: 2},{key: 3, value: 3}]
    render() {
-        return (
-            <div>
-                {
-                    this.list.map((item) => {
-                        return <div key={item.key}>{item.value}</div>
-                    })
-                }
-            </div>
-        );
+     return (
+        <div>
+          {
+            this.list.map((item) => {
+                return <div key={item.key}>{item.value}</div>
+            })
+          }
+        </div>
+     );
   } 
 }
 ```

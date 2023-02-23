@@ -1,6 +1,6 @@
 module.exports = {
     title: 'Quark',
-    description: 'Just playing around',
+    dest:'./dist',
     head: [
         ['link', { rel: 'shortcut icon', type: "image/x-icon", href: "/assets/img/logo.png" }]
     ],
