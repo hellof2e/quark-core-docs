@@ -1,7 +1,7 @@
 ## Rendering
 为你的自定义元素添加一个 `render` 方法。
 ```tsx
-import QuarkElement, { customElement } from "quarkc";
+import { QuarkElement, customElement } from "quarkc";
 @customElement({ tag: "quark-count" })
 export default class Count extends QuarkElement {
    render() {
@@ -16,7 +16,7 @@ export default class Count extends QuarkElement {
 
 条件渲染：
 ```tsx
-import QuarkElement, { customElement } from "quarkc";
+import { QuarkElement, customElement } from "quarkc";
 @customElement({ tag: "quark-count" })
 export default class Count extends QuarkElement {
    count = 0
@@ -37,7 +37,7 @@ export default class Count extends QuarkElement {
 
 三目运算符：
 ```tsx
-import QuarkElement, { customElement } from "quarkc";
+import { QuarkElement, customElement } from "quarkc";
 @customElement({ tag: "quark-count" })
 export default class Count extends QuarkElement {
    count = 0
@@ -51,7 +51,7 @@ export default class Count extends QuarkElement {
 
 列表渲染：
 ```tsx
-import QuarkElement, { customElement } from "quarkc";
+import { QuarkElement, customElement } from "quarkc";
 @customElement({ tag: "quark-count" })
 export default class Count extends QuarkElement {
    list = [{key: 1, value: 1}, {key: 2, value: 2},{key: 3, value: 3}]

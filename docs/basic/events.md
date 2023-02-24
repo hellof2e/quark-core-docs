@@ -2,7 +2,7 @@
 ### 原生事件
 通过 `onXXX` 的方式监听原生事件。
 ```tsx
-import QuarkElement, { customElement } from "quarkc"
+import { QuarkElement, customElement } from "quarkc"
 
 @customElement({ tag: "quark-input", style })
 export default class Input extends QuarkElement {
@@ -28,7 +28,7 @@ export default class Input extends QuarkElement {
 ### 自定义事件
 通过 `$emit` 发送事件。
 ```tsx
-import QuarkElement, { customElement } from "quarkc"
+import { QuarkElement, customElement } from "quarkc"
 
 @customElement({ tag: "quark-input", style })
 export default class Input extends QuarkElement {

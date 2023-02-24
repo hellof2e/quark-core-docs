@@ -4,7 +4,7 @@
 `Quark` 支持独立 `css` 文件的方式开发组件，只需要在 `@customElement` 传入 `style` 即可。
 
 ```tsx
-import QuarkElement, { customElement } from "quarkc"
+import { QuarkElement, customElement } from "quarkc"
 import style from './index.css'
 
 @customElement({ tag: "quark-count", style })
@@ -48,7 +48,7 @@ export default class Count extends QuarkElement {
 直接在组件内部书写样式。
 
 ```tsx
-import QuarkElement, { customElement } from "quarkc"
+import { QuarkElement, customElement } from "quarkc"
 import style from './index.css'
 
 @customElement({ tag: "quark-count", style })
