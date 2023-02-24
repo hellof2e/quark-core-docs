@@ -1,5 +1,6 @@
 ---
 home: true
+heroImage: /assets/img/logo.png
 heroText: Quark
 tagline: 构建下一代前端组件
 actionText: 快速上手 →
