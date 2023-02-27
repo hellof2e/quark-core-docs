@@ -5,7 +5,7 @@
 通过 `@property` 为你的组件属性增加响应式特性，`@property` 支持通过参数来标注类型。
 
 ```tsx
-import QuarkElement, { customElement, property} from "quarkc";
+import { QuarkElement, customElement, property} from "quarkc";
 @customElement({ tag: "quark-count" })
 export default class Count extends QuarkElement {
    @property({
@@ -41,7 +41,7 @@ export default class Count extends QuarkElement {
 通过 `@state` 为你组件的内部状态增加响应式特性。
 
 ```tsx
-import QuarkElement, { customElement, property} from "quarkc";
+import { QuarkElement, customElement, property} from "quarkc";
 @customElement({ tag: "quark-count" })
 export default class Count extends QuarkElement {
    @state()
@@ -66,7 +66,7 @@ export default class Count extends QuarkElement {
 
 组件内部暴露一个 `setColumns` 方法。
 ```tsx
-import QuarkElement, { customElement } from "quarkc";
+import { QuarkElement, customElement } from "quarkc";
 export interface PickerColumn {
   text: string;
   children: PickerColumn[];

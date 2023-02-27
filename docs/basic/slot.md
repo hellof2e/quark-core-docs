@@ -2,7 +2,7 @@
 ### 默认插槽
 
 ```tsx
-import QuarkElement, { customElement } from "quarkc"
+import { QuarkElement, customElement } from "quarkc"
 import style from './index.css'
 
 @customElement({ tag: "quark-count", style })
@@ -23,7 +23,7 @@ export default class Count extends QuarkElement {
 ### 具名插槽
 组件内部给 `slot` 添加 `name`，外部使用时指定 `name`。
 ```tsx
-import QuarkElement, { customElement } from "quarkc"
+import { QuarkElement, customElement } from "quarkc"
 import style from './index.css'
 
 @customElement({ tag: "quark-count", style })
@@ -43,7 +43,7 @@ export default class Count extends QuarkElement {
 ### 高级技巧
 可以通过 `onslotchange` 事件获取到 `slot` 挂载完成时机。
 ```tsx
-import QuarkElement, { customElement, createRef } from "quarkc"
+import { QuarkElement, customElement, createRef } from "quarkc"
 import style from './index.css'
 
 @customElement({ tag: "quark-count", style })

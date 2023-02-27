@@ -2,7 +2,8 @@
 自定义一个继承自 `QuarkElement` 的类， 然后使用 `@customElement` 装饰器修饰。
 
 ```tsx
-import QuarkElement, { customElement } from "quarkc";
+import { QuarkElement, customElement } from "quarkc";
+
 @customElement({ tag: "quark-count" })
 export default class Count extends QuarkElement {/***/}
 ```

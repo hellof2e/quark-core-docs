@@ -14,7 +14,7 @@
 
 ```tsx
 
-import QuarkElement, {
+import { QuarkElement,
   property,
   state
   customElement
