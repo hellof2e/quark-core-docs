@@ -3,7 +3,6 @@
       class="home"
       :aria-labelledby="data.heroText !== null ? 'main-title' : null"
     >
-      <div>Custom home</div>
       <header class="hero">
         <img
           v-if="data.heroImage"

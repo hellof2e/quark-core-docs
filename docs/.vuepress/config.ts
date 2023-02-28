@@ -12,7 +12,7 @@ module.exports = {
                 nav: [
                     { text: '指南', link: '/guide/introduce/' },
                     { text: 'Quark Design', link: 'https://quark-design.hellobike.com/' },
-                    { text: 'Playground', link: 'https://quark-design.hellobike.com/' },
+                    { text: 'Github', link: 'https://github.com/hellof2e/quark/' },
                 ],
                 sidebar: {
                     '/': [
