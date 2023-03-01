@@ -9,14 +9,15 @@ on:
       - '**'
 
 jobs:
-  copy:
+  build-and-deploy:
     runs-on: ubuntu-latest  
     steps:
-      - uses: actions/checkout@v2 
+      - uses: actions/checkout@v3
       - run: npm install
       - run: npm run build
+
       - name : Sync 
-        uses : JamesIves/github-pages-deploy-action@4.1.7 
+        uses : JamesIves/github-pages-deploy-action@v4
         with :
           branch : main # action 应该部署到的分支。
           folder : dist # 操作应该部署的文件夹。
