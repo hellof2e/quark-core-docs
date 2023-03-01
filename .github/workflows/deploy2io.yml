@@ -12,8 +12,8 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest  
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v3 # 检出仓库
+      - uses: actions/setup-node@v3 # 设置node版本
         with:
           node-version: 16
       - run: npm install
