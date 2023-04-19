@@ -1,0 +1,30 @@
+name: sync to github.io
+
+on:
+  push:
+    branches:
+      - main # default branch
+    paths:
+      - '.github/workflows/**'
+      - '**'
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest  
+    steps:
+      - uses: actions/checkout@v3 # 检出仓库
+      - uses: actions/setup-node@v3 # 设置node版本
+        with:
+          node-version: 16
+      - run: npm install
+      - run: npm run build
+
+      - name : Sync 
+        uses : JamesIves/github-pages-deploy-action@v4  # 跨仓库提交代码
+        with :
+          branch : main # action 应该部署到的分支。
+          folder : dist # 操作应该部署的文件夹。
+          clean: false
+          repository-name: hellof2e/quark-docs.github.io
+          token: ${{ secrets.GIT_ACTION }}
+          target-folder: /

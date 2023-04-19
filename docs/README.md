@@ -15,5 +15,5 @@ features:
 ---
 
 ::: slot footer
-MIT Licensed | Copyright © 2018-present Quark
+A project by Quark Labs.
 :::
