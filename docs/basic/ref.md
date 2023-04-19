@@ -15,20 +15,20 @@ import style from "./style.css";
 })
 class QuarkBadge extends QuarkElement {
 
-  slotRef: any = createRef();
+  inputRef: any = createRef();
 
-  deal = () => {
-    if (this.slotRef.current?.assignedNodes().length) {
-        console.log("slot 有子节点")
-    } else {
-        console.log("slot 无子节点")
-    }
-  };
+  componentDidMount() {
+    this.firstUpdated();
+  }
+
+  firstUpdated() {
+    this.inputRef.current?.focus();
+  }
 
   render() {
     return (
-      <div class="quark-badge">
-        <slot ref={this.slotRef} onslotchange={this.deal}></slot>
+      <div>
+        <input ref={this.inputRef}></input>
       </div>
     );
   }
