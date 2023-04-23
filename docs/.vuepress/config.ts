@@ -39,6 +39,16 @@ module.exports = {
                             ]
                         },
                         {
+                            title: '工作流',
+                            collapsable: false,
+                            children: [
+                                ['workflow/requirements', '要求 Requirements'],
+                                ['workflow/development', '开发 Development'],
+                                ['workflow/testing', '测试 Testing'],
+                                ['workflow/publishing', '发布 Publishing']
+                            ]
+                        },
+                        {
                             title: '其它',
                             collapsable: false,
                             children: [
@@ -77,7 +87,24 @@ module.exports = {
                                 ['basic/events', 'Events'],
                                 ['basic/ref', 'Ref']
                             ]
+                        },{
+                            title: '工作流',
+                            collapsable: false,
+                            children: [
+                                ['workflow/requirements', '要求 Requirements'],
+                                ['workflow/development', '开发 Development'],
+                                ['workflow/testing', '测试 Testing'],
+                                ['workflow/publishing', '发布 Publishing']
+                            ]
+                        },
+                        {
+                            title: '其它',
+                            collapsable: false,
+                            children: [
+                                ['other/changelog', '更新日志'],
+                            ]
                         }
+
 
                     ],
                 }

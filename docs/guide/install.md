@@ -1,4 +1,4 @@
-## 安装
+## Install
 
 ```shell
 npm i quarkc --save
