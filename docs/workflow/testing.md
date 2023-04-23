@@ -6,7 +6,6 @@
 import QuarkElement, { property, customElement, createRef } from "quarkc";
 import "../loading";
 import style from "./style.css";
-import { pxToVw } from "../../utils/util";
 
 @customElement({
   tag: "quark-button",
@@ -104,7 +103,7 @@ const data = {
   slotText: "主要按钮",
   disabled: false,
   type: "primary",
-  icon: "https://m.hellobike.com/resource/helloyun/16682/Agnve_tel%20(1).png",
+  icon: "https://nve_tel%20(1).png",
   loading: true,
   shape: "round",
 };

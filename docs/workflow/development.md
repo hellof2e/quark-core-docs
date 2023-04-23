@@ -33,7 +33,6 @@ import { babel } from "@rollup/plugin-babel";
 import typescript from "@rollup/plugin-typescript";
 import postcss from "@quarkd/rollup-plugin-postcss";
 import px2vp from "postcss-px-to-viewport";
-import filesize from "rollup-plugin-filesize";
 
 const extensions = [".js", ".ts", ".tsx"];
 
@@ -61,7 +60,6 @@ const options = [
         exclude: "node_modules/**",
         extensions,
       }),
-      filesize(),
     ],
   },
 ];
