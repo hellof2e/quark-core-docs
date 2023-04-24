@@ -19,10 +19,10 @@ export default class Count extends QuarkElement {
 }
 ```
 
-其中样式采用独立文件的方式，因此要求你的构建支持这种 css 文件的导入，比如 `rollup` 的 `rollup-plugin-import-css`.
+其中样式采用独立文件的方式，因此要求你的构建工具支持这种 css 文件的导入，比如 `rollup` 的 `rollup-plugin-import-css`.
 如果你的组件需要做屏幕适配，可以在构建阶段使用相关插件解决，比如 `postcss-px-to-viewport`.
 
-以 `rollup` 打包工具为示例，一个可用于构建面向生产的构建配置如下：
+以 `rollup` 打包工具为示例，一个可用于面向生产的构建配置如下：
 ```js
 /*
 * rollup.config.js
@@ -86,7 +86,7 @@ module.exports = { presets, plugins };
 ```
 
 
-```js
+```json
 /*
 * tsconfig.json
 */

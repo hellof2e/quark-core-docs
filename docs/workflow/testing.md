@@ -1,5 +1,5 @@
 ## Testing
-一个面向生产环境的组件，其单元测试是少不了的。我们推荐使用[@open-wc/testing](https://open-wc.org/docs/testing/testing-package/),一个专门针对 Web components 的测试库。
+我们推荐 [@open-wc/testing](https://open-wc.org/docs/testing/testing-package/) 作为 Web components 的测试框架，`@open-wc/testing`是一个专门针对 Web components 的测试库。
 以一个 button 组件为例：
 
 ```tsx

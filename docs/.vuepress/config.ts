@@ -11,6 +11,7 @@ module.exports = {
                 lang: 'en-US',
                 nav: [
                     { text: '指南', link: '/guide/introduce/' },
+                    { text: 'Quark Playground', link: 'https://quark-playground.hellobike.com/#/hello-world' },
                     { text: 'Quark Design', link: 'https://quark-design.hellobike.com/' },
                     { text: 'Github', link: 'https://github.com/hellof2e/quark/' },
                 ],
