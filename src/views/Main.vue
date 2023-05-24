@@ -23,23 +23,15 @@
               <a
                 class="get-started"
                 :href="`${
-                  isZhLang
-                    ? `#/zh-CN/guide/quickstart`
-                    : `#/en-US/guide/quickstart`
+                  isZhLang ? `#/zh-CN/docs/introduce` : `#/en-US/docs/introduce`
                 }`"
                 >{{ t("getStarted") }}</a
               >
             </div>
             <div class="action">
-              <a
-                class="why-quark"
-                :href="`${
-                  isZhLang
-                    ? `#/zh-CN/guide/introduction`
-                    : `#/en-US/guide/introduction`
-                }`"
-                >{{ t("whyQuark") }}</a
-              >
+              <a class="npm-i" href="https://www.npmjs.com/package/quarkc">
+                > npm i quarkc
+              </a>
             </div>
           </div>
         </div>

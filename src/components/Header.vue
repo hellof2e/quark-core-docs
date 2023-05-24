@@ -1,5 +1,5 @@
 <template>
-  <header :class="{ sticky: isHomePage() }" class="header">
+  <header class="header">
     <div>
       <div class="container">
         <div class="left-bar">
@@ -61,6 +61,15 @@
                           ></path>
                         </svg>
                       </a>
+                      <p class="link menu-link" style="color: #aaa">
+                        Angular (Work in progress)
+                      </p>
+                      <p class="link menu-link" style="color: #aaa">
+                        Svelte (Work in progress)
+                      </p>
+                      <p class="link menu-link" style="color: #aaa">
+                        Javascript (Work in progress)
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -345,16 +354,6 @@ export default defineComponent({
       };
     });
 
-    const isHomePage = computed(() => {
-      return function () {
-        return !(
-          route.path.includes("component") ||
-          route.path.includes("guide") ||
-          route.path.includes("otherdocs")
-        );
-      };
-    });
-
     // lang switch
     const switchLang = () => {
       let href = "";
@@ -387,7 +386,6 @@ export default defineComponent({
       data,
       isActive,
       switchLang,
-      isHomePage,
       ecosystemLangs,
     };
   },
@@ -396,15 +394,12 @@ export default defineComponent({
 
 <style lang="scss">
 .header {
-  height: 72px;
+  // height: 72px;
   z-index: 30;
   top: 0px;
-  position: relative;
+  position: sticky;
   min-width: 860px;
-
-  &.sticky {
-    position: sticky;
-  }
+  width: 100%;
 
   > div {
     margin-left: auto;

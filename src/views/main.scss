@@ -137,6 +137,15 @@
   }
 }
 
+.npm-i {
+  background-color: #313136;
+  color: #fff;
+  &:hover {
+    background-color: #4c4c52;
+    color: #fff;
+  }
+}
+
 .scroll-down {
   margin-bottom: 20px;
   padding-bottom: 40px;
@@ -326,7 +335,7 @@
       color: #fff;
       text-align: left;
     }
-    
+
   }
   .box1,
   .box2,

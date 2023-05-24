@@ -1,28 +1,25 @@
 <template>
   <div class="doc-nav" :class="{ 'fixed-class': fixed }">
-    <div
-      v-for="item in docs.packages"
-      :class="{ active: isActive(item.name) }"
-      :key="item"
-    >
-      <p>{{ isZhLang ? item.cName : item.name }}</p>
-      <router-link
-        :to="item.name.toLowerCase()"
-        v-for="subItem in item.children"
-        :key="subItem"
-      >
-        {{ item.name }}
-        {{ isZhLang ? subItem.cName : subItem.name }}
-      </router-link>
+    <div class="nav-wrap">
+      <section v-for="item in docs.packages" :key="item">
+        <h2>{{ isZhLang ? item.cName : item.name }}</h2>
+
+        <router-link
+          v-for="subItem in item.children"
+          :class="{ active: isActive(subItem.name) }"
+          :key="subItem"
+          :to="subItem.name.toLowerCase()"
+        >
+          {{ isZhLang ? subItem.cName : subItem.name }}
+        </router-link>
+      </section>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, computed, onMounted, toRefs } from "vue";
-import { useRoute, onBeforeRouteUpdate } from "vue-router";
-import { RefData } from "@/assets/util/ref";
-import { nav, docs } from "@/config";
+import { defineComponent, reactive, computed } from "vue";
+import { docs } from "@/config";
 
 export default defineComponent({
   name: "DocNav",
@@ -30,13 +27,9 @@ export default defineComponent({
     fixed: Boolean,
   },
   setup() {
-    const route = useRoute();
-
     const isActive = computed(() => {
       return function (name: string) {
-        const currentValue = RefData.getInstance().currentRoute.value;
-        const value = currentValue;
-        return value == name.toLowerCase();
+        return location.hash.split("/").pop() === name;
       };
     });
 
@@ -51,71 +44,32 @@ export default defineComponent({
 
 <style lang="scss">
 .doc-nav {
-  bottom: 0px;
-  left: 0px;
-  z-index: 10;
-  width: 260px;
-  position: fixed;
-  top: 75px;
   overflow: auto;
   transition: all 150ms;
+  padding: 32px 32px 0;
 
-  &.fixed-class {
-    top: 0;
+  h2 {
+    color: #213547;
+    line-height: 20px;
+    font-size: 13px;
+    font-weight: 600;
   }
-  ol {
-    margin-bottom: 20px;
-    // padding-left: 32px;
 
-    li {
-      font-size: 14px;
-      font-weight: bold;
-      position: relative;
-
-      &.active {
-        &::before {
-          position: absolute;
-          content: "";
-          left: 0;
-          top: 50%;
-          width: 22px;
-          margin-top: -5px;
-          height: 10px;
-          transform: rotate(90deg);
-        }
-      }
-    }
-
-    > ul {
-      // padding-left: 26px;
-
-      li {
-        /* padding-left: 29px; */
-        cursor: pointer;
-
-        &:hover {
-          a {
-            color: #646cff;
-          }
-        }
-
-        a {
-          height: 48px;
-          line-height: 48px;
-          display: flex;
-
-          &.router-link-active,
-          &.active {
-            color: #646cff;
-          }
-
-          b {
-            font-weight: normal;
-            font-size: 12px;
-          }
-        }
-      }
-    }
+  a {
+    display: flex;
+    font-size: 15px;
+    line-height: 32px;
   }
+
+  .router-link-active {
+    color: #646cff;
+  }
+
+  section {
+    margin-bottom: 26px;
+  }
+}
+.nav-wrap {
+  position: fixed;
 }
 </style>

@@ -163,12 +163,15 @@ html.dark {
     color: #fff;
   }
 
-  .doc-nav a {
+  .doc-nav h2 {
     color: #fff;
   }
+
   .doc-nav a:hover {
     color: var(--brand-color);
+    opacity: 1;
   }
+
 
   .translations:before, .appearance:before, .social-links:before {
     background-color: rgba(60, 60, 67, 0.92);
@@ -217,25 +220,3 @@ html.dark {
     }
   }
 }
-
-
-
-
-
-// @media screen and (min-width: 860px) {
-//   .doc-nav {
-//     display: none;
-//   }
-//   .doc-content {
-//     margin-left: 0!important;
-//   }
-// }
-
-// @media screen and (max-width: 880px) {
-//   .doc-nav {
-//     display: block;
-//   }
-//   .doc-content {
-//     margin-left: 260px;
-//   }
-// }

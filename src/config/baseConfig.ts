@@ -51,8 +51,13 @@ export default {
             show: true,
           },
           {
-            name: "event",
-            cName: "事件 event",
+            name: "lifecycle",
+            cName: "生命周期 lifecycle",
+            show: true,
+          },
+          {
+            name: "events",
+            cName: "事件 events",
             show: true,
           },
           {
@@ -68,29 +73,30 @@ export default {
         children: [
           {
             name: "requirements",
-            cname: "要求 requirements",
+            cName: "要求 requirements",
+            show: true,
           },
           {
             name: "development",
-            cname: "开发 development",
+            cName: "开发 development",
           },
           {
             name: "testing",
-            cname: "测试 testing",
+            cName: "测试 testing",
           },
           {
             name: "publishing",
-            cname: "发布 publishing",
+            cName: "发布 publishing",
           },
         ],
       },
       {
         name: "Other",
-        cname: "其它",
+        cName: "其它",
         children: [
           {
             name: "changelog",
-            cname: "更新日志 changelog",
+            cName: "更新日志 changelog",
           },
         ],
       },
