@@ -1,0 +1,232 @@
+@import "highlight.scss";
+
+.doc-content-document {
+  min-height: 800px;
+  flex-shrink: 0;
+  position: relative;
+  padding: 40px;
+
+  .card {
+    margin-bottom: 24px;
+    padding: 24px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 8px 12px #ebedf0;
+  }
+
+  a {
+    margin: 0 1px;
+    color: #646cff;
+    text-decoration-line: underline;
+
+    &:hover {
+      color: #bcc0ff;
+    }
+
+    &:active {
+      color: #bcc0ff;
+    }
+  }
+
+  &.isComponent {
+    h1 {
+      display: none;
+    }
+  }
+
+  h1 {
+    margin: 0 0 30px;
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    margin-bottom: 56px;
+  }
+
+  h2 {
+    margin: 45px 0 20px;
+    font-size: 24px;
+  }
+
+  h3 {
+    margin: 16px 0px;
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  h4 {
+    margin: 24px 0 12px;
+    font-weight: 600;
+    font-size: 16px;
+  }
+
+  h5 {
+    margin: 24px 0 12px;
+    font-weight: 600;
+    font-size: 15px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  strong {
+    margin: 24px 0 12px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  table {
+    width: 100%;
+    margin-top: 12px;
+    font-size: 14px;
+    line-height: 1.5;
+    border-collapse: collapse;
+    th {
+      padding: 8px 20px;
+      font-weight: 600;
+      text-align: left;
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+
+    td {
+      padding: 8px 20px;
+      color: #fff;
+      
+      &:first-child {
+        border-left: 0px;
+        code {
+          margin: 0;
+          padding: 2px 6px;
+          color: #38bdf7;
+          font-weight: 600;
+          font-size: 11px;
+          background-color: fade(#38bdf7, 10%);
+          border-radius: 20px;
+        }
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+
+    em {
+      color: #fa2400;
+      font-size: 14px;
+      font-family: -apple-system, BlinkMacSystemFont, Segoe UI,
+      Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+      sans-serif;
+      font-style: normal;
+      -webkit-font-smoothing: auto;
+    }
+  }
+
+  ul li,
+  ol li {
+    position: relative;
+    // margin: 5px 0 5px 10px;
+    // padding-left: 15px;
+    font-size: 16px;
+    line-height: 26px;
+    list-style-type: disc;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      box-sizing: border-box;
+      width: 6px;
+      height: 6px;
+      margin-top: 10px;
+      border: 1px solid #eee;
+      border-radius: 50%;
+      content: "";
+    }
+  }
+
+  hr {
+    margin: 30px 0;
+    border: 0 none;
+    border-top: 1px solid #eee;
+  }
+
+  p > code,
+  li > code,
+  table code {
+    display: inline;
+    margin: 0 2px;
+    padding: 2px 5px;
+    font-size: 14px;
+    font-family: inherit;
+    word-break: keep-all;
+    border-radius: 4px;
+    -webkit-font-smoothing: antialiased;
+    font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+  p > code {
+    font-size: 14px;
+  }
+
+  section {
+    padding: 24px;
+    overflow: hidden;
+  }
+
+  blockquote {
+    margin: 16px 0px;
+    padding: 16px;
+    background-color: rgba(100, 108, 255, .08);
+    border: 1px solid var(--brand-color);
+    border-radius: 8px;
+    p {
+      color: #fff;
+    }
+  }
+
+  &--changelog,
+  &--changelog-v3 {
+    strong {
+      display: block;
+      margin: 24px 0 12px;
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    h3 {
+      + p code {
+        margin: 0;
+      }
+
+      a {
+        color: inherit;
+        font-size: 20px;
+      }
+    }
+  }
+  .handle-part {
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    .online-btn {
+      display: block;
+      color: #5555e2;
+      background-color: #fff;
+      font-size: 14px;
+      cursor: pointer;
+      &:hover {
+        color: blue;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  ul li::before {
+    display: none;
+  }
+}

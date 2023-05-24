@@ -1,13 +1,81 @@
 {
-  "name": "quark-docs",
+  "name": "quark-design-docs",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Mobile UI Components built on Web Components.",
+  "keywords": [
+    "web components",
+    "quarkd",
+    "shadow dom",
+    "custom element",
+    "library ui"
+  ],
+  "author": "hbf2e",
   "license": "MIT",
   "scripts": {
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "dev": "tsc && vite --force",
+    "build": "vite build",
+    "serve": "vite preview",
+    "prepare": "husky install",
+    "test": "jest",
+    "codeformat": "prettier --write .",
+    "push2GithubWebsite": "node ./scripts/push2GithubWebsite"
+  },
+  "dependencies": {
+    "@codemirror/lang-html": "^6.1.0",
+    "@codemirror/lang-javascript": "^6.0.2",
+    "@codemirror/theme-one-dark": "^6.0.0",
+    "@docsearch/js": "^3.3.3",
+    "codemirror": "^6.0.1",
+    "quarkd": "^1.0.2",
+    "sass": "~1.32.0",
+    "vue-codemirror": "^6.0.2",
+    "vue-i18n": "^9.1.10",
+    "vue-router": "^4.0.11"
   },
   "devDependencies": {
-    "vuepress": "^1.9.8"
+    "@commitlint/cli": "^10.0.0",
+    "@commitlint/config-conventional": "^10.0.0",
+    "@rollup/pluginutils": "^4.2.1",
+    "@types/jest": "^26.0.22",
+    "@types/node": "^14.14.31",
+    "@typescript-eslint/eslint-plugin": "^4.20.0",
+    "@typescript-eslint/parser": "^4.20.0",
+    "@vitejs/plugin-vue": "^3.2.0",
+    "@vue/eslint-config-prettier": "^6.0.0",
+    "@vue/eslint-config-typescript": "^7.0.0",
+    "@vue/test-utils": "^2.0.0-rc.6",
+    "autoprefixer": "^10.4.8",
+    "axios": "^0.21.0",
+    "eslint": "^7.23.2",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-vue": "^7.8.0",
+    "eslint-visitor-keys": "2",
+    "happy-dom": "^7.8.1",
+    "highlight.js": "^10.3.1",
+    "husky": "^6.0.0",
+    "inquirer": "^8.2.0",
+    "jest": "^26.6.3",
+    "lint-staged": "^10.5.0",
+    "lzutf8": "^0.6.0",
+    "markdown-it-container": "^3.0.0",
+    "postcss": "^8.4.16",
+    "prettier": "^2.0.0",
+    "remark-codesandbox": "^0.10.1",
+    "standard-version": "^9.3.0",
+    "transliteration": "^2.2.0",
+    "ts-jest": "^26.5.5",
+    "typescript": "^4.1.5",
+    "vite": "^3.0.5",
+    "vite-plugin-md": "^0.20.4",
+    "vue": "^3.2.26",
+    "vue-jest": "^5.0.0-alpha.7"
+  },
+  "lint-staged": {
+    "*.md": "prettier --write",
+    "*.{ts,tsx,js,vue,scss}": "prettier --write"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hellof2e/quark-design-docs.git"
   }
 }

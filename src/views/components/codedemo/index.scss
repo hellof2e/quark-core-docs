@@ -1,0 +1,88 @@
+.code-demo {
+  display: grid;
+  margin-top: 30px;
+
+  .preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    --tw-gradient-to: #6366f1;
+    --tw-gradient-from: #a855f7;
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+    background-image: linear-gradient(to right, var(--tw-gradient-stops));
+    border-radius: 0.75rem;
+    height: 500px;
+
+    quark-button {
+      width: 108px;
+      height: 40px;
+      --tw-text-opacity: 1;
+      color: rgb(255 255 255 / var(--tw-text-opacity));
+      --tw-bg-opacity: 0.2;
+      background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+
+      font-size: 16px;
+      --button-icon-hspacing: 6px;
+    }
+  }
+
+  .demo-wrap {
+    --tab-item-min-width: 60px;
+    width: 400px;
+    border-radius: 4px;
+    overflow: hidden;
+    .tab-item {
+      padding: 30px 30px 50px;
+    }
+  }
+
+  .editor-skin-header {
+    display: flex;
+    height: 40px;
+    line-height: 40px;
+    align-items: center;
+    background-color: #21252b;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  .editor-skin-header-btn-group {
+    margin: 0 10px;
+    display: flex;
+  }
+
+  .editor-skin-header-btn {
+    width: 12px;
+    height: 12px;
+    margin: 0 4px;
+    border-radius: 6px;
+  }
+
+  .red {
+    background-color: #ff4a4a;
+  }
+
+  .yellow {
+    background-color: #ffb83d;
+  }
+
+  .green {
+    background-color: #00c543;
+  }
+
+  .ͼ1.cm-editor {
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    overflow: hidden;
+  }
+
+  .ͼo .cm-gutters {
+    background-color: #141f31;
+    color: #7d8799;
+    border: none;
+  }
+  .ͼo {
+    color: #abb2bf;
+    background-color: #141f31;
+  }
+}

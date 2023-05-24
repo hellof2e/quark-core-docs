@@ -1,0 +1,71 @@
+@charset "utf-8";
+body {
+  margin: 0;
+  padding: 0;
+}
+ol,
+ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+p{
+  margin: 0;
+}
+
+button {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+html,
+body,
+a,
+button,
+input {
+  outline: 0 none;
+  border: 0;
+  text-decoration: none;
+}
+
+img {
+  border: 0 none;
+  vertical-align: bottom;
+  -ms-interpolation-mode: bicubic;
+}
+
+html,
+body {
+  min-height: 100vh;
+  flex-direction: column;
+  display: flex;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+  border: 0 none;
+  vertical-align: bottom;
+}
+
+::selection {
+  background: var(--brand-color);
+  color: #fff;
+}
+
+a {
+  color: #4c4c52;
+  transition: all 0.25s;
+}
+a:hover {
+  color: var(--brand-color);
+  transition: all 0.25s;
+}
+
+svg {
+  fill: currentColor;
+}

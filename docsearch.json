@@ -1,0 +1,13 @@
+// {
+//   "index_name": "quark-design-hellobike",
+//   "start_urls": ["https://quark-design.hellobike.com/#/en-US/component/button"],
+//   "selectors": {
+//     "lvl0": {
+//       "selector": "",
+//       "default_value": "Documentation"
+//     },
+//     "lvl1": ".markdown-body h1"
+//   },
+//   "rateLimit": 8,
+//   "maxDepth": 10
+// }

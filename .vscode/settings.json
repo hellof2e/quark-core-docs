@@ -12,8 +12,5 @@
   "workbench.startupEditor": "none",
   "stylelint.validate": ["css", "scss"],
   "scss.validate": false,
-  "css.validate": false,
-  "i18n-ally.localesPaths": [
-    "src/lang"
-  ]
+  "css.validate": false
 }
