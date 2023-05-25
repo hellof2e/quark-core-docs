@@ -1,6 +1,19 @@
-# Quark ECOSYSTEM Website
+# Quark ECOSYSTEM
 
-Quark ECOSYSTEM's documentation.
+
+<p align="center">
+  <a href="https://quark.hellobike.com/">
+    <img width="120" src="https://user-images.githubusercontent.com/14307551/197440754-08db4379-eb0f-4808-890d-690355e6e8d2.png">
+  </a>
+</p>
+
+<h1 align="center">Quark everything</h1>
+
+<div align="center">
+
+Next-gen frontend component, it can be used in any framework or no framework.
+
+</div>
 
 
 ## Documentation
