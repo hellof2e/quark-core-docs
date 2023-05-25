@@ -4,7 +4,7 @@ Quark ECOSYSTEM's documentation.
 
 
 ## Documentation
-For full documentation, visit (htttp://quark.hellobike.com)[htttp://quark.hellobike.com]
+For full documentation, visit [https://quark.hellobike.com](https://quark.hellobike.com)
 
 
 ## Developer guide
