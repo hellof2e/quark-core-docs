@@ -41,7 +41,9 @@
                         v-for="(item, index) in ecosystemLangs.stacks"
                         :key="index"
                         class="link menu-link"
-                        :href="`https://${item}-quarkdesign.hellobike.com/#/en-US/component/button`"
+                        :href="`https://${item}-quarkdesign.hellobike.com/#/${
+                          isZhLang ? 'zh-CN' : 'en-US'
+                        }/component/button`"
                         target="_blank"
                         rel="noopener noreferrer"
                       >

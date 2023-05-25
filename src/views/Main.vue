@@ -140,9 +140,7 @@
             </div>
 
             <div class="preview">
-              <quark-button size="big" :loading="isLoading" @click="handleClick"
-                >Button</quark-button
-              >
+              <quark-button size="big">Button</quark-button>
             </div>
           </div>
         </div>
@@ -232,6 +230,8 @@ import { useI18n } from "vue-i18n";
 import Header from "@/components/Header.vue";
 import CodeDemo from "./components/codedemo/index.vue";
 
+import "quarkd/lib/button";
+
 export default defineComponent({
   name: "Main",
   components: {
@@ -241,7 +241,6 @@ export default defineComponent({
   setup() {
     const { t } = useI18n();
     let darkMode = ref(false);
-    const isLoading = ref(false);
 
     const data = reactive({
       tabs: ["Vue", "React", "Angular", "Html"],
@@ -283,13 +282,6 @@ export default defineComponent({
       data.activeTab = tab;
     };
 
-    const handleClick = () => {
-      isLoading.value = true;
-      setTimeout(() => {
-        isLoading.value = false;
-      }, 3000); // 点击2s后loading消失
-    };
-
     watch(activeFwIndex, () => {
       document.querySelector(".tech-name").style.animation =
         "3s infinite text-alter";
@@ -306,8 +298,6 @@ export default defineComponent({
       darkMode,
       activeFwIndex,
       ...toRefs(data),
-      isLoading,
-      handleClick,
       handleTabSwitch,
     };
   },

@@ -19,51 +19,26 @@ import { html } from "@codemirror/lang-html";
 import { oneDark } from "@codemirror/theme-one-dark";
 
 const codes = {
-  React: `import react, { useState } from 'react'
+  React: `import react from 'react'
 import { Button } from '@quarkd/quark-react'
 
 export default () => {
-  const [loading, setLoading] = useState(false)
-
-  const handleClick = () => {
-    setLoading(true)
-    setTimeout(() => { setLoading(false) }, 2000);
-  }
-
   return (
-    <Button loading={loading} onClick={handleClick}>
-      Button
-    </Button>
+    <Button>Button</Button>
   )
 }`,
   Vue: `<template>
-    <quark-button :loading="loading" @click="handleClick">Button</quark-button>
+    <quark-button>Button</quark-button>
 </template>
 
 <script>
-  import { defineComponent, ref } from "vue";
   import "quarkd/lib/button"
-
-  export default defineComponent({
-    setup() {
-      const loading = ref(false);
-
-      const handleClick = () => {
-        loading.value = true;
-        setTimeout(() => { loading.value = false }, 2000);
-      }
-
-      return  { loading, handleClick }
-    }
-  })
 <\/script>`,
   Angular: `import { Component } from '@angular/core
 import "quarkd/lib/button"
 
 @Component({
-  template: \`<quark-button loading="\{{loading}}"" (click)="handleClick()">
-    Button
-  </quark-button>\`
+  template: \`<quark-button>Button</quark-button>\`
 })`,
   Html: `<!DOCTYPE html>
 <html lang="en">
@@ -72,14 +47,10 @@ import "quarkd/lib/button"
   </head>
   <script src="https://fastly.jsdelivr.net/npm/quarkd@1.0.11/umd/index.js" />
   <body>
-    <quark-button loading="false" id="btn">Button</quark-button>
+
+    <quark-button>Button</quark-button>
+
   </body>
-  <script>
-    const el = document.getElementById('btn')
-    el.addEventListener('click', function handleClick() {
-      el.loading = true
-    })
-  <\/script>
 </html>
   `,
 };
