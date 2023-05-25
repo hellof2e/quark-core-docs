@@ -1,7 +1,13 @@
-# Quark Design Documentation
+# Quark ECOSYSTEM Website
 
-Quark Design uses Vue.js for its documentation.
+Quark ECOSYSTEM's documentation.
 
+
+## Documentation
+For full documentation, visit [htttp://quark.hellobike.com](htttp://quark.hellobike.com)
+
+
+## Developer guide
 To run the project locally, first install the dependencies:
 
 ```bash
