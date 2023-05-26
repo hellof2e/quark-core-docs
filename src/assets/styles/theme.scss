@@ -9,6 +9,7 @@
   --text-font-color-light: rgba(60, 60, 67, .92);
 
   --brand-color: #646cff;
+  --nav-link-color: #646cff;
 
   --brand-color-light: #bcc0ff; // hover color
 
@@ -44,12 +45,9 @@
   font-family: var(--font-family-base);
 }
 .nav-item a:hover {
-  color: var(--brand-color);
+  color: var(--nav-link-color);
 }
-.social-links a,
-.translate-lang a {
-  color: rgba(60, 60, 67, .7);
-}
+
 .social-links a:hover svg,
 .translate-lang a:hover svg{
   color: rgba(60, 60, 67, .92);
@@ -113,19 +111,24 @@ html.dark {
   --text-font-color: rgba(255, 255, 255, 0.87);
   --header-bg-light: #fff;
   --line-light: rgba(60, 60, 67, .12);
-  --text-font-color-light: rgba(60, 60, 67, .92);
+
+  // --text-font-color-light: rgba(60, 60, 67, .92);
+  --text-font-color-light: rgba(255, 255, 255, 0.5);
+
   --text-code-font-color: #c9def1;
   --brand-color: #646cff;
   --brand-color-light: #bcc0ff; // hover color
   --mute-light: #313136; // tag background
   --line-light: rgba(82, 82, 89, .32);
+  --nav-link-color: #fff;
+
   font-family: var(--font-family-base);
   color: var(--link-font-color-dark);
   background-color: var(--main-bg);
 
-  a, button {
-    color: rgba(255, 255, 255, 0.5);
-  }
+  // a, button {
+  //   color: rgba(255, 255, 255, 0.5);
+  // }
 
   pre {
     color: #1e1e20;
@@ -150,21 +153,26 @@ html.dark {
 
   .nav-item a:hover,
   .nav-item button:hover {
-    color: rgba(255 255 255 / 1);
+    color: var(--nav-link-color);
   }
   .nav-item .nav-active {
-    color: #fff;
+    color: var(--nav-link-color);
   }
 
   .social-links a:hover svg{
-    color: #fff;
+    color: var(--nav-link-color);
   }
   .translate-lang:hover {
-    color: #fff;
+    color: var(--nav-link-color);
   }
 
   .doc-nav h2 {
     color: #fff;
+  }
+
+  .doc-nav a {
+    color: var(--nav-link-color);
+    opacity: .65;
   }
 
   .doc-nav a:hover {

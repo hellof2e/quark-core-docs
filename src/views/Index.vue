@@ -1,5 +1,5 @@
 <template>
-  <doc-header />
+  <quark-doc-header></quark-doc-header>
 
   <section class="doc-section">
     <doc-nav />
@@ -11,14 +11,12 @@
 </template>
 <script lang="ts">
 import { defineComponent } from "vue";
-
-import Header from "@/components/Header.vue";
 import Nav from "@/components/Nav.vue";
+import "quark-doc-header/lib/index";
 
 export default defineComponent({
   name: "doc",
   components: {
-    [Header.name]: Header,
     [Nav.name]: Nav,
   },
   setup() {
