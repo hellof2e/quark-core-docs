@@ -111,8 +111,6 @@ html.dark {
   --text-font-color: rgba(255, 255, 255, 0.87);
   --header-bg-light: #fff;
   --line-light: rgba(60, 60, 67, .12);
-
-  // --text-font-color-light: rgba(60, 60, 67, .92);
   --text-font-color-light: rgba(255, 255, 255, 0.5);
 
   --text-code-font-color: #c9def1;
@@ -125,10 +123,6 @@ html.dark {
   font-family: var(--font-family-base);
   color: var(--link-font-color-dark);
   background-color: var(--main-bg);
-
-  // a, button {
-  //   color: rgba(255, 255, 255, 0.5);
-  // }
 
   pre {
     color: #1e1e20;
