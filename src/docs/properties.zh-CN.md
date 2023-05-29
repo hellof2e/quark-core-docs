@@ -6,6 +6,7 @@
 
 ```tsx
 import { QuarkElement, customElement, property} from "quarkc";
+
 @customElement({ tag: "quark-count" })
 export default class Count extends QuarkElement {
    @property({
@@ -25,7 +26,7 @@ export default class Count extends QuarkElement {
         return (
             <button onClick={this.click}>{count}</button>
         );
-  } 
+  }
 }
 ```
 
@@ -42,6 +43,7 @@ export default class Count extends QuarkElement {
 
 ```tsx
 import { QuarkElement, customElement, property} from "quarkc";
+
 @customElement({ tag: "quark-count" })
 export default class Count extends QuarkElement {
    @state()
@@ -53,7 +55,7 @@ export default class Count extends QuarkElement {
         return (
             <button onClick={this.click}>{count}</button>
         );
-  } 
+  }
 }
 ```
 点击按钮后，组件将自动更新。
@@ -67,23 +69,23 @@ export default class Count extends QuarkElement {
 组件内部暴露一个 `setColumns` 方法。
 ```tsx
 import { QuarkElement, customElement } from "quarkc";
-export interface PickerColumn {
-  text: string;
-  children: PickerColumn[];
-}
+
+export interface PickerColumn { text: string; children: PickerColumn[] }
+
 @customElement({tag: "quark-cascade-picker"})
 class QuarkCascadePicker extends QuarkElement {
   constructor() {
     super();
   }
   columns: PickerColumn[] = [];
+
   setColumns(columns: PickerColumn[]) {
     if (!columns || columns.length < 1) {
       return;
     }
     this.columns = columns;
-    
   }
+
   render() {
     return (
       /***/
@@ -98,10 +100,12 @@ export default QuarkCascadePicker;
 ```tsx
 export default () => {
   const pickerRef = useRef(null);
+
   useEffect(() => {
     const { current: pickerCurrent } = pickerRef;
       pickerCurrent.setColumns([]);
   }, []);
+
   return (
     <div>
       <quark-cascade-picker
@@ -111,7 +115,7 @@ export default () => {
   );
 };
 ```
-[更多使用技巧参考](https://github.com/hellof2e/quark-design/blob/main/packages/quark/src/cascadepicker/index.tsx) 
+[更多使用技巧参考](https://github.com/hellof2e/quark-design/blob/main/packages/quark/src/cascadepicker/index.tsx)
 
 
 

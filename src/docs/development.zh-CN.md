@@ -7,15 +7,16 @@ import style from './index.css'
 
 @customElement({ tag: "quark-count", style })
 export default class Count extends QuarkElement {
-   @property({
-     type: Boolean,
-   })
-   disabled = false
-   render() {
-        return (
-            <button class="quark_count_button">Click</button>
-        );
-  } 
+  @property({
+    type: Boolean,
+  })
+  disabled = false
+
+  render() {
+    return (
+      <button class="quark_count_button">Click</button>
+    );
+  }
 }
 ```
 

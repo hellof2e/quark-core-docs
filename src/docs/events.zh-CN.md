@@ -1,27 +1,28 @@
 ## Events
 ### 原生事件
 通过 `onXXX` 的方式监听原生事件。
-```tsx
+
+```jsx
 import { QuarkElement, customElement } from "quarkc"
 
 @customElement({ tag: "quark-input", style })
 export default class Input extends QuarkElement {
-   onClick = () => {
-       console.log("按钮被点击“)
-   }
-   onInput = () => {
-      console.log("input 事件“)
-   }
+  onClick = () => {
+    console.log("按钮被点击“)
+  }
 
-   render() {
-        return (
-            <div>
-                <button onClick={this.onClick}>Click</button>
-                <input onInput={this.onInput}></input>
-            </div>
-            
-        );
-  } 
+  onInput = () => {
+    console.log("input 事件“)
+  }
+
+  render() {
+    return (
+      <div>
+          <button onClick={this.onClick}>Click</button>
+          <input onInput={this.onInput}></input>
+      </div>
+    );
+  }
 }
 ```
 
@@ -41,13 +42,12 @@ export default class Input extends QuarkElement {
    }
 
    render() {
-        return (
-            <div>
-                <input onInput={this.onInput}></input>
-            </div>
-            
-        );
-  } 
+    return (
+      <div>
+        <input onInput={this.onInput}></input>
+      </div>
+    );
+  }
 }
 ```
 

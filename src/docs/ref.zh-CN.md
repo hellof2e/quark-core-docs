@@ -9,10 +9,7 @@ import { QuarkElement,
 } from "quarkc";
 import style from "./style.css";
 
-@customElement({
-  tag: "quark-badge",
-  style,
-})
+@customElement({ tag: "quark-badge", style })
 class QuarkBadge extends QuarkElement {
 
   inputRef: any = createRef();
