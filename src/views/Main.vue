@@ -37,7 +37,7 @@
       <a
         class="scroll-down"
         id="scroll-down"
-        href="#we-believe"
+        @click="scrollDown"
         style="opacity: 1"
       >
         <span>{{ t("scrollDown") }}</span>
@@ -52,7 +52,7 @@
       </a>
     </section>
 
-    <section class="we-believe" id="we-believe">
+    <section class="we-believe" id="we-believe" ref="weBelieveRef">
       <div class="wrap">
         <h2>
           {{ t("weBelieve") }}
@@ -238,6 +238,7 @@ export default defineComponent({
   setup() {
     const { t } = useI18n();
     let darkMode = ref(false);
+    const weBelieveRef = ref(null);
 
     const data = reactive({
       tabs: ["Vue", "React", "Angular", "Html"],
@@ -289,6 +290,12 @@ export default defineComponent({
       state.timeInter = null;
     });
 
+    const scrollDown = () => {
+      weBelieveRef.value.scrollIntoView({
+        behavior: "smooth",
+      });
+    };
+
     return {
       isZhLang: localStorage.getItem("language") === "zh-CN",
       t,
@@ -296,6 +303,8 @@ export default defineComponent({
       activeFwIndex,
       ...toRefs(data),
       handleTabSwitch,
+      scrollDown,
+      weBelieveRef,
     };
   },
 });
