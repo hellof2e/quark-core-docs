@@ -16,10 +16,6 @@ if (localStorage.getItem("language") === null) {
   localStorage.setItem("language", "en-US");
 }
 
-// if (isMobile) {
-//   location.replace("/demo/demo.html" + location.hash);
-// }
-
 const app = createApp(App);
 
 // app.config.compilerOptions.isCustomElement = (tag) =>
