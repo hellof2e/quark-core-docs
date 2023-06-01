@@ -16,6 +16,7 @@ export default class Count extends QuarkElement {/***/}
 ```html
 <quark-count />
 ```
+
 ```tsx
 const count = document.createElement('quark-count');
 ```

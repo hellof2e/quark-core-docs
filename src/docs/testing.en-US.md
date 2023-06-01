@@ -112,7 +112,7 @@ let el;
 describe("<quark-button>", async () => {
   it("icon exist", async () => {
     el = await fixture(
-      `<quark-button 
+      `<quark-button
           icon=${data.icon}
         >
           ${data.slotText}

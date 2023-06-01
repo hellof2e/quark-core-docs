@@ -9,15 +9,16 @@ import style from './index.css'
 
 @customElement({ tag: "quark-count", style })
 export default class Count extends QuarkElement {
-   @property({
-     type: Boolean,
-   })
-   disabled = false
-   render() {
-        return (
-            <button class="quark_count_button">Click</button>
-        );
-  } 
+  @property({
+    type: Boolean,
+  })
+  disabled = false
+
+  render() {
+    return (
+      <button class="quark_count_button">Click</button>
+    );
+  }
 }
 ```
 
@@ -53,20 +54,20 @@ import style from './index.css'
 
 @customElement({ tag: "quark-count", style })
 export default class Count extends QuarkElement {
-   @property({
-     type: Boolean,
-   })
-   disabled = false
+  @property({
+    type: Boolean,
+  })
+  disabled = false
 
-   render() {
-      const style = {
-          width: "100%",
-          marginTop: "10px"
-      }
-      return (
-          <button style={style}>Click</button>
-      );
-  } 
+  render() {
+    const style = {
+      width: "100%",
+      marginTop: "10px"
+    }
+    return (
+      <button style={style}>Click</button>
+    );
+  }
 }
 ```
 

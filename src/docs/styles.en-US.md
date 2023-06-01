@@ -9,15 +9,16 @@ import style from './index.css'
 
 @customElement({ tag: "quark-count", style })
 export default class Count extends QuarkElement {
-   @property({
-     type: Boolean,
-   })
-   disabled = false
-   render() {
-        return (
-            <button class="quark_count_button">Click</button>
-        );
-  } 
+  @property({
+    type: Boolean,
+  })
+  disabled = false
+
+  render() {
+    return (
+      <button class="quark_count_button">Click</button>
+    );
+  }
 }
 ```
 
@@ -34,6 +35,7 @@ export default class Count extends QuarkElement {
   height: 100%;
   cursor: unset;
 }
+
 :host([disabled]) {
   cursor: not-allowed;
   opacity: 0.68;
@@ -53,20 +55,21 @@ import style from './index.css'
 
 @customElement({ tag: "quark-count", style })
 export default class Count extends QuarkElement {
-   @property({
-     type: Boolean,
-   })
-   disabled = false
+  @property({
+    type: Boolean,
+  })
+  disabled = false
 
-   render() {
-      const style = {
-          width: "100%",
-          marginTop: "10px"
-      }
-      return (
-          <button style={style}>Click</button>
-      );
-  } 
+  render() {
+    const style = {
+      width: "100%",
+      marginTop: "10px"
+    }
+
+    return (
+      <button style={style}>Click</button>
+    );
+  }
 }
 ```
 
@@ -82,6 +85,7 @@ export default class Count extends QuarkElement {
 :host .quark_count_button {
   color: var(--quark-primary-color, red);
 }
+
 :host([disabled]) {
   color: var(--quark-disable-color, gray);
 }

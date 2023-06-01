@@ -22,12 +22,14 @@ import { QuarkElement, customElement } from "quarkc"
 @customElement({ tag: "quark-count" })
 export default class Count extends QuarkElement {
    count = 0
+
    renderItem = () => {
      if (this.count > 0) {
         return <div>{this.count}</div>
      }
      return null
    }
+
    render() {
      return (
         <button>Click</button>
@@ -44,6 +46,7 @@ import { QuarkElement, customElement } from "quarkc"
 @customElement({ tag: "quark-count" })
 export default class Count extends QuarkElement {
    count = 0
+
    render() {
      return (
         <div>{this.count > 0 ? "More" : "Less"}</div>
@@ -58,7 +61,9 @@ import { QuarkElement, customElement } from "quarkc"
 
 @customElement({ tag: "quark-count" })
 export default class Count extends QuarkElement {
+
    list = [{key: 1, value: 1}, {key: 2, value: 2},{key: 3, value: 3}]
+
    render() {
      return (
         <div>

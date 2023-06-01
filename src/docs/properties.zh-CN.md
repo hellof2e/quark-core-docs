@@ -9,23 +9,26 @@ import { QuarkElement, customElement, property} from "quarkc";
 
 @customElement({ tag: "quark-count" })
 export default class Count extends QuarkElement {
-   @property({
-     type: Number,
-   })
-   count = 0
-   @property({
-     type: Boolean,
-   })
-   disabled = false
-   click = () => {
-     if(!disabled) {
-        console.log('count click')
-     }
-   }
-   render() {
-        return (
-            <button onClick={this.click}>{count}</button>
-        );
+  @property({
+    type: Number,
+  })
+  count = 0
+
+  @property({
+    type: Boolean,
+  })
+  disabled = false
+
+  click = () => {
+    if(!disabled) {
+      console.log('count click')
+    }
+  }
+
+  render() {
+    return (
+      <button onClick={this.click}>{count}</button>
+    );
   }
 }
 ```
@@ -48,13 +51,15 @@ import { QuarkElement, customElement, property} from "quarkc";
 export default class Count extends QuarkElement {
    @state()
    count = 0
+
    click = () => {
      this.count += 1;
    }
-   render() {
-        return (
-            <button onClick={this.click}>{count}</button>
-        );
+
+  render() {
+    return (
+      <button onClick={this.click}>{count}</button>
+    )
   }
 }
 ```

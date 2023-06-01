@@ -8,24 +8,27 @@
 import { QuarkElement, customElement, property} from "quarkc";
 @customElement({ tag: "quark-count" })
 export default class Count extends QuarkElement {
-   @property({
-     type: Number,
-   })
-   count = 0
-   @property({
-     type: Boolean,
-   })
-   disabled = false
-   click = () => {
-     if(!disabled) {
-        console.log('count click')
-     }
-   }
-   render() {
-        return (
-            <button onClick={this.click}>{count}</button>
-        );
-  } 
+  @property({
+    type: Number,
+  })
+  count = 0
+
+  @property({
+    type: Boolean,
+  })
+  disabled = false
+
+  click = () => {
+    if(!disabled) {
+      console.log('count click')
+    }
+  }
+
+  render() {
+    return (
+      <button onClick={this.click}>{count}</button>
+    );
+  }
 }
 ```
 
@@ -53,7 +56,7 @@ export default class Count extends QuarkElement {
         return (
             <button onClick={this.click}>{count}</button>
         );
-  } 
+  }
 }
 ```
 点击按钮后，组件将自动更新。
@@ -82,7 +85,7 @@ class QuarkCascadePicker extends QuarkElement {
       return;
     }
     this.columns = columns;
-    
+
   }
   render() {
     return (
@@ -111,7 +114,7 @@ export default () => {
   );
 };
 ```
-[更多使用技巧参考](https://github.com/hellof2e/quark-design/blob/main/packages/quark/src/cascadepicker/index.tsx) 
+[更多使用技巧参考](https://github.com/hellof2e/quark-design/blob/main/packages/quark/src/cascadepicker/index.tsx)
 
 
 

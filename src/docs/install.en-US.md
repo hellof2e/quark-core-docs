@@ -2,9 +2,9 @@
 
 ```shell
 npm i quarkc --save
-``` 
+```
 
-### 快速开始  
+### 快速开始
 
 自定义元素：
 
@@ -17,9 +17,11 @@ export default class Count extends QuarkElement {
     type: Number
   })
   count: number = 0;
+
   add = () => {
     this.count += 1;
   }
+
   render() {
     return (
         <button onClick={this.add}>count is: { this.count}</button>

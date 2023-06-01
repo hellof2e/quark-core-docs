@@ -112,7 +112,7 @@ let el;
 describe("<quark-button>", async () => {
   it("icon exist", async () => {
     el = await fixture(
-      `<quark-button 
+      `<quark-button
           icon=${data.icon}
         >
           ${data.slotText}
@@ -209,8 +209,6 @@ describe("<quark-button>", async () => {
     expect(eventspy.called).to.equal(false);
   });
 });
-
-
 ```
 
 更多使用示例，请参考[官网](https://open-wc.org/docs/testing/testing-package/)

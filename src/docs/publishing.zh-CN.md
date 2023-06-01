@@ -11,7 +11,7 @@
   "main": "lib/index.js",
   "module": "lib/index.js",
   "files": [
-    "lib/*",
+    "/lib",
     "README.md",
     "package.json"
   ],

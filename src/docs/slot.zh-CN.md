@@ -7,13 +7,13 @@ import style from './index.css'
 
 @customElement({ tag: "quark-count", style })
 export default class Count extends QuarkElement {
-   render() {
-        return (
-            <button>
-                <slot></slot>
-            </button>
-        );
-  } 
+  render() {
+    return (
+      <button>
+        <slot></slot>
+      </button>
+    );
+  }
 }
 ```
 ```html
@@ -28,13 +28,13 @@ import style from './index.css'
 
 @customElement({ tag: "quark-count", style })
 export default class Count extends QuarkElement {
-   render() {
-        return (
-            <button>
-                <slot name="abc"></slot>
-            </button>
-        );
-  } 
+  render() {
+    return (
+      <button>
+        <slot name="abc"></slot>
+      </button>
+    );
+  }
 }
 ```
 ```html
@@ -48,18 +48,18 @@ import style from './index.css'
 
 @customElement({ tag: "quark-count", style })
 export default class Count extends QuarkElement {
-   slotRef = createRef()
-   onSlotChange = () => {
-    // 此处已获取到 slot 的 dom 实例。
-    const { current } = this.ref
-   }
-   render() {
-        return (
-            <button>
-                <slot name="abc" ref={this.slotRef} onslotchange={this.onSlotChange}></slot>
-            </button>
-        );
-  } 
+  slotRef = createRef()
+  onSlotChange = () => {
+  // 此处已获取到 slot 的 dom 实例。
+  const { current } = this.ref
+  }
+  render() {
+    return (
+      <button>
+        <slot name="abc" ref={this.slotRef} onslotchange={this.onSlotChange}></slot>
+      </button>
+    );
+  }
 }
 ```
 
