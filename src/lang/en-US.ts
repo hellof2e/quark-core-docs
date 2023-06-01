@@ -1,5 +1,5 @@
 export default {
-  homeTitle: "Next-gen browser-native component",
+  homeTitle: "Quarkc, born for cross technology stack!",
   homeSubtitle2: "It can be run on",
   getStarted: "Get Started",
   whyQuark: "Why Quark?",

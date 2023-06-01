@@ -1,5 +1,5 @@
 export default {
-  homeTitle: "下一代浏览器原生组件",
+  homeTitle: "Quarkc，为跨技术栈而生！",
   homeSubtitle2: "它可以被运行在",
   getStarted: "构建你的 Quark 组件",
   whyQuark: "为什么选择 Quark？",
