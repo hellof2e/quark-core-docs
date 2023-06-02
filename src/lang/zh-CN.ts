@@ -2,6 +2,8 @@ export default {
   homeTitle: "Quarkc，为跨技术栈而生！",
   homeSubtitle2: "它可以被运行在",
   getStarted: "构建你的 Quark 组件",
+  getStartedQuarkc: "构建你的 Quark 组件",
+  getStartedQuarkd: "组件库文档",
   whyQuark: "为什么选择 Quark？",
   scrollDown: "Scroll Down",
   weBelieve: "我们认为",
@@ -22,6 +24,8 @@ export default {
   box3Desc:
     "不同于其它第三方组件库，quarkd 不会随着技术栈的升级而更新迭代，无需常年更新，也没有历史包袱",
   whatDesc1:
-    "Quarkc 是一种全新的组件构建方式。传统组件框架如 Antd 和 Vant 等在浏览器中需要做大量的工作，而 Quark 将这些工作放到构建应用程序的编译阶段来处理。",
-  whatDesc2: "组件的数据修改由浏览器自身 API 处理，更简单，更高效！",
+    "Quarkc 是一种全新的组件构建工具，通过它可以让你最低成本，高效的实现一个自定义跨技术栈/无框架的原生组件。",
+  whatDesc2:
+    "传统组件框架如 Antd 和 Vant 等在浏览器中需要做大量的工作，而 Quark 将这些工作放到构建应用程序的编译阶段来处理。",
+  whatDesc3: "组件的数据修改由浏览器自身 API 处理，更简单，更高效！",
 };

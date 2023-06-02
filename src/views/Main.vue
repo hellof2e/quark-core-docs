@@ -7,10 +7,6 @@
         <div>
           <div class="home-logo">
             <img src="/src/assets/images/quark-logo.png" alt="" />
-            <!-- <img
-              src="https://m.hellobike.com/resource/helloyun/13459/Dc16h_quarkc-dark.png?x-oss-process=image/quality,q_80"
-              alt=""
-            /> -->
           </div>
           <h1 class="home-title">{{ t("homeTitle") }}</h1>
           <p class="home-subtitle2 text-grad">
@@ -23,16 +19,33 @@
           <div class="actions">
             <div class="action">
               <a
-                class="get-started"
+                class="get-started-quarkc"
                 :href="`${
                   isZhLang ? `#/zh-CN/docs/introduce` : `#/en-US/docs/introduce`
                 }`"
-                >{{ t("getStarted") }}</a
               >
+                <p class="button-logo">
+                  <img
+                    src="https://m.hellobike.com/resource/helloyun/13459/5UF9v_quarkc.png?x-oss-process=image/quality,q_80"
+                    alt=""
+                  />
+                </p>
+                <p>
+                  {{ t("getStartedQuarkc") }}
+                </p>
+              </a>
             </div>
             <div class="action">
-              <a class="npm-i" href="https://www.npmjs.com/package/quarkc">
-                > npm i quarkc
+              <a class="get-started-quarkd" :href="quarkdLink">
+                <p class="button-logo">
+                  <img
+                    src="https://m.hellobike.com/resource/helloyun/13459/L4ass_quarkd.png?x-oss-process=image/quality,q_80"
+                    alt=""
+                  />
+                </p>
+                <p>
+                  {{ t("getStartedQuarkd") }}
+                </p>
               </a>
             </div>
           </div>
@@ -56,7 +69,32 @@
       </a>
     </section>
 
-    <section class="advantage" id="advantage">
+    <!-- <section class="our-product">
+      <div class="wrap">
+        <div class="quarkc">
+          <a href="https://quark.hellobike.com/#/zh-CN/docs/introduce">
+            <img
+              src="https://m.hellobike.com/resource/helloyun/13459/H3kyK_quarkc-light.png?x-oss-process=image/quality,q_80"
+              alt=""
+            />
+            <p>Quarkc，低成本构建跨技术栈，无框架 Web 组件！</p>
+          </a>
+        </div>
+        <div class="quarkd">
+          <a
+            href="https://vue-quarkdesign.hellobike.com/#/zh-CN/component/button"
+          >
+            <img
+              src="https://m.hellobike.com/resource/helloyun/13459/MRdWv_quarkd-light.png?x-oss-process=image/quality,q_80"
+              alt=""
+            />
+            <p>Quarkd，下一代浏览器原生组件库！</p>
+          </a>
+        </div>
+      </div>
+    </section> -->
+
+    <section class="advantage" id="advantage" ref="scrollToThisRef">
       <div class="wrap">
         <h2>
           {{ t("advantage") }}
@@ -92,7 +130,8 @@
           </div>
           <div class="what">
             <p>{{ t("whatDesc1") }}</p>
-            <p>{{ t("whatDesc2") }}</p>
+            <!-- <p>{{ t("whatDesc2") }}</p>
+            <p>{{ t("whatDesc3") }}</p> -->
             <p>
               <a href="https://github.com/hellof2e/quark-cli" target="_blank"
                 >阅读此篇</a
@@ -115,7 +154,7 @@ npm start
       </div>
     </section>
 
-    <section class="we-believe" id="we-believe" ref="weBelieveRef">
+    <section class="we-believe" id="we-believe">
       <div class="wrap">
         <h2>
           {{ t("weBelieve") }}
@@ -242,13 +281,18 @@ export default defineComponent({
   setup() {
     const { t } = useI18n();
     let darkMode = ref(false);
-    const weBelieveRef = ref(null);
+    const scrollToThisRef = ref(null);
 
     const data = reactive({
       tabs: ["Vue", "React", "Angular", "Html"],
       activeTab: "Vue",
       tabIndex: 1,
       framework: ["Vue2.x", "Vue3.x", "React", "Angular", "Svelte", "JQuery"],
+      quarkdLink: `https://vue-quarkdesign.hellobike.com/#/${
+        localStorage.getItem("language")
+          ? localStorage.getItem("language")
+          : "zh-CN"
+      }/component/button`,
     });
 
     let activeFwIndex = ref(0);
@@ -295,7 +339,7 @@ export default defineComponent({
     });
 
     const scrollDown = () => {
-      weBelieveRef.value.scrollIntoView({
+      scrollToThisRef.value.scrollIntoView({
         behavior: "smooth",
       });
     };
@@ -308,7 +352,7 @@ export default defineComponent({
       ...toRefs(data),
       handleTabSwitch,
       scrollDown,
-      weBelieveRef,
+      scrollToThisRef,
     };
   },
 });

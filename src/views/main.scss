@@ -46,17 +46,6 @@
   text-align: center;
 }
 
-// .home-subtitle{
-//   padding-top: 12px;
-//   max-width: 576px;
-//   line-height: 32px;
-//   font-size: 20px;
-//   margin: 0 auto;
-//   font-weight: 500;
-//   white-space: pre-wrap;
-//   font-size: 20px;
-// }
-
 .home-subtitle2{
   padding-top: 12px;
   font-size: 20px;
@@ -118,7 +107,7 @@
     padding: 0 20px;
     line-height: 38px;
     font-size: 14px;
-    display: inline-block;
+    // display: inline-block;
     border: 1px solid transparent;
     text-align: center;
     font-weight: 600;
@@ -132,8 +121,24 @@
       background-color: #4f57f8;
     }
   }
-  .why-quark {
-    border-color: #525259;
+}
+
+.get-started-quarkc,
+.get-started-quarkd {
+  display: flex;
+  background-color: #313136;
+  color: #fff;
+  &:hover {
+    background-color: #4c4c52;
+    color: #fff;
+  }
+  .button-logo{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+  }
+  img{
+    width: 56px;
   }
 }
 
@@ -369,6 +374,7 @@
     p{
       font-size: 19px;
       margin: 0 0 10px 0;
+      line-height: 36px;
     }
     a {
       color: #646cff;
@@ -413,3 +419,40 @@
     justify-content: center;
   }
 }
+
+
+// .our-product {
+//   .wrap {
+//     // display: grid;
+//     // grid-template-columns: 50% 50%;
+//     // grid-gap: 40px;
+//     display: flex;
+//     max-width: 100%;
+//     padding: 0;
+
+//     .quarkc {
+//       background-color: #141f31;
+//     }
+//     .quarkd {
+//       background-color: #0f4499;
+//     }
+//     >div {
+//       width: 70%;
+//       display: flex;
+//       flex-direction: column;
+
+//       img {
+//         width: 100%;
+//       }
+//       p{
+//         color: #fff;
+//         text-align: right;
+//         font-size: 16px;
+//       }
+//     }
+
+//     a {
+//       padding: 15% 0;
+//     }
+//   }
+// }

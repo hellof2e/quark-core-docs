@@ -1,7 +1,13 @@
-## Install
+## 安装
 
-```shell
-npm i quarkc --save
+```bash
+npx create-quark-app create project-name
+```
+
+## 启动项目
+```
+npm install
+npm run dev
 ```
 
 ### 快速开始
