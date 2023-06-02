@@ -7,6 +7,10 @@
         <div>
           <div class="home-logo">
             <img src="/src/assets/images/quark-logo.png" alt="" />
+            <!-- <img
+              src="https://m.hellobike.com/resource/helloyun/13459/Dc16h_quarkc-dark.png?x-oss-process=image/quality,q_80"
+              alt=""
+            /> -->
           </div>
           <h1 class="home-title">{{ t("homeTitle") }}</h1>
           <p class="home-subtitle2 text-grad">
@@ -50,6 +54,65 @@
           <img v-else src="/src/assets/images/arrow-light.png" alt="arrow" />
         </span>
       </a>
+    </section>
+
+    <section class="advantage" id="advantage">
+      <div class="wrap">
+        <h2>
+          {{ t("advantage") }}
+          <img
+            v-if="darkMode"
+            class="down-icon"
+            alt="down-icon"
+            src="/src/assets/images/i-down.png"
+            height="34"
+            width="36"
+          />
+          <img
+            v-else
+            class="down-icon"
+            alt="down-icon"
+            src="/src/assets/images/i-down-light.png"
+            height="34"
+            width="36"
+          />
+        </h2>
+        <div class="box-group">
+          <div class="box1">
+            <h2>{{ t("box1Title") }}</h2>
+            <p>{{ t("box1Desc") }}</p>
+          </div>
+          <div class="box2">
+            <h2>{{ t("box2Title") }}</h2>
+            <p>{{ t("box2Desc") }}</p>
+          </div>
+          <div class="box3">
+            <h2>{{ t("box3Title") }}</h2>
+            <p>{{ t("box3Desc") }}</p>
+          </div>
+          <div class="what">
+            <p>{{ t("whatDesc1") }}</p>
+            <p>{{ t("whatDesc2") }}</p>
+            <p>
+              <a href="https://github.com/hellof2e/quark-cli" target="_blank"
+                >阅读此篇</a
+              >
+              了解更多信息。
+            </p>
+          </div>
+          <div class="how">
+            <div class="bash-code">
+              <pre class="language-bash">
+npx create-quark-app create project-name
+cd project-name
+
+npm install
+npm start
+              </pre>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="we-believe" id="we-believe" ref="weBelieveRef">
@@ -139,65 +202,6 @@
 
             <div class="preview">
               <quark-button size="big">Button</quark-button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="advantage" id="advantage">
-      <div class="wrap">
-        <h2>
-          {{ t("advantage") }}
-          <img
-            v-if="darkMode"
-            class="down-icon"
-            alt="down-icon"
-            src="/src/assets/images/i-down.png"
-            height="34"
-            width="36"
-          />
-          <img
-            v-else
-            class="down-icon"
-            alt="down-icon"
-            src="/src/assets/images/i-down-light.png"
-            height="34"
-            width="36"
-          />
-        </h2>
-        <div class="box-group">
-          <div class="box1">
-            <h2>{{ t("box1Title") }}</h2>
-            <p>{{ t("box1Desc") }}</p>
-          </div>
-          <div class="box2">
-            <h2>{{ t("box2Title") }}</h2>
-            <p>{{ t("box2Desc") }}</p>
-          </div>
-          <div class="box3">
-            <h2>{{ t("box3Title") }}</h2>
-            <p>{{ t("box3Desc") }}</p>
-          </div>
-          <div class="what">
-            <p>{{ t("whatDesc1") }}</p>
-            <p>{{ t("whatDesc2") }}</p>
-            <p>
-              <a href="https://github.com/hellof2e/quark-cli" target="_blank"
-                >阅读此篇</a
-              >
-              了解更多信息。
-            </p>
-          </div>
-          <div class="how">
-            <div class="bash-code">
-              <pre class="language-bash">
-npx create-quark-app create project-name
-cd project-name
-
-npm install
-npm start
-              </pre>
             </div>
           </div>
         </div>
