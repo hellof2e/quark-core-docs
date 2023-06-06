@@ -6,7 +6,6 @@
 
         <router-link
           v-for="subItem in item.children"
-          :class="{ active: isActive(subItem.name) }"
           :key="subItem"
           :to="subItem.name.toLowerCase()"
         >
@@ -27,15 +26,8 @@ export default defineComponent({
     fixed: Boolean,
   },
   setup() {
-    const isActive = computed(() => {
-      return function (name: string) {
-        return location.hash.split("/").pop() === name;
-      };
-    });
-
     return {
       isZhLang: localStorage.getItem("language") === "zh-CN",
-      isActive,
       docs: reactive(docs),
     };
   },
