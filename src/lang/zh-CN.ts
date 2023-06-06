@@ -22,7 +22,7 @@ export default {
   box2Desc: "依托于 Web components 技术，quark 组件可以被任何前端框架使用。",
   box3Title: "版本稳定",
   box3Desc:
-    "不同于其它第三方组件库，Quarkd（Quark design）不会随着技术栈的升级而更新迭代，无需常年更新。",
+    "不同于其它第三方组件构建方式，Quark 组件不依赖前端框架，无需随着技术栈更新而更新。",
   whatDesc1:
     "Quarkc (Quark core)是一种全新的组件构建工具，通过它可以让你最低成本，高效的实现一个自定义跨技术栈/无框架的原生组件。",
   whatDesc2:
