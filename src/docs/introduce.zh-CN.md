@@ -13,6 +13,7 @@
 
 ### 特性
 
-* 可以在任何框架或者无框架使用 `Quark` 自定义元素
-* 高性能设计，`Shadow DOM` 与 `Virtual DOM` 融合
-* `Web Components + TSX` 融合
+- Web Components, Simble, Fast！
+- 不依赖框架，组件可以跨技术栈使用
+- 没有 runtime，web 组件体积小到极致
+- 高性能设计，Shadow DOM 与 Virtual DOM 融合

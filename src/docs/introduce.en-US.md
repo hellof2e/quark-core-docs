@@ -8,11 +8,12 @@
 
 ### 介绍
 
-`Quark`(读音 /kwɑːk/ ) © 是一个拥有完美开发体验的 `Web Components` 框架。通过它可以让你最低成本，高效的实现自定义**跨技术栈/无框架的原生组件**！
+`Quarkc`(读音 /kwɑːk C/ ) (Quark Core 的缩写)是一个拥有完美开发体验的 `Web Components` 框架。通过它可以让你最低成本，高效的实现自定义**跨技术栈/无框架的原生组件**！
 
 
 ### 特性
 
-* 可以在任何框架或者无框架使用 `Quark` 自定义元素
-* 高性能设计，`Shadow DOM` 与 `Virtual DOM` 融合
-* `Web Components + TSX` 融合
+- Web Components, Simble, Fast！
+- 不依赖框架，组件可以跨技术栈使用
+- 没有 runtime，web 组件体积小到极致
+- 高性能设计，Shadow DOM 与 Virtual DOM 融合
