@@ -2,7 +2,7 @@ export default {
   homeTitle: "Quarkc，为跨技术栈而生！",
   homeSubtitle2: "它可以被运行在",
   getStarted: "构建你的 Quark 组件",
-  getStartedQuarkc: "构建你的 Quark 组件",
+  getStartedQuarkc: "构建你的 Web 组件",
   getStartedQuarkd: "组件库文档",
   whyQuark: "为什么选择 Quark？",
   scrollDown: "Scroll Down",
