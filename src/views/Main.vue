@@ -133,9 +133,7 @@
             <!-- <p>{{ t("whatDesc2") }}</p>
             <p>{{ t("whatDesc3") }}</p> -->
             <p>
-              <a href="https://github.com/hellof2e/quark-cli" target="_blank"
-                >阅读此篇</a
-              >
+              <a href="/#/zh-CN/docs/introduce" target="_blank">阅读此篇</a>
               了解更多信息。
             </p>
           </div>
