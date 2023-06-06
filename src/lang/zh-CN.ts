@@ -17,7 +17,7 @@ export default {
   advantage: "有什么优势",
   box1Title: "减少代码量",
   box1Desc:
-    "构建的组件无需依赖第三方 runtime，平均每个组件体积 1kb ~ 2kb 左右。",
+    "用 Quarkc 构建的组件无需依赖第三方 runtime，平均每个组件体积 1kb ~ 2kb 左右。",
   box2Title: "浏览器原生",
   box2Desc: "依托于 Web components 技术，quark 组件可以被任何前端框架使用。",
   box3Title: "版本稳定",
