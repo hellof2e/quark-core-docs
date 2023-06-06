@@ -27,7 +27,7 @@ export default {
     "Relying on Web components technology, quarkd can be used by any front-end framework.",
   box3Title: "Stable version",
   box3Desc:
-    "Unlike other third-party component libraries, quarkd will not update and iterate with the upgrade of the technology stack. It does not need to be updated all year round, and there is no historical burden.",
+    "Unlike other third-party component libraries, quark component will not update and iterate with the upgrade of the technology stack. It does not need to be updated all year round, and there is no historical burden.",
   whatDesc1:
     "Quarkc is a brand new way of building components. Traditional component frameworks such as Antd and Vant need to do a lot of work in the browser, but Quarkc puts these tasks into the compilation phase of building applications.",
   whatDesc2:

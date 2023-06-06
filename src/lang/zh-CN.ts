@@ -19,7 +19,7 @@ export default {
   box1Desc:
     "构建的组件无需依赖第三方 runtime，平均每个组件体积 1kb ~ 2kb 左右。",
   box2Title: "浏览器原生",
-  box2Desc: "依托于 Web components 技术，quarkd 可以被任何前端框架使用。",
+  box2Desc: "依托于 Web components 技术，quark 组件可以被任何前端框架使用。",
   box3Title: "版本稳定",
   box3Desc:
     "不同于其它第三方组件库，quarkd 不会随着技术栈的升级而更新迭代，无需常年更新，也没有历史包袱",
