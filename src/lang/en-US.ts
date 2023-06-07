@@ -25,7 +25,7 @@ export default {
   box2Title: "Browser native",
   box2Desc:
     "Relying on Web components technology, components can be used by any front-end framework.",
-  box3Title: "Stable",
+  box3Title: "Face the future",
   box3Desc:
     "Unlike other third-party component building methods, Quark components do not rely on front-end frameworks, and do not need to be updated with technology stack updates.",
   whatDesc1:

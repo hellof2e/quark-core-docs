@@ -20,7 +20,7 @@ export default {
     "用 Quarkc 构建的组件无需依赖第三方 runtime，平均每个组件体积 1kb ~ 2kb 左右。",
   box2Title: "浏览器原生",
   box2Desc: "依托于 Web components 技术，组件可以被任何前端框架使用。",
-  box3Title: "稳定",
+  box3Title: "面向未来",
   box3Desc:
     "不同于其它组件构建方式，Quark 组件不依赖前端框架，无需随着技术栈更新而更新。",
   whatDesc1:
