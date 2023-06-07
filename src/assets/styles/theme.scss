@@ -152,6 +152,21 @@ html.dark {
     color: var(--nav-link-color);
   }
 
+
+  .install-btn {
+    background: #000000;
+    color: #ddd;
+    border-color: #222;
+    transition: all .2s ease-out;
+
+    &:hover {
+      color: #fff;
+      background: #111;
+      transition: all .2s ease-out;
+    }
+
+  }
+
   .doc-nav h2 {
     color: #fff;
   }

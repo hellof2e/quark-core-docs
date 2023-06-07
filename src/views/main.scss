@@ -132,6 +132,10 @@
   font-size: 16px;
   line-height: 112%;
 
+  &:hover {
+    border-color: #92a0b3;
+  }
+
   .cta-icon {
     position: relative;
   }

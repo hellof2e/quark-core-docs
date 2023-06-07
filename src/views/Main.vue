@@ -25,6 +25,7 @@
             >
               Get started →
             </a>
+
             <button class="install-btn" @click="copyPrompt">
               npx create-quark-app create project-name
               <div class="cta-icon">
