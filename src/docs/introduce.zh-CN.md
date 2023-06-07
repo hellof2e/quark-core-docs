@@ -1,7 +1,7 @@
 
-<p align="center">
+<p align="center" style="padding-top: 10%">
   <a href="https://quark-design.hellobike.com/">
-    <img width="200" src="https://user-images.githubusercontent.com/14307551/197440754-08db4379-eb0f-4808-890d-690355e6e8d2.png">
+    <img width="350" src="https://m.hellobike.com/resource/helloyun/13459/Dc16h_quarkc-dark.png?x-oss-process=image/quality,q_80">
   </a>
 </p>
 <h2 align="center"> Quark，构建下一代前端组件！ </h2>
@@ -10,7 +10,7 @@
 
 
 
-<p>Quarkc (读音 /kwɑːk C/ ) (Quark Core 的缩写)是一个拥有完美开发体验的 `Web Components` 框架。通过它可以让你最低成本，高效的实现自定义**跨技术栈/无框架的原生组件**(更具体来说，是自定义元素)！</p>
+<p>Quarkc (读音 /kwɑːk C/ ) (Quark Core 的缩写)是一个拥有完美开发体验的Web Components框架。通过它可以让你<b>低成本</b>，高效的实现自定义<b>跨技术栈/无框架的原生组件</b>(更具体来说，是自定义元素)！</p>
 <br />
 <p>Quarkc 使用TypeScript、JSX和CSS来创建符合标准的Web组件，这些组件可以用来制作高质量的组件库。</p>
 <br />
