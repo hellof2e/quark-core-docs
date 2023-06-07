@@ -114,7 +114,7 @@ export default () => {
   );
 };
 ```
-[更多使用技巧参考](https://github.com/hellof2e/quark-design/blob/main/packages/quark/src/cascadepicker/index.tsx)
+[更多使用技巧参考](https://github.com/hellof2e/quark-design/blob/main/packages/quarkd/src/cascadepicker/index.tsx)
 
 
 

@@ -29,8 +29,6 @@ for (const path in modulesEnDocs) {
   });
 }
 
-console.log(docsRouters, 999);
-
 // 自定义路由
 const routes: Array<RouteRecordRaw> = [
   {

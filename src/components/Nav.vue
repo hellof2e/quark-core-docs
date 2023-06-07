@@ -17,7 +17,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, computed } from "vue";
+import { defineComponent, reactive } from "vue";
 import { docs } from "@/config";
 
 export default defineComponent({

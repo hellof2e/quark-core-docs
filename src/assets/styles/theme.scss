@@ -32,14 +32,6 @@
   color: var(--brand-color);
 }
 
-.action .why-quark {
-  background-color: var(--main-bg);
-  color: #000;
-  &:hover {
-    background-color: #f6f6f6;
-  }
-}
-
 .nav-item a {
   color: var(--text-font-color-light);
   font-family: var(--font-family-base);
@@ -219,11 +211,10 @@ html.dark {
     color: var(--text-font-color);
   }
 
-  .action .why-quark {
-    background-color: #313136;
-    color: #fff;
-    &:hover {
-      background-color: #2c2c30;
-    }
+
+  .doc-footer a {
+    color: var(--text-font-color-light);
+    text-decoration: none;
+    opacity: .8;
   }
 }

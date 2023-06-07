@@ -9,9 +9,13 @@ export default {
         cName: "介绍",
         children: [
           {
-            // name: "what is Quark？",
             name: "introduce",
             cName: "Quarkc 是什么？",
+            show: true,
+          },
+          {
+            name: "goalsAndObjectives",
+            cName: "目标和愿景",
             show: true,
           },
           {

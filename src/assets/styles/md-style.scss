@@ -5,14 +5,7 @@
   flex-shrink: 0;
   position: relative;
   padding: 40px;
-
-  .card {
-    margin-bottom: 24px;
-    padding: 24px;
-    background-color: #fff;
-    border-radius: 20px;
-    box-shadow: 0 8px 12px #ebedf0;
-  }
+  margin-bottom: 10%;
 
   a {
     margin: 0 1px;
@@ -36,12 +29,15 @@
 
   h1 {
     margin: 0 0 30px;
-    font-size: 30px;
+    font-size: 3rem;
     font-weight: bold;
     position: relative;
     margin-bottom: 56px;
   }
 
+  h2{
+    font-size: 2rem;
+  }
 
   h3 {
     margin: 16px 0px;
