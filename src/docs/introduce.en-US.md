@@ -14,6 +14,6 @@
 ### 特性
 
 - Web Components, Simble, Fast！
-- 不依赖框架，组件可以跨技术栈使用
+- 浏览器原生API，组件可以跨技术栈使用
 - 没有 Runtime，Web 组件体积小到极致
 - 高性能设计，Shadow DOM 与 Virtual DOM 融合
