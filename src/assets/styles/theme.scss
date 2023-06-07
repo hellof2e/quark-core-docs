@@ -6,7 +6,7 @@
 
   --header-bg-light: #fff;
   --line-light: rgba(60, 60, 67, .12);
-  --text-font-color-light: rgba(60, 60, 67, .92);
+  --text-font-color-light: #03060b;
 
   --brand-color: #646cff;
   --nav-link-color: #646cff;
@@ -20,7 +20,7 @@
   --main-shadow: 0 12px 32px rgba(0, 0, 0, .1), 0 2px 6px rgba(0, 0, 0, .08);
 
   // --text-font-color: rgba(28, 30, 33);
-  --text-font-color: rgba(60, 60, 67, .92);
+  --text-font-color: #03060b;
   --text-code-font-color: #476582;
 
   color: var(--text-font-color);
@@ -42,7 +42,7 @@
 
 .social-links a:hover svg,
 .translate-lang a:hover svg{
-  color: rgba(60, 60, 67, .92);
+  color: var(--text-font-color-light);
   transition: color .25s;
 }
 .header .container {
