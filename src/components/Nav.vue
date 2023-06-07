@@ -63,5 +63,11 @@ export default defineComponent({
 }
 .nav-wrap {
   position: fixed;
+  overflow: scroll;
+  height: 100%;
+  padding: 32px 40px 0;
+}
+.nav-wrap ::-webkit-scrollbar {
+  display: none;
 }
 </style>
