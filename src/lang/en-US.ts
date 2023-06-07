@@ -29,7 +29,9 @@ export default {
   box3Desc:
     "Unlike other third-party component building methods, Quark components do not rely on front-end frameworks, and do not need to be updated with technology stack updates.",
   whatDesc1:
-    "Quarkc (Quark core) is a brand new way of building components. Traditional component frameworks such as Antd and Vant need to do a lot of work in the browser, but Quarkc puts these tasks into the compilation phase of building applications.",
+    "Quarkc (Quark core): A Web Components compiler. It allows you to implement a custom cross-stack/frame-free native component with minimal cost and efficiency.",
   whatDesc2:
     "The data modification of the component is handled by the browser's own API, which is simpler and more efficient!",
+  whatDesc3:
+    "Component data modification is handled by the browser's own API, which is simpler and more efficient!",
 };
