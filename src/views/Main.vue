@@ -17,37 +17,59 @@
           </p>
 
           <div class="actions">
-            <div class="action">
-              <a
-                class="get-started-quarkc"
-                :href="`${
-                  isZhLang ? `#/zh-CN/docs/introduce` : `#/en-US/docs/introduce`
-                }`"
-              >
-                <p class="button-logo">
-                  <img
-                    src="https://m.hellobike.com/resource/helloyun/13459/5UF9v_quarkc.png?x-oss-process=image/quality,q_80"
-                    alt=""
-                  />
-                </p>
-                <p>
-                  {{ t("getStartedQuarkc") }}
-                </p>
-              </a>
-            </div>
-            <div class="action">
-              <a class="get-started-quarkd" :href="quarkdLink">
-                <p class="button-logo">
-                  <img
-                    src="https://m.hellobike.com/resource/helloyun/13459/L4ass_quarkd.png?x-oss-process=image/quality,q_80"
-                    alt=""
-                  />
-                </p>
-                <p>
-                  {{ t("getStartedQuarkd") }}
-                </p>
-              </a>
-            </div>
+            <a
+              class="get-started-quarkc"
+              :href="`${
+                isZhLang ? `#/zh-CN/docs/introduce` : `#/en-US/docs/introduce`
+              }`"
+            >
+              Get started →
+            </a>
+            <button class="install-btn" @click="copyPrompt">
+              npx create-quark-app create project-name
+              <div class="cta-icon">
+                <svg
+                  :class="iconCopiedChange ? 'copy icon-copied' : 'copy'"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  fill="none"
+                  aria-label="copy icon"
+                >
+                  <path
+                    stroke="#73849A"
+                    stroke-linejoin="round"
+                    d="M12.72 4H5.78C4.8 4 4 4.8 4 5.78v6.94c0 .98.8 1.78 1.78 1.78h6.94c.98 0 1.78-.8 1.78-1.78V5.78c0-.98-.8-1.78-1.78-1.78Z"
+                  ></path>
+                  <path
+                    stroke="#73849A"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m11.98 4 .02-.75a1.75 1.75 0 0 0-1.75-1.75H3.5a2 2 0 0 0-2 2v6.75A1.76 1.76 0 0 0 3.25 12H4"
+                  ></path>
+                </svg>
+
+                <svg
+                  :class="
+                    iconCopiedChange ? 'checkmark icon-copied' : 'checkmark'
+                  "
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 512 512"
+                  aria-label="checkmark icon"
+                >
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="32"
+                    d="M416 128L192 384l-96-96"
+                  ></path>
+                </svg>
+              </div>
+            </button>
           </div>
         </div>
       </div>
@@ -68,31 +90,6 @@
         </span>
       </a>
     </section>
-
-    <!-- <section class="our-product">
-      <div class="wrap">
-        <div class="quarkc">
-          <a href="https://quark.hellobike.com/#/zh-CN/docs/introduce">
-            <img
-              src="https://m.hellobike.com/resource/helloyun/13459/H3kyK_quarkc-light.png?x-oss-process=image/quality,q_80"
-              alt=""
-            />
-            <p>Quarkc，低成本构建跨技术栈，无框架 Web 组件！</p>
-          </a>
-        </div>
-        <div class="quarkd">
-          <a
-            href="https://vue-quarkdesign.hellobike.com/#/zh-CN/component/button"
-          >
-            <img
-              src="https://m.hellobike.com/resource/helloyun/13459/MRdWv_quarkd-light.png?x-oss-process=image/quality,q_80"
-              alt=""
-            />
-            <p>Quarkd，下一代浏览器原生组件库！</p>
-          </a>
-        </div>
-      </div>
-    </section> -->
 
     <section class="advantage" id="advantage" ref="scrollToThisRef">
       <div class="wrap">
@@ -342,6 +339,36 @@ export default defineComponent({
       });
     };
 
+    let iconCopiedChange = ref(false);
+    const copyPrompt = function () {
+      const text = "npx create-quark-app create project-name";
+      if (navigator.clipboard) {
+        // clipboard api 复制
+        navigator.clipboard.writeText(text);
+      } else {
+        const textarea = document.createElement("textarea");
+        document.body.appendChild(textarea);
+        // 隐藏此输入框
+        textarea.style.position = "fixed";
+        textarea.style.clip = "rect(0 0 0 0)";
+        textarea.style.top = "10px";
+        // 赋值
+        textarea.value = text;
+        // 选中
+        textarea.select();
+        // 复制
+        document.execCommand("copy", true);
+        // 移除输入框
+        document.body.removeChild(textarea);
+      }
+
+      iconCopiedChange.value = true;
+
+      setTimeout(() => {
+        iconCopiedChange.value = false;
+      }, 2000);
+    };
+
     return {
       isZhLang: localStorage.getItem("language") === "zh-CN",
       t,
@@ -351,6 +378,8 @@ export default defineComponent({
       handleTabSwitch,
       scrollDown,
       scrollToThisRef,
+      copyPrompt,
+      iconCopiedChange,
     };
   },
 });

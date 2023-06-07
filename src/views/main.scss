@@ -92,64 +92,79 @@
 
 
 .actions{
-  text-align: center;
   display: flex;
-  flex-wrap: wrap;
-  padding-top: 32px;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-top: 32px;
 }
 
-.action {
-  flex-shrink: 0;
-  padding: 6px;
-  a{
-    border-radius: 20px;
-    padding: 0 20px;
-    line-height: 38px;
-    font-size: 14px;
-    // display: inline-block;
-    border: 1px solid transparent;
-    text-align: center;
-    font-weight: 600;
-    white-space: nowrap;
-  }
-  .get-started{
-    min-width: 100px;
-    background-color: #646cff;
-    color: #fff;
-    &:hover{
-      background-color: #4f57f8;
-    }
-  }
-}
-
-.get-started-quarkc,
-.get-started-quarkd {
+.get-started-quarkc {
   display: flex;
-  background-color: #313136;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 1.25rem;
+  border-radius: 100px;
+  font-size: 16px;
+  line-height: 112%;
+  background-color: #646cff;
   color: #fff;
-  &:hover {
-    background-color: #4c4c52;
-    color: #fff;
-  }
-  .button-logo{
-    display: flex;
-    align-items: center;
-    margin-right: 10px;
-  }
-  img{
-    width: 56px;
+  font-weight: 600;
+  transition: background-color .2s ease-out;
+
+  &:hover{
+    background-color: #4f57f8;
   }
 }
 
-.npm-i {
-  background-color: #313136;
-  color: #fff;
-  &:hover {
-    background-color: #4c4c52;
-    color: #fff;
+.install-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #fff;
+  border: 1px solid #ced6e0;
+  font-family: "__Roboto_Mono_0db19d","__Roboto_Mono_Fallback_0db19d",Courier New,Courier,monospace;
+  color: #001a3a;
+  transition: border-color .2s ease-out;
+  text-align: center;
+  padding: 1rem 1.25rem;
+  border-radius: 100px;
+  font-size: 16px;
+  line-height: 112%;
+
+  .cta-icon {
+    position: relative;
+  }
+
+  svg {
+    display: block;
+    vertical-align: middle;
+  }
+
+  .copy {
+    opacity: 1;
+    transition: opacity .2s ease-out,transform .2s ease-out;
+  }
+
+  .copy.icon-copied {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+
+  .checkmark.icon-copied {
+    opacity: 1;
+    transform: translateY(100%);
+  }
+
+  .checkmark {
+    position: absolute;
+    bottom: 100%;
+    opacity: 0;
+    transform: translateY(0);
+    transition: opacity .2s ease-out,transform .2s ease-out;
   }
 }
+
 
 .scroll-down {
   margin-bottom: 20px;
