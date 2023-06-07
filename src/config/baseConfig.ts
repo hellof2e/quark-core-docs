@@ -11,12 +11,12 @@ export default {
           {
             // name: "what is Quark？",
             name: "introduce",
-            cName: "quark 是什么？",
+            cName: "Quarkc 是什么？",
             show: true,
           },
           {
             name: "install",
-            cName: "安装 install",
+            cName: "安装 Install",
             show: true,
           },
         ],
@@ -27,37 +27,37 @@ export default {
         children: [
           {
             name: "defining",
-            cName: "自定义元素 defining",
+            cName: "自定义元素 Defining",
             show: true,
           },
           {
             name: "rendering",
-            cName: "渲染 rendering",
+            cName: "渲染 Rendering",
             show: true,
           },
           {
             name: "properties",
-            cName: "属性 properties",
+            cName: "属性 Properties",
             show: true,
           },
           {
             name: "styles",
-            cName: "样式 styles",
+            cName: "样式 Styles",
             show: true,
           },
           {
             name: "slot",
-            cName: "插槽 slot",
+            cName: "插槽 Slot",
             show: true,
           },
           {
             name: "lifecycle",
-            cName: "生命周期 lifecycle",
+            cName: "生命周期 Lifecycle",
             show: true,
           },
           {
             name: "events",
-            cName: "事件 events",
+            cName: "事件 Events",
             show: true,
           },
           {
@@ -73,20 +73,20 @@ export default {
         children: [
           {
             name: "requirements",
-            cName: "要求 requirements",
+            cName: "要求 Requirements",
             show: true,
           },
           {
             name: "development",
-            cName: "开发 development",
+            cName: "开发 Development",
           },
           {
             name: "testing",
-            cName: "测试 testing",
+            cName: "测试 Testing",
           },
           {
             name: "publishing",
-            cName: "发布 publishing",
+            cName: "发布 Publishing",
           },
         ],
       },
@@ -96,7 +96,7 @@ export default {
         children: [
           {
             name: "changelog",
-            cName: "更新日志 changelog",
+            cName: "更新日志 Changelog",
           },
         ],
       },
