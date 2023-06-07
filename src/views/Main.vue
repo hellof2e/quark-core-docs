@@ -319,7 +319,7 @@ export default defineComponent({
           document.querySelector("#scroll-down").style.opacity = 1;
         }
       });
-      intersectionObserver.observe(document.querySelector("#we-believe"));
+      intersectionObserver.observe(document.querySelector("#advantage"));
     });
 
     const handleTabSwitch = (tab) => {

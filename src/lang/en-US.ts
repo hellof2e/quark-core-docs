@@ -19,13 +19,13 @@ export default {
   whatWeDoDesc2:
     "This makes the front-end component library truly independent of the technology stack.",
   advantage: "Advantages",
-  box1Title: "Write less code",
+  box1Title: "Small Size",
   box1Desc:
     "The built components do not need to rely on third-party runtimes, and the average volume of each component is about 1kb ~ 2kb.",
   box2Title: "Browser native",
   box2Desc:
-    "Relying on Web components technology, quarkd can be used by any front-end framework.",
-  box3Title: "Stable version",
+    "Relying on Web components technology, components can be used by any front-end framework.",
+  box3Title: "Stable",
   box3Desc:
     "Unlike other third-party component building methods, Quark components do not rely on front-end frameworks, and do not need to be updated with technology stack updates.",
   whatDesc1:
