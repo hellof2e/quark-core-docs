@@ -5,14 +5,12 @@
     <section class="home-section">
       <div class="home-text">
         <div>
-          <a href="" target="_blank" rel="noopener" class="paragraph">
+          <!-- <a href="" target="_blank" rel="noopener" class="paragraph">
             <span class="pill-text">
               Quarkd is here!&nbsp;
-              <!-- <span> Read all about what’s new in latest major release </span> -->
             </span>
-
             <span class="link-btn">Read the Blog →</span>
-          </a>
+          </a> -->
 
           <div class="home-logo">
             <img src="/src/assets/images/quark-logo.png" alt="" />
