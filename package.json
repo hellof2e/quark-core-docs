@@ -13,8 +13,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "tsc && vite --force",
-    "build": "npm run quark-header-doc:update && vite build",
-    "quark-header-doc:update": "npm i quark-doc-header@latest",
+    "build": "npm run quark-doc-header:update && vite build",
+    "quark-doc-header:update": "npm i quark-doc-header@latest",
     "serve": "vite preview",
     "prepare": "husky install",
     "test": "jest",
