@@ -151,6 +151,15 @@ html.dark {
     color: var(--nav-link-color);
   }
 
+  .paragraph {
+    color: #e2e2e2;
+    opacity: .85;
+    transition: all .2s ease-out;
+    &:hover {
+      opacity: 1;
+      transition: all .2s ease-out;
+    }
+  }
 
   .install-btn {
     background: #000000;

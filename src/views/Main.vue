@@ -12,7 +12,7 @@
             class="paragraph"
           >
             <span class="pill-text"> Quarkd is here!&nbsp; </span>
-            <span class="link-btn">Read the Document →</span>
+            <span class="link-btn">Read the Doc →</span>
           </a>
 
           <div class="home-logo">
