@@ -192,66 +192,6 @@ npm start
         </p>
       </div>
     </section>
-
-    <section class="what-we-do" id="what-we-do">
-      <div class="wrap">
-        <h2>
-          {{ t("whatWeDo") }}
-          <img
-            v-if="darkMode"
-            class="down-icon"
-            alt="down-icon"
-            src="/src/assets/images/i-down.png"
-            height="34"
-            width="36"
-          />
-          <img
-            v-else
-            class="down-icon"
-            alt="down-icon"
-            src="/src/assets/images/i-down-light.png"
-            height="34"
-            width="36"
-          />
-        </h2>
-        <p>
-          {{ t("whatWeDoDesc1") }}
-        </p>
-        <p style="margin-top: 1.5rem">
-          {{ t("whatWeDoDesc2") }}
-        </p>
-
-        <div class="code-demo-tab-group">
-          <button
-            v-for="item in tabs"
-            :key="item"
-            @click="handleTabSwitch(item)"
-            :class="activeTab === item ? 'active-tab' : ''"
-          >
-            {{ item }}
-          </button>
-        </div>
-
-        <div class="code-demo-container">
-          <div class="code-demo relative">
-            <div>
-              <div class="editor-skin-header">
-                <div class="editor-skin-header-btn-group">
-                  <span class="editor-skin-header-btn red"></span>
-                  <span class="editor-skin-header-btn yellow"></span>
-                  <span class="editor-skin-header-btn green"></span>
-                </div>
-              </div>
-              <CodeDemo :tabName="activeTab" />
-            </div>
-
-            <div class="preview">
-              <quark-button size="big">Button</quark-button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
   <div class="footer-container">
