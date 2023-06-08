@@ -5,12 +5,15 @@
     <section class="home-section">
       <div class="home-text">
         <div>
-          <!-- <a href="" target="_blank" rel="noopener" class="paragraph">
-            <span class="pill-text">
-              Quarkd is here!&nbsp;
-            </span>
-            <span class="link-btn">Read the Blog →</span>
-          </a> -->
+          <a
+            href="https://github.com/hellof2e/quark-design#documentation"
+            target="_blank"
+            rel="noopener"
+            class="paragraph"
+          >
+            <span class="pill-text"> Quarkd is here!&nbsp; </span>
+            <span class="link-btn">Read the Document →</span>
+          </a>
 
           <div class="home-logo">
             <img src="/src/assets/images/quark-logo.png" alt="" />
