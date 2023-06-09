@@ -1,63 +1,58 @@
 ## Publishing
+
+> 推荐使用：https://github.com/hellof2e/quark-cli 生成项目
+
 当你使用 `quarkc` 编写完组件，就可以发布你自己的无框架组件啦。
-先根据 [Development](http://localhost:8080/workflow/development.html) 配置好你的打包工具，当然你也可以按照自己的需要修改打包配置。
 
-你的 package.json 文件 内容大致如下：
-```json
-{
-  "name": "xxx",
-  "version": "1.0.0",
-  "description": "Web components",
-  "main": "lib/index.js",
-  "module": "lib/index.js",
-  "files": [
-    "/lib",
-    "README.md",
-    "package.json"
-  ],
-  "scripts": {
-    "build": "rimraf lib && rollup -c"
-  },
-  "dependencies": {
-    "quarkc":"^1.0.4"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.5.5",
-    "@babel/core": "^7.5.5",
-    "@babel/plugin-proposal-decorators": "^7.16.5",
-    "@babel/plugin-transform-runtime": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "@babel/preset-typescript": "^7.16.5",
-    "@babel/runtime": "^7.5.5",
-    "@rollup/plugin-babel": "^5.3.0",
-    "@rollup/plugin-commonjs": "^21.0.0",
-    "@rollup/plugin-node-resolve": "^13.0.5",
-    "@rollup/plugin-typescript": "^8.3.0",
-    "@types/node": "^14.14.31",
-    "babel-loader": "^8.0.6",
-    "rollup-plugin-terser": "^7.0.2",
-    "typescript": "^4.1.5",
-    "rimraf": "3.0.2",
-    "rollup": "2.77.0",
-  },
-  "homepage": "https://xxx",
-  "repository": {
-    "type": "git",
-    "url": "xxxx"
-  },
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://registry.npmjs.org/"
-  },
-  "author": "",
-  "license": "ISC"
-}
+<br/>
 
-```
+quark-cli 生成的项目已经附带了打包配置，执行
 
-执行：
 ```shell
 npm run build
 ```
+即可。
 
-生成的打包产物在 lib 文件夹下，其中已包含 TypeScript 的类型声明。打包结束，就可以将你的 component 发布到 npm 啦。npm 发布相关可参考[链接](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry)。
+<br />
+
+生成的打包产物在 lib/ 文件夹下:
+
+```tree
+.
+├── types
+|     └── install.d.ts
+├── index.js
+├── index.umd.cjs
+└── style.css
+```
+
+### 发布到 npm
+
+打包结束，就可以将你的 component 发布到 npm ~
+
+<br />
+npm 发布相关可参考[链接](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry)。
+
+作为 node 包使用：
+```
+import "you-component"
+```
+
+作为 CDN 使用：
+
+```html
+<script src="https://unpkg.com/your-component/lib/index.js" />
+```
+
+### 直接项目中使用
+
+直接拷贝产物 `index.js` 到您的项目
+
+```js
+import "index.js"
+```
+
+### 相关案例
+
+使用 quarkc 构建的组件案例，供参考！
+https://github.com/hellof2e/quark#%E4%BC%98%E7%A7%80%E6%A1%88%E4%BE%8B
