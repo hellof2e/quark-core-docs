@@ -69,7 +69,7 @@
   }
 
   table {
-    width: 100%;
+    // width: 100%;
     margin-top: 12px;
     margin-bottom: 12px;
     font-size: 14px;
@@ -80,9 +80,9 @@
       font-weight: 600;
       text-align: left;
 
-      &:last-child {
-        padding-right: 0;
-      }
+      // &:last-child {
+      //   padding-right: 0;
+      // }
     }
 
     td {
@@ -102,9 +102,9 @@
         }
       }
 
-      &:last-child {
-        padding-right: 0;
-      }
+      // &:last-child {
+      //   padding-right: 0;
+      // }
     }
 
     em {

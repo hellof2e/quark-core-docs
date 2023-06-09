@@ -15,7 +15,7 @@ export default {
           },
           {
             name: "goalsAndObjectives",
-            cName: "目标和愿景",
+            cName: "目标",
             show: true,
           },
           {
@@ -73,7 +73,7 @@ export default {
       },
       {
         name: "workflow",
-        cName: "工作流",
+        cName: "组件发布",
         children: [
           {
             name: "requirements",
