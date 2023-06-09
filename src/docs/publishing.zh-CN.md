@@ -34,7 +34,8 @@ npm run build
 npm 发布相关可参考[链接](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry)。
 
 作为 node 包使用：
-```
+
+```js
 import "you-component"
 ```
 
