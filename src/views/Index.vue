@@ -1,5 +1,5 @@
 <template>
-  <quark-doc-header></quark-doc-header>
+  <quark-doc-header from="quarkc"></quark-doc-header>
 
   <section class="doc-section">
     <doc-nav />
