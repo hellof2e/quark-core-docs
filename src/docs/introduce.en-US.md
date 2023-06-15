@@ -4,7 +4,7 @@
     <img width="350" src="https://m.hellobike.com/resource/helloyun/13459/Dc16h_quarkc-dark.png?x-oss-process=image/quality,q_80">
   </a>
 </p>
-<h2 align="center"> Quark，构建下一代前端组件！ </h2>
+<h2 align="center"> Quarkc，构建下一代前端组件！ </h2>
 
 ### 介绍
 
