@@ -30,12 +30,13 @@ npm run build
 打包结束，就可以将你的 component 发布到 npm ~ npm 发布相关可参考 [npm Docs](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry)。
 
 
-作为 node 包使用：
+1、可以作为 node 包使用：
+
 ```js
 import "you-component"
 ```
 
-作为 CDN 使用：
+2、也可以采用 CDN 使用：
 
 ```html
 <script src="https://fastly.jsdelivr.net/npm/quarkc@latest"></script>
