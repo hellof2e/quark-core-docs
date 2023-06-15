@@ -90,7 +90,7 @@ export default {
           },
           {
             name: "publishing",
-            cName: "发布 Publishing",
+            cName: "发布 Publishing 🚀",
           },
         ],
       },
@@ -101,6 +101,10 @@ export default {
           {
             name: "changelog",
             cName: "更新日志 Changelog",
+          },
+          {
+            name: "example",
+            cName: "Quarkc 优秀示例",
           },
         ],
       },
