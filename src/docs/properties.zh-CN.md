@@ -36,6 +36,7 @@ export default class Count extends QuarkElement {
 ```html
 <quark-count count = "6" disabled />
 ```
+
 当 `count` 或者 `disabled` 属性变更后，组件将自动更新。
 
 - 由于 `HTML` 元素的属性只能是字符串，因此组件内部的属性需要正确标记类型，这样 `Quark` 底层会帮助做类型转换。
@@ -45,7 +46,7 @@ export default class Count extends QuarkElement {
 通过 `@state` 为你组件的内部状态增加响应式特性。
 
 ```tsx
-import { QuarkElement, customElement, property} from "quarkc";
+import { QuarkElement, customElement, state} from "quarkc";
 
 @customElement({ tag: "quark-count" })
 export default class Count extends QuarkElement {
@@ -63,15 +64,15 @@ export default class Count extends QuarkElement {
   }
 }
 ```
+
 点击按钮后，组件将自动更新。
-
-
 
 ### 高级技巧
 
 针对有些组件需要传递复杂数据类型的场景，可采用如下方式：
 
 组件内部暴露一个 `setColumns` 方法。
+
 ```tsx
 import { QuarkElement, customElement } from "quarkc";
 
@@ -102,6 +103,7 @@ export default QuarkCascadePicker;
 ```
 
 使用时，通过 `ref` 拿到组件的实例，然后调用暴露的 `setColumns` 方法即可完成复杂数据类型的传递。
+
 ```tsx
 export default () => {
   const pickerRef = useRef(null);
@@ -120,8 +122,5 @@ export default () => {
   );
 };
 ```
+
 [更多使用技巧参考](https://github.com/hellof2e/quark-design/blob/main/packages/quarkd/src/cascadepicker/index.tsx)
-
-
-
-
