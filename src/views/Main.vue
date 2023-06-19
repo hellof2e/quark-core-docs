@@ -1,18 +1,19 @@
 <template>
-  <quark-doc-header></quark-doc-header>
+  <quark-doc-header from="quarkc"></quark-doc-header>
 
   <main class="home-main">
     <section class="home-section">
       <div class="home-text">
         <div>
-          <!-- <a href="" target="_blank" rel="noopener" class="paragraph">
-            <span class="pill-text">
-              Quarkd is here!&nbsp;
-              <span> Read all about what’s new in latest major release </span>
-            </span>
-
-            <span class="link-btn">Read the Blog →</span>
-          </a> -->
+          <a
+            href="https://github.com/hellof2e/quark-design#documentation"
+            target="_blank"
+            rel="noopener"
+            class="paragraph"
+          >
+            <span class="pill-text"> Quarkd is here!&nbsp; </span>
+            <span class="link-btn">Read the Doc →</span>
+          </a>
 
           <div class="home-logo">
             <img src="/src/assets/images/quark-logo.png" alt="" />
@@ -191,66 +192,6 @@ npm start
         </p>
       </div>
     </section>
-
-    <section class="what-we-do" id="what-we-do">
-      <div class="wrap">
-        <h2>
-          {{ t("whatWeDo") }}
-          <img
-            v-if="darkMode"
-            class="down-icon"
-            alt="down-icon"
-            src="/src/assets/images/i-down.png"
-            height="34"
-            width="36"
-          />
-          <img
-            v-else
-            class="down-icon"
-            alt="down-icon"
-            src="/src/assets/images/i-down-light.png"
-            height="34"
-            width="36"
-          />
-        </h2>
-        <p>
-          {{ t("whatWeDoDesc1") }}
-        </p>
-        <p style="margin-top: 1.5rem">
-          {{ t("whatWeDoDesc2") }}
-        </p>
-
-        <div class="code-demo-tab-group">
-          <button
-            v-for="item in tabs"
-            :key="item"
-            @click="handleTabSwitch(item)"
-            :class="activeTab === item ? 'active-tab' : ''"
-          >
-            {{ item }}
-          </button>
-        </div>
-
-        <div class="code-demo-container">
-          <div class="code-demo relative">
-            <div>
-              <div class="editor-skin-header">
-                <div class="editor-skin-header-btn-group">
-                  <span class="editor-skin-header-btn red"></span>
-                  <span class="editor-skin-header-btn yellow"></span>
-                  <span class="editor-skin-header-btn green"></span>
-                </div>
-              </div>
-              <CodeDemo :tabName="activeTab" />
-            </div>
-
-            <div class="preview">
-              <quark-button size="big">Button</quark-button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
 
   <div class="footer-container">
@@ -273,16 +214,12 @@ import {
   onUnmounted,
 } from "vue";
 import { useI18n } from "vue-i18n";
-import CodeDemo from "./components/codedemo/index.vue";
 
 import "quarkd/lib/button";
-import "quark-doc-header/lib/index";
+import "quark-doc-header";
 
 export default defineComponent({
   name: "Main",
-  components: {
-    CodeDemo,
-  },
   setup() {
     const { t } = useI18n();
     let darkMode = ref(false);

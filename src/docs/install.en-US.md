@@ -39,7 +39,20 @@ export default class Count extends QuarkElement {
 
 开始使用：
 ```html
- <quark-count count="6"></quark-count>
+  <!-- 无框架 -->
+ <my-element count="count" />
+
+  <!-- vue -->
+  <my-element :count="count" />
+
+  <!-- react -->
+  <my-element count={count} />
+
+  <!-- svelte -->
+  <my-element {count} />
+
+  <!-- angular -->
+  <my-element [count]="count" />
 ```
 
 恭喜，你已经入门了！

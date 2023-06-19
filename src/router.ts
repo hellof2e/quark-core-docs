@@ -58,13 +58,13 @@ const routes: Array<RouteRecordRaw> = [
 ];
 
 // 404 路由
-// routes.push({
-//   name: "notFound",
-//   path: "/:path(.*)+",
-//   redirect: {
-//     name: "/",
-//   },
-// });
+routes.push({
+  name: "notFound",
+  path: "/:path(.*)+",
+  redirect: {
+    name: "/",
+  },
+});
 
 const router = createRouter({
   history: createWebHashHistory(),

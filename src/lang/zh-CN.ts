@@ -7,13 +7,9 @@ export default {
   whyQuark: "为什么选择 Quark？",
   scrollDown: "Scroll Down",
   weBelieve: "我们认为",
-  weBelieveDesc1: "组件库可以不用依赖技术框架而存在。",
-  weBelieveDesc2: "如果能做到这点，那么这个组件库可以穿越沉浮，历经长久!",
+  weBelieveDesc1: "组件可以不用依赖技术框架而存在。",
+  weBelieveDesc2: "如果能做到这点，那么这个组件可以穿越沉浮，历经长久!",
   weBelieveDesc3: "不用随着技术栈的更新而更新。",
-  whatWeDo: "我们做了什么",
-  whatWeDoDesc1:
-    "得益于 Web Components 在浏览器的原生支持特性，我们使用该技术开发了 Quark Design。",
-  whatWeDoDesc2: "这让前端组件库真正实现了「技术栈无关」。",
   advantage: "有什么优势",
   box1Title: "体积小",
   box1Desc:

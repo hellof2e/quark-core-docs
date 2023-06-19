@@ -13,11 +13,6 @@ export default {
     "If this can be done, then the component library can go through ups anddowns and go through a long period of time!",
   weBelieveDesc3:
     "It does not need to be updated with the update of the technology stack.",
-  whatWeDo: "WHAT WE DO",
-  whatWeDoDesc1:
-    "Benefiting from the native support of web components in browsers, we developed Quark Design using this technology.",
-  whatWeDoDesc2:
-    "This makes the front-end component library truly independent of the technology stack.",
   advantage: "Advantages",
   box1Title: "Small Size",
   box1Desc:

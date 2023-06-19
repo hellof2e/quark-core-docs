@@ -1,5 +1,5 @@
 <template>
-  <quark-doc-header></quark-doc-header>
+  <quark-doc-header from="quarkc"></quark-doc-header>
 
   <section class="doc-section">
     <doc-nav />
@@ -12,7 +12,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import Nav from "@/components/Nav.vue";
-import "quark-doc-header/lib/index";
+import "quark-doc-header";
 
 export default defineComponent({
   name: "doc",
