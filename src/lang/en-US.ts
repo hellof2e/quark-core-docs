@@ -10,7 +10,7 @@ export default {
   weBelieveDesc1:
     "The component library can exist without relying on the technical framework.",
   weBelieveDesc2:
-    "If this can be done, then the component library can go through ups anddowns and go through a long period of time!",
+    "If this can be done, then the component library can go through ups and downs and go through a long period of time!",
   weBelieveDesc3:
     "It does not need to be updated with the update of the technology stack.",
   advantage: "Advantages",
