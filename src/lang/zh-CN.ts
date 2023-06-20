@@ -24,4 +24,6 @@ export default {
   whatDesc2:
     "传统组件框架如 Antd 和 Vant 等在浏览器中需要做大量的工作，而 Quark 将这些工作放到构建应用程序的编译阶段来处理。",
   whatDesc3: "组件的数据修改由浏览器自身 API 处理，更简单，更高效！",
+  readPage: "阅读此篇",
+  knowMore: "了解更多信息。",
 };

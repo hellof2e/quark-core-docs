@@ -141,8 +141,10 @@
             <!-- <p>{{ t("whatDesc2") }}</p>
             <p>{{ t("whatDesc3") }}</p> -->
             <p>
-              <a href="/#/zh-CN/docs/introduce" target="_blank">阅读此篇</a>
-              了解更多信息。
+              <a href="/#/zh-CN/docs/introduce" target="_blank">{{
+                t("readPage")
+              }}</a>
+              {{ t("knowMore") }}
             </p>
           </div>
           <div class="how">
@@ -197,7 +199,7 @@ npm start
   <div class="footer-container">
     <footer>
       <div class="text-xs text-gray-400">
-        A project by <a href="/"> Quark Labs</a>
+        Powered by <a href="/"> Quark Labs</a>
       </div>
     </footer>
   </div>

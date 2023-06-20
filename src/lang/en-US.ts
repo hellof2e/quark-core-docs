@@ -14,13 +14,13 @@ export default {
   weBelieveDesc3:
     "It does not need to be updated with the update of the technology stack.",
   advantage: "Advantages",
-  box1Title: "Small Size",
+  box1Title: "Small size",
   box1Desc:
     "The built components do not need to rely on third-party runtimes, and the average volume of each component is about 1kb ~ 2kb.",
   box2Title: "Browser native",
   box2Desc:
     "Relying on Web components technology, components can be used by any front-end framework.",
-  box3Title: "Face the future",
+  box3Title: "Future oriented",
   box3Desc:
     "Unlike other third-party component building methods, Quark components do not rely on front-end frameworks, and do not need to be updated with technology stack updates.",
   whatDesc1:
@@ -29,4 +29,6 @@ export default {
     "The data modification of the component is handled by the browser's own API, which is simpler and more efficient!",
   whatDesc3:
     "Component data modification is handled by the browser's own API, which is simpler and more efficient!",
+  readPage: "Read this article",
+  knowMore: "to learn more.",
 };
