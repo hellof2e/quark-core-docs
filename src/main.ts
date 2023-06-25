@@ -12,9 +12,9 @@ import "@/assets/styles/md-style.scss";
 import "@/assets/styles/theme.scss";
 
 // 默认中文
-if (localStorage.getItem("language") === null) {
-  localStorage.setItem("language", "en-US");
-}
+// if (localStorage.getItem("language") === null) {
+//   localStorage.setItem("language", "en-US");
+// }
 
 const app = createApp(App);
 
