@@ -27,7 +27,7 @@
     "@codemirror/theme-one-dark": "^6.0.0",
     "@docsearch/js": "^3.3.3",
     "codemirror": "^6.0.1",
-    "quark-doc-header": "^0.3.24",
+    "quark-doc-header": "^0.3.25",
     "quarkd": "^1.0.59",
     "sass": "~1.32.0",
     "vue-codemirror": "^6.0.2",
