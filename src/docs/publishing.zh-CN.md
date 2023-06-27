@@ -25,11 +25,19 @@ npm run build
 └── index.umd.js
 ```
 
+### 直接项目中使用
+
+直接拷贝产物 `index.js` 到您的项目，然后直接按照路径导入即可使用。
+
+```js
+import "your-component/lib"
+```
+
 ### 发布到 Npm 平台
 
-打包结束，就可以将你的 component 发布到 npm ~ npm 发布相关可参考 [npm Docs](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry)。
+或者，打包结束，也可将你的产物发布到 npm。[npm Docs](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry)。
 
-1、可以作为 node 包使用：
+1、作为 npm 包使用：
 
 ```js
 import "you-component"
@@ -42,13 +50,6 @@ import "you-component"
 <script src="https://fastly.jsdelivr.net/npm/your-published-component@latest"></script>
 ```
 
-### 直接项目中使用
-
-直接拷贝产物 `index.js` 到您的项目，然后直接按照路径导入即可
-
-```js
-import "your-component/lib"
-```
 
 ### 优秀案例
 
