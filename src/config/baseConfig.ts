@@ -90,7 +90,7 @@ export default {
           },
           {
             name: "publishing",
-            cName: "发布 Publishing 🚀",
+            cName: "使用/发布 Publishing 🚀",
           },
         ],
       },
