@@ -1,6 +1,6 @@
 export default {
   homeTitle: "Quarkc, born for cross technology stack!",
-  homeSubtitle2: "It can be run on",
+  homeSubtitle2: "Components can be run on",
   getStarted: "Get Started",
   getStartedQuarkc: "Build your component",
   getStartedQuarkd: "Components Docs",

@@ -1,6 +1,6 @@
 export default {
   homeTitle: "Quarkc，为跨技术栈而生！",
-  homeSubtitle2: "它可以被运行在",
+  homeSubtitle2: "组件可以被运行在",
   getStarted: "Get Started",
   getStartedQuarkc: "构建你的 Web 组件",
   getStartedQuarkd: "组件库文档",
