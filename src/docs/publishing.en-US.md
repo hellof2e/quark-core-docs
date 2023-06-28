@@ -30,7 +30,7 @@ npm run build
 直接拷贝产物 `index.js` 到您的项目，然后直接按照路径导入即可使用。
 
 ```js
-import "your-component/lib"
+import "your-component"
 ```
 
 ### 发布到 Npm 平台

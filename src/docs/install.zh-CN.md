@@ -1,7 +1,8 @@
 ## 安装
 
-```bash
+```js
 npx create-quark-app create project-name
+// 选择 component
 ```
 
 ## 启动项目
@@ -12,7 +13,7 @@ npm run dev
 
 ### 快速开始
 
-自定义元素：
+#### 创建组件（元素）
 
 ```tsx
 import { QuarkElement, property, customElement } from "quarkc";
@@ -34,6 +35,41 @@ export default class Count extends QuarkElement {
     );
   }
 }
+```
+
+#### 构建
+
+```js
+npm run build
+```
+
+生成的打包产物在 lib/ 文件夹下:
+
+```tree
+.
+├── types
+|     └── install.d.ts
+├── index.js
+└── index.umd.js
+```
+
+#### 使用
+
+产物可以直接被任何前端项目使用
+
+```js
+import "path/lib/your-component"
+```
+
+或发布到 npm：
+```js
+import "your-component"
+```
+
+或使用 CDN：
+```js
+<script src="https://fastly.jsdelivr.net/npm/quarkc@latest"></script>
+<script src="https://fastly.jsdelivr.net/npm/your-published-component@latest"></script>
 ```
 
 开始使用：
