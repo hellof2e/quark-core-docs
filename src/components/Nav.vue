@@ -38,7 +38,6 @@ export default defineComponent({
 .doc-nav {
   overflow: auto;
   transition: all 150ms;
-  padding: 32px 32px 0;
 
   h2 {
     color: #213547;
