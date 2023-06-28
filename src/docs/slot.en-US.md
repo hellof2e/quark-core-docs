@@ -51,7 +51,7 @@ export default class Count extends QuarkElement {
   slotRef = createRef()
   onSlotChange = () => {
   // 此处已获取到 slot 的 dom 实例。
-  const { current } = this.ref
+  const { current } = this.slotRef
   }
   render() {
     return (
