@@ -40,7 +40,7 @@ export default class Count extends QuarkElement {
 当 `count` 或者 `disabled` 属性变更后，组件将自动更新。
 
 - 由于 `HTML` 元素的属性只能是字符串，因此组件内部的属性需要正确标记类型，这样 `Quark` 底层会帮助做类型转换。
-
+- 由于 `HTML` 元素的属性是大小写不敏感的，因此组件内部的属性统一使用单词拼接方式如：`righttext`。
 ### State
 
 通过 `@state` 为你组件的内部状态增加响应式特性。

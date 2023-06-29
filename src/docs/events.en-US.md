@@ -54,11 +54,12 @@ export default class Input extends QuarkElement {
 然后在你的自定义元素上绑定事件：
 ```tsx
 /**Vue中*/
-<quark-input @input="this.onInput"/>
+<quark-input @input="this.onInput" id="quark-input"/>
 ```
 或者
 ```tsx
 /**其它任何框架或者无框架中*/
+const myInputElement = document.getElementById("quark-input");
 myInputElement.addEventListener('input', (evt) => {})
 ```
  通过 `this.$emit` 触发自定义事件，`emit` 的第一个参数为事件名，第二个参数为传递的参数。可通过 `evt.detail` 获取到传递的数据。
