@@ -2,7 +2,7 @@
 ### 原生事件
 通过 `onXXX` 的方式监听原生事件。
 
-```jsx
+```tsx
 import { QuarkElement, customElement } from "quarkc"
 
 @customElement({ tag: "quark-input", style })
