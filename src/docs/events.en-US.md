@@ -1,7 +1,8 @@
 ## Events
 ### 原生事件
 通过 `onXXX` 的方式监听原生事件。
-```tsx
+
+```jsx
 import { QuarkElement, customElement } from "quarkc"
 
 @customElement({ tag: "quark-input", style })
@@ -19,9 +20,9 @@ export default class Input extends QuarkElement {
                 <button onClick={this.onClick}>Click</button>
                 <input onInput={this.onInput}></input>
             </div>
-            
+
         );
-  } 
+  }
 }
 ```
 
@@ -45,9 +46,9 @@ export default class Input extends QuarkElement {
             <div>
                 <input onInput={this.onInput}></input>
             </div>
-            
+
         );
-  } 
+  }
 }
 ```
 
