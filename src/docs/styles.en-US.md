@@ -1,7 +1,7 @@
 ## Styles
 
 ### 独立 css 文件方式
-`Quark` 支持独立 `css` 文件的方式开发组件，只需要在 `@customElement` 传入 `style` 即可。
+`Quarkc` 支持独立 `css` 文件的方式开发组件，只需要在 `@customElement` 传入 `style` 即可。
 
 ```tsx
 import { QuarkElement, customElement, property } from "quarkc"

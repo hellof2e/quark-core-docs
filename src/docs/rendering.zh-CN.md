@@ -13,7 +13,7 @@ export default class Count extends QuarkElement {
 }
 ```
 
-`Quark` 使用 `tsx` 来作为 `UI` 表达式，因此 `render` 函数内可以包含任何 `tsx` 语法,如条件渲染、三目运算符等。你可以像写 `React` 组件一样，写 `Quark` 组件。
+`Quarkc` 使用 `tsx` 来作为 `UI` 表达式，因此 `render` 函数内可以包含任何 `tsx` 语法,如条件渲染、三目运算符等。你可以像写 `React` 组件一样，写 `Quarkc` 组件。
 
 条件渲染：
 ```tsx
