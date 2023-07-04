@@ -12,12 +12,11 @@ Web componnets 的浏览器 & 移动端兼容情况如下表：
 | 浏览器              | 版本             |
 | ------------------ | ---------------- |
 | Chrome              | >= 67         |
-| Safari            | >= 10         |
+| Safari            | >= 10.1         |
 | Firefox         | >= 63         |
-| Edge "classic"      | > 18     |
-| Internet Explorer    | 11 |
+| Edge "Chromium"      | >= 79     |
 
 | OS             | 版本             |
 | ------------------ | ---------------- |
-| iOS              | >= 10         |
+| iOS              | >= 10.3         |
 | Android            | >= 7         |
