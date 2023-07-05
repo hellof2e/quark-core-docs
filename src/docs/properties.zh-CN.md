@@ -2,7 +2,7 @@
 
 ### Props
 
-通过 `@property` 为你的组件属性增加响应式特性，`@property` 支持通过参数来标注类型。
+通过 `@property` 为你的组件属性增加响应式特性，`@property` 支持通过参数 `type` 来标注属性类型,通过参数 `attribute` 来标记属性名
 
 ```tsx
 import { QuarkElement, customElement, property} from "quarkc";
@@ -11,13 +11,17 @@ import { QuarkElement, customElement, property} from "quarkc";
 export default class Count extends QuarkElement {
   @property({
     type: Number,
+    attribute: 'count-number'
   })
-  count = 0
+  countNumber = 0
 
   @property({
     type: Boolean,
   })
   disabled = false
+
+  @property()
+  text = ''
 
   click = () => {
     if(!disabled) {
@@ -27,20 +31,45 @@ export default class Count extends QuarkElement {
 
   render() {
     return (
-      <button onClick={this.click}>{count}</button>
+      <>
+      <button onClick={this.click}>{this.countNumber}</button>
+      <span>{this.text}</span>
+      </>
     );
   }
 }
 ```
 
 ```html
-<quark-count count = "6" disabled />
+<quark-count count-number="6" text="我是 Quark 计算器" disabled/>
 ```
 
-当 `count` 或者 `disabled` 属性变更后，组件将自动更新。
+当 `count-number`、`text` 或者 `disabled` 属性变更后，组件将自动更新。
 
-- 由于 `HTML` 元素的属性只能是字符串，因此组件内部的属性需要正确标记类型，这样 `Quark` 底层会帮助做类型转换。
-- 由于 `HTML` 元素的属性是大小写不敏感的，因此组件内部的属性统一使用单词拼接方式如：`righttext`。
+- 由于 `HTML` 元素的属性只能是字符串，因此组件内部的属性需要正确标记类型，这样 `Quark` 底层会帮助做类型转换，默认 String 类型
+
+
+由于 `HTML` 元素的属性是大小写不敏感的，Quarkc 支持以下两种方式来书写组件属性
+
+第一种方式：通过 attribute 来标记属性名
+```tsx
+  @property({
+    attribute: 'count-number' // 标记属性名
+  })
+  countNumber = 0 // 组件内部仍可以采用驼峰命名
+
+  // 使用时通过 count-number 传递属性
+  <quark-count count-number="6" />
+```
+
+第二种方式：采用单词拼接方式
+```tsx
+  @property()
+  countnumber = 0 // 组件内部属性采用单词拼接，不可使用驼峰
+
+  // 使用时通过 countnumber 传递属性，即跟组件内部属性变量名保持一致
+  <quark-count countnumber="6" />
+```
 ### State
 
 通过 `@state` 为你组件的内部状态增加响应式特性。
