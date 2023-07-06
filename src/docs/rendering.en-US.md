@@ -1,21 +1,33 @@
 ## Rendering
+
 为你的自定义元素添加一个 `render` 方法。
+
 ```tsx
 import { QuarkElement, customElement } from "quarkc"
 
+import './my-header.js'
+import './my-body.js'
+import './my-footer.js'
+
 @customElement({ tag: "quark-count" })
 class Count extends QuarkElement {
-   render() {
-     return (
-        <button>Count</button>
-     );
+  render() {
+    return (
+      <>
+        <h1>Welcome to Quarkc！</h1>
+
+        <my-header></my-header>
+        <my-body></my-body>
+        <my-footer></my-footer>
+      </>
+    );
   }
 }
 ```
 
 `Quarkc` 使用 `tsx/jsx` 来作为 `UI` 表达式，因此 `render` 函数内可以包含任何 `tsx/jsx` 语法,如条件渲染、三目运算符等。你可以像写 `React` 组件一样，写 `Quarkc` 组件。
 
-条件渲染：
+### 条件渲染
 ```tsx
 import { QuarkElement, customElement } from "quarkc"
 
@@ -41,7 +53,7 @@ class MyElement extends QuarkElement {
 }
 ```
 
-三目运算符：
+### 三目运算符
 ```tsx
 import { QuarkElement, customElement } from "quarkc"
 
@@ -57,7 +69,8 @@ class MyCount extends QuarkElement {
 }
 ```
 
-列表渲染：
+### 列表渲染
+
 ```tsx
 import { QuarkElement, customElement } from "quarkc"
 
@@ -79,4 +92,3 @@ class MyCount extends QuarkElement {
   }
 }
 ```
-等...
