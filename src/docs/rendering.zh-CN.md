@@ -89,4 +89,3 @@ class MyCount extends QuarkElement {
   }
 }
 ```
-等...
