@@ -16,7 +16,7 @@ class Text extends QuarkElement {
   render() {
     return (
       <div>{ this.text }</div>
-    );
+    )
   }
 }
 ```

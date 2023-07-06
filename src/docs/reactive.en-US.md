@@ -39,12 +39,12 @@ class Count extends QuarkElement {
 ```js
 @customElement({ tag: "quark-count" })
 class Count extends QuarkElement {
-  #height = 0;
-  #width;
+  #height = 0
+  #width
 
   constructor(height, width) {
-    this.#height = height;
-    this.#width = width;
+    this.#height = height
+    this.#width = width
   }
 
   render() {/**/}
@@ -91,7 +91,7 @@ class Count extends QuarkElement {
       <button onClick={this.click}>{this.countNumber}</button>
       <span>{this.text}</span>
       </>
-    );
+    )
   }
 }
 ```
@@ -139,20 +139,18 @@ import { QuarkElement, customElement } from "quarkc"
 
 @customElement({tag: "my-picker"})
 class MyPicker extends QuarkElement {
-  data = [];
+  data = []
 
   setData(data) {
-    this.data = data;
+    this.data = data
   }
 
   render() {
     return (
       /***/
-    );
+    )
   }
 }
-
-MyPicker;
 ```
 
 使用时，通过 `ref` 拿到组件的实例，然后调用暴露的 `setData` 方法即可完成复杂数据类型的传递。
@@ -160,16 +158,16 @@ MyPicker;
 ```tsx
 // React 示例：
 () => {
-  const pickerRef = useRef(null);
+  const pickerRef = useRef(null)
 
   useEffect(() => {
 
-    pickerRef.current.setData([]);
+    pickerRef.current.setData([])
 
-  }, []);
+  }, [])
 
   return <my-picker ref={pickerRef} />
-};
+}
 ```
 
 [更多使用技巧参考](https://github.com/hellof2e/quark-design/blob/main/packages/quarkd/src/cascadepicker/index.tsx)

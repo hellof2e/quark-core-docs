@@ -2,7 +2,7 @@
 自定义一个继承自 `QuarkElement` 的类， 然后使用 `@customElement` 装饰器修饰。
 
 ```tsx
-import { QuarkElement, customElement } from "quarkc";
+import { QuarkElement, customElement } from "quarkc"
 
 @customElement({ tag: "quark-count" })
 class Count extends QuarkElement {/***/}
@@ -28,5 +28,5 @@ import 'my-component'  // ☑️
 ```
 或者用 JS 的方式创建这个元素（组件）。
 ```tsx
-const count = document.createElement('quark-count');
+const count = document.createElement('quark-count')
 ```

@@ -20,7 +20,7 @@ class Count extends QuarkElement {
         <my-body></my-body>
         <my-footer></my-footer>
       </>
-    );
+    )
   }
 }
 ```
@@ -48,7 +48,7 @@ class MyElement extends QuarkElement {
       <>
         { this.renderNode() }
       </>
-    );
+    )
   }
 }
 ```
@@ -64,7 +64,7 @@ class MyCount extends QuarkElement {
   render() {
     return (
       <div>{this.count > 0 ? "More" : "Less"}</div>
-    );
+    )
   }
 }
 ```
@@ -88,7 +88,7 @@ class MyCount extends QuarkElement {
           })
         }
       </div>
-    );
+    )
   }
 }
 ```

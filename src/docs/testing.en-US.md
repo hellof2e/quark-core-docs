@@ -5,45 +5,49 @@
 以一个 button 组件为例：
 
 ```tsx
-import { QuarkElement, property } from "quarkc";
-import style from "./style.css";
+import { QuarkElement, property } from "quarkc"
+import style from "./style.css"
 
 @customElement({ tag: "quark-button", style })
 class QuarkButton extends QuarkElement {
   @property()
-  type = "primary";
+  type = "primary"
 
   render() {
     return (
       <div class="quark-button">
         <slot></slot>
       </div>
-    );
+    )
   }
 }
 ```
 
 其单测用例如下：
 ```tsx
-import { expect, fixture } from "@open-wc/testing";
-import "quarkd/lib/button";
-import sinon from "sinon";
+import { expect, fixture } from "@open-wc/testing"
+import sinon from "sinon"
+import "path/your-button-path"
 
 const data = {
   type: "primary",
-};
-let el;
+}
+let el
 
-describe("<quark-button>", async () => {
+describe("<your-button>", async () => {
+
   it("type attribute", async () => {
     el = await fixture(
-      `<quark-button type=${data.type}>
+      `<your-button type=${data.type}>
           ${data.slotText}
-        </quark-button>`
-    );
-    expect(el.type).to.equal(data.type);
-  });
-});
+        </your-button>`
+    )
+
+    expect(el.type).to.equal(data.type)
+
+  })
+
+})
 
 
 ```

@@ -1,32 +1,22 @@
 ## Styles
 
 ### 独立 css 文件方式
+
 `Quarkc` 支持独立 `css` 文件的方式开发组件，只需要在 `@customElement` 传入 `style` 即可。
 
 ```tsx
 import { QuarkElement, customElement, property } from "quarkc"
 import style from './index.css'
 
-@customElement({ tag: "quark-count", style })
-class Count extends QuarkElement {
-  @property({
-    type: Boolean,
-  })
-  disabled = false
-
-  render() {
-    return (
-      <button class="quark_count_button">Click</button>
-    );
-  }
+@customElement({ tag: "my-element", style })
+class MyElement extends QuarkElement {
+  // ...
 }
 ```
 
-```css
-/*
-* index.css
-*/
+index.css：
 
+```css
 :host .quark_count_button {
   display: flex;
   justify-content: center;
@@ -35,6 +25,7 @@ class Count extends QuarkElement {
   height: 100%;
   cursor: unset;
 }
+
 :host([disabled]) {
   cursor: not-allowed;
   opacity: 0.68;
@@ -54,16 +45,13 @@ import style from './index.css'
 
 @customElement({ tag: "quark-count", style })
 class Count extends QuarkElement {
-  @property({
-    type: Boolean,
-  })
-  disabled = false
 
   render() {
     const style = {
       width: "100%",
       marginTop: "10px"
     }
+
     return (
       <button style={style}>Click</button>
     );
@@ -74,16 +62,17 @@ class Count extends QuarkElement {
 推荐使用独立 `css` 文件的方式来开发。
 
 ### 主题
-可以使用 `css` [自定义属性](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)的方式来自定义主题。
-```css
-/*
-* index.css
-*/
 
+可以使用 `css` [自定义属性](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)的方式来自定义主题。
+
+index.css：
+
+```css
 :host .quark_count_button {
-  color: var(--quark-primary-color, red);
+  color: var(--your-primary-color, red);
 }
+
 :host([disabled]) {
-  color: var(--quark-disable-color, gray);
+  color: var(--your-disable-color, gray);
 }
 ```

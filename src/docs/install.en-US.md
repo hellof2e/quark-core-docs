@@ -16,23 +16,23 @@ npm run dev
 #### 创建组件（元素）
 
 ```tsx
-import { QuarkElement, property, customElement } from "quarkc";
+import { QuarkElement, property, customElement } from "quarkc"
 
 @customElement({ tag: "quark-count" })
 class Count extends QuarkElement {
   @property({
     type: Number
   })
-  count: number = 0;
+  count: number = 0
 
   add = () => {
-    this.count += 1;
+    this.count += 1
   }
 
   render() {
     return (
-        <button onClick={this.add}>count is: { this.count}</button>
-    );
+      <button onClick={this.add}>count is: { this.count}</button>
+    )
   }
 }
 ```

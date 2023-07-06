@@ -14,8 +14,12 @@
 
 ```tsx
 
-import { QuarkElement, property, state, customElement } from "quarkc";
-import style from "./style.css";
+import { QuarkElement,
+  property,
+  state
+  customElement
+} from "quarkc"
+import style from "./style.css"
 
 @customElement({
   tag: "quark-count",
@@ -29,19 +33,15 @@ class QuarkCount extends QuarkElement {
     this.interval = setInterval(() => this.tick(), 1000)
   }
 
-  shouldComponentUpdate(
-    propName: string,
-    oldValue: string | boolean,
-    newValue: string | boolean
-  ): boolean {
+  shouldComponentUpdate(propName, oldValue, newValue) {
     if (propName === "xxx") {
       // 阻止更新
       return false
     }
-    return true;
+    return true
   }
 
-  componentDidUpdate(propName: string, oldValue: string, newValue: string) {
+  componentDidUpdate(propName, oldValue, newValue) {
     // 已更新
   }
 
@@ -50,14 +50,15 @@ class QuarkCount extends QuarkElement {
     clearInterval(this.interval)
   }
 
-  tick() {
+  // 自定义事件建议使用箭头函数
+  tick = () => {
     this.count++
   }
 
   render() {
     return (
      <div>{this.count}</div>
-    );
+    )
   }
 }
 

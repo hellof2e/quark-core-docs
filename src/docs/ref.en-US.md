@@ -1,42 +1,34 @@
+
 ## Ref
+
 通过 `ref` 获取 `dom` 节点实例。
+
 ```tsx
-import { QuarkElement,
-  customElement,
-  property,
-  state,
-  createRef,
-} from "quarkc";
-import style from "./style.css";
+import { QuarkElement, customElement, property, state, createRef } from "quarkc"
+import style from "./style.css"
 
-@customElement({
-  tag: "quark-badge",
-  style,
-})
-class QuarkBadge extends QuarkElement {
+@customElement({ tag: "my-element", style })
+class MyComponent extends QuarkElement {
 
-  inputRef: any = createRef();
+  inputRef: any = createRef()
 
-  componentDidMount() {
-    this.firstUpdated();
-  }
-
-  firstUpdated() {
-    this.inputRef.current?.focus();
+  handleFocus = () => {
+    this.inputRef.current.focus() // 点击手动聚焦 input 框
   }
 
   render() {
     return (
       <div>
         <input ref={this.inputRef}></input>
+        <button onClick={this.handleFocus}>自己输入框聚焦</button>
       </div>
-    );
+    )
   }
 }
-
-QuarkBadge;
 ```
+
 
 好了，至此您已经学完了有关于 Quarkc 的相关用法。赶紧去试一试吧～
 
-[优秀案例参考](#/en-US/docs/example)
+
+[优秀案例参考](#/zh-CN/docs/example)
