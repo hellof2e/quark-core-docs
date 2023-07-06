@@ -1,8 +1,62 @@
-## Reactive properties
+## Reactive
 
-### 响应式属性 Props
+响应式状态。
 
-通过 `@property` 装饰器可以为你的组件属性增加响应式属性，`@property` 支持通过参数 `type` 来标注属性类型,通过参数 `attribute` 来标记属性名
+## 内部状态 State
+
+组件内部 **响应式数据**。
+
+<br />
+
+通过 `@state` 为你组件的内部状态增加响应式特性。
+
+```tsx
+import { QuarkElement, customElement, state} from "quarkc"
+
+@customElement({ tag: "quark-count" })
+export default class Count extends QuarkElement {
+  @state()
+  count = 0
+
+  click = () => {
+    this.count += 1
+  }
+
+  render() {
+    return (
+      <button onClick={this.click}>{count}</button>
+    )
+  }
+}
+```
+
+点击按钮后，组件将自动更新。
+
+当你不需要响应式变量的时候，也可以直接使用 [ES6 中的 Class 类的私有变量](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Classes)。示例：
+
+```js
+@customElement({ tag: "quark-count" })
+export default class Count extends QuarkElement {
+  #height = 0;
+  #width;
+
+  constructor(height, width) {
+    this.#height = height;
+    this.#width = width;
+  }
+
+  render() {/**/}
+}
+```
+
+
+## 外部状态 Props
+
+组件通过属性从外部传入的 **响应式数据**。
+
+<br />
+
+通过 `@property` 装饰器可以为你的组件属性增加响应式属性，`@property` 支持通过参数 `type` 来标注属性类型，通过参数 `attribute` 来标记属性名
 
 ```tsx
 import { QuarkElement, customElement, property} from "quarkc"
@@ -71,31 +125,6 @@ export default class Count extends QuarkElement {
   <quark-count countnumber="6" />
 ```
 
-### State
-
-通过 `@state` 为你组件的内部状态增加响应式特性。
-
-```tsx
-import { QuarkElement, customElement, state} from "quarkc"
-
-@customElement({ tag: "quark-count" })
-export default class Count extends QuarkElement {
-  @state()
-  count = 0
-
-  click = () => {
-    this.count += 1
-  }
-
-  render() {
-    return (
-      <button onClick={this.click}>{count}</button>
-    )
-  }
-}
-```
-
-点击按钮后，组件将自动更新。
 
 ### 高级技巧
 

@@ -40,8 +40,8 @@ export default {
             show: true,
           },
           {
-            name: "properties",
-            cName: "属性 Properties",
+            name: "Reactive",
+            cName: "响应式状态 State/Property",
             show: true,
           },
           {
@@ -67,6 +67,11 @@ export default {
           {
             name: "ref",
             cName: "引用 Ref",
+            show: true,
+          },
+          {
+            name: "unsafeHTML",
+            cName: "HTML 字符串",
             show: true,
           },
         ],

@@ -13,28 +13,30 @@ export default class Count extends QuarkElement {
 }
 ```
 
-`Quarkc` 使用 `tsx` 来作为 `UI` 表达式，因此 `render` 函数内可以包含任何 `tsx` 语法,如条件渲染、三目运算符等。你可以像写 `React` 组件一样，写 `Quarkc` 组件。
+`Quarkc` 使用 `tsx/jsx` 来作为 `UI` 表达式，因此 `render` 函数内可以包含任何 `tsx/jsx` 语法,如条件渲染、三目运算符等。你可以像写 `React` 组件一样，写 `Quarkc` 组件。
 
 条件渲染：
 ```tsx
 import { QuarkElement, customElement } from "quarkc"
 
-@customElement({ tag: "quark-count" })
-export default class Count extends QuarkElement {
-   count = 0
+@customElement({ tag: "my-element" })
+export default class MyElement extends QuarkElement {
+  isShow = false // class 写法，内部私有变量，不属于 state/property（无响应式）
 
-   renderItem = () => {
-     if (this.count > 0) {
-        return <div>{this.count}</div>
-     }
-     return null
-   }
+  renderNode = () => {
+    if(isShow) {
+      return <div>Render it</div>
+    }
 
-   render() {
-     return (
-        <button>Click</button>
-        {this.renderItem()}
-     );
+    return null
+  }
+
+  render() {
+    return (
+      <>
+        { this.renderNode() }
+      </>
+    );
   }
 }
 ```
@@ -43,14 +45,14 @@ export default class Count extends QuarkElement {
 ```tsx
 import { QuarkElement, customElement } from "quarkc"
 
-@customElement({ tag: "quark-count" })
-export default class Count extends QuarkElement {
-   count = 0
+@customElement({ tag: "my-count" })
+export default class MyCount extends QuarkElement {
+  count = 0
 
-   render() {
-     return (
-        <div>{this.count > 0 ? "More" : "Less"}</div>
-     );
+  render() {
+    return (
+      <div>{this.count > 0 ? "More" : "Less"}</div>
+    );
   }
 }
 ```
@@ -59,21 +61,21 @@ export default class Count extends QuarkElement {
 ```tsx
 import { QuarkElement, customElement } from "quarkc"
 
-@customElement({ tag: "quark-count" })
-export default class Count extends QuarkElement {
+@customElement({ tag: "my-count" })
+export default class MyCount extends QuarkElement {
 
-   list = [{key: 1, value: 1}, {key: 2, value: 2},{key: 3, value: 3}]
+  list = [{key: 1, value: 1}, {key: 2, value: 2},{key: 3, value: 3}]
 
-   render() {
-     return (
-        <div>
-          {
-            this.list.map((item) => {
-                return <div key={item.key}>{item.value}</div>
-            })
-          }
-        </div>
-     );
+  render() {
+    return (
+      <div>
+        {
+          this.list.map((item) => {
+            return <div key={item.key}>{item.value}</div>
+          })
+        }
+      </div>
+    );
   }
 }
 ```
