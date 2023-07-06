@@ -71,7 +71,7 @@ export default {
           },
           {
             name: "unsafeHTML",
-            cName: "HTML 字符串",
+            cName: "危险HTML Unsafe HTML",
             show: true,
           },
         ],
