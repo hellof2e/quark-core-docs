@@ -32,6 +32,8 @@ export default class Count extends QuarkElement {
 
 点击按钮后，组件将自动更新。
 
+### 内部不需要响应式？
+
 当你不需要响应式变量的时候，也可以直接使用 [ES6 中的 Class 类的私有变量](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Classes)。示例：
 
 ```js
