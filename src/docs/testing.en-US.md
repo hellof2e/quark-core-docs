@@ -9,7 +9,7 @@ import { QuarkElement, property } from "quarkc";
 import style from "./style.css";
 
 @customElement({ tag: "quark-button", style })
-export default class QuarkButton extends QuarkElement {
+class QuarkButton extends QuarkElement {
   @property()
   type = "primary";
 

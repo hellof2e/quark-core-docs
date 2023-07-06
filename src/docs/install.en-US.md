@@ -19,7 +19,7 @@ npm run dev
 import { QuarkElement, property, customElement } from "quarkc";
 
 @customElement({ tag: "quark-count" })
-export default class Count extends QuarkElement {
+class Count extends QuarkElement {
   @property({
     type: Number
   })

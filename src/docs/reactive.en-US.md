@@ -14,7 +14,7 @@
 import { QuarkElement, customElement, state} from "quarkc"
 
 @customElement({ tag: "quark-count" })
-export default class Count extends QuarkElement {
+class Count extends QuarkElement {
   @state()
   count = 0
 
@@ -38,7 +38,7 @@ export default class Count extends QuarkElement {
 
 ```js
 @customElement({ tag: "quark-count" })
-export default class Count extends QuarkElement {
+class Count extends QuarkElement {
   #height = 0;
   #width;
 
@@ -64,7 +64,7 @@ export default class Count extends QuarkElement {
 import { QuarkElement, customElement, property} from "quarkc"
 
 @customElement({ tag: "quark-count" })
-export default class Count extends QuarkElement {
+class Count extends QuarkElement {
   @property({
     type: Number,
     attribute: 'count-number'
@@ -152,14 +152,14 @@ class MyPicker extends QuarkElement {
   }
 }
 
-export default MyPicker;
+MyPicker;
 ```
 
 使用时，通过 `ref` 拿到组件的实例，然后调用暴露的 `setData` 方法即可完成复杂数据类型的传递。
 
 ```tsx
 // React 示例：
-export default () => {
+() => {
   const pickerRef = useRef(null);
 
   useEffect(() => {

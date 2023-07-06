@@ -8,7 +8,7 @@ import { QuarkElement, customElement, property } from "quarkc"
 import style from './index.css'
 
 @customElement({ tag: "quark-count", style })
-export default class Count extends QuarkElement {
+class Count extends QuarkElement {
   @property({
     type: Boolean,
   })
@@ -54,7 +54,7 @@ import { QuarkElement, customElement } from "quarkc"
 import style from './index.css'
 
 @customElement({ tag: "quark-count", style })
-export default class Count extends QuarkElement {
+class Count extends QuarkElement {
   @property({
     type: Boolean,
   })

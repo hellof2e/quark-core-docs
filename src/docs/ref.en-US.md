@@ -34,7 +34,7 @@ class QuarkBadge extends QuarkElement {
   }
 }
 
-export default QuarkBadge;
+QuarkBadge;
 ```
 
 好了，至此您已经学完了有关于 Quarkc 的相关用法。赶紧去试一试吧～

@@ -6,7 +6,7 @@ import { QuarkElement, customElement } from "quarkc"
 import style from './index.css'
 
 @customElement({ tag: "quark-count", style })
-export default class Count extends QuarkElement {
+class Count extends QuarkElement {
   render() {
     return (
       <button>
@@ -27,7 +27,7 @@ import { QuarkElement, customElement } from "quarkc"
 import style from './index.css'
 
 @customElement({ tag: "quark-count", style })
-export default class Count extends QuarkElement {
+class Count extends QuarkElement {
   render() {
     return (
       <button>
@@ -47,7 +47,7 @@ import { QuarkElement, customElement, createRef } from "quarkc"
 import style from './index.css'
 
 @customElement({ tag: "quark-count", style })
-export default class Count extends QuarkElement {
+class Count extends QuarkElement {
   slotRef = createRef()
   onSlotChange = () => {
   // 此处已获取到 slot 的 dom 实例。

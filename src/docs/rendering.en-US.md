@@ -4,7 +4,7 @@
 import { QuarkElement, customElement } from "quarkc"
 
 @customElement({ tag: "quark-count" })
-export default class Count extends QuarkElement {
+class Count extends QuarkElement {
    render() {
      return (
         <button>Count</button>
@@ -20,7 +20,7 @@ export default class Count extends QuarkElement {
 import { QuarkElement, customElement } from "quarkc"
 
 @customElement({ tag: "my-element" })
-export default class MyElement extends QuarkElement {
+class MyElement extends QuarkElement {
   isShow = false // class 写法，内部私有变量，不属于 state/property（无响应式）
 
   renderNode = () => {
@@ -46,7 +46,7 @@ export default class MyElement extends QuarkElement {
 import { QuarkElement, customElement } from "quarkc"
 
 @customElement({ tag: "my-count" })
-export default class MyCount extends QuarkElement {
+class MyCount extends QuarkElement {
   count = 0
 
   render() {
@@ -62,7 +62,7 @@ export default class MyCount extends QuarkElement {
 import { QuarkElement, customElement } from "quarkc"
 
 @customElement({ tag: "my-count" })
-export default class MyCount extends QuarkElement {
+class MyCount extends QuarkElement {
 
   list = [{key: 1, value: 1}, {key: 2, value: 2},{key: 3, value: 3}]
 

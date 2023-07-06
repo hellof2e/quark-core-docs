@@ -25,7 +25,7 @@ import style from "./style.css";
   tag: "quark-count",
   style,
 })
-export default class QuarkCount extends QuarkElement {
+class QuarkCount extends QuarkElement {
   @state()
   count = 0
 

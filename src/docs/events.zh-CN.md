@@ -6,7 +6,7 @@
 import { QuarkElement, customElement } from "quarkc"
 
 @customElement({ tag: "quark-input", style })
-export default class Input extends QuarkElement {
+class Input extends QuarkElement {
   onClick = () => {
     console.log("按钮被点击“)
   }
@@ -32,7 +32,7 @@ export default class Input extends QuarkElement {
 import { QuarkElement, customElement } from "quarkc"
 
 @customElement({ tag: "quark-input", style })
-export default class Input extends QuarkElement {
+class Input extends QuarkElement {
    onInput = () => {
       this.$emit("input", {
       detail: {

@@ -9,7 +9,7 @@ import { QuarkElement, customElement, property } from "quarkc"
 import style from './index.css'
 
 @customElement({ tag: "quark-text", style })
-export default class Text extends QuarkElement {
+class Text extends QuarkElement {
   @property() // 外部传入属性
   text = false
 

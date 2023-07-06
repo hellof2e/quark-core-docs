@@ -5,7 +5,7 @@
 import { QuarkElement, customElement } from "quarkc";
 
 @customElement({ tag: "quark-count" })
-export default class Count extends QuarkElement {/***/}
+class Count extends QuarkElement {/***/}
 ```
 
 装饰器 `@customElement` 底层通过 [customElements.define](https://developer.mozilla.org/en-US/docs/Web/API/CustomElementRegistry/define) 向浏览器注册自定义元素。

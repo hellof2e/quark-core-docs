@@ -34,7 +34,7 @@ class QuarkBadge extends QuarkElement {
   }
 }
 
-export default QuarkBadge;
+QuarkBadge;
 ```
 
 
