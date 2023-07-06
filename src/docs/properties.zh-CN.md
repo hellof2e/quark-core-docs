@@ -1,18 +1,18 @@
 ## Reactive properties
 
-### Props
+### 响应式属性 Props
 
-通过 `@property` 为你的组件属性增加响应式特性，`@property` 支持通过参数来标注类型。
+通过 `@property` 装饰器可以为你的组件属性增加响应式属性，`@property` 支持通过参数来标注类型。
 
 ```tsx
-import { QuarkElement, customElement, property} from "quarkc";
+import { QuarkElement, customElement, property} from "quarkc"
 
 @customElement({ tag: "quark-count" })
 export default class Count extends QuarkElement {
   @property({
     type: Number,
   })
-  count = 0
+  count = 0 // 可以设置默认值，外部传入属性可覆盖默认值
 
   @property({
     type: Boolean,
@@ -41,21 +41,22 @@ export default class Count extends QuarkElement {
 
 - 由于 `HTML` 元素的属性只能是字符串，因此组件内部的属性需要正确标记类型，这样 `Quark` 底层会帮助做类型转换。
 - 由于 `HTML` 元素的属性是大小写不敏感的，因此组件内部的属性统一使用单词拼接方式如：`righttext`。
+
 ### State
 
 通过 `@state` 为你组件的内部状态增加响应式特性。
 
 ```tsx
-import { QuarkElement, customElement, state} from "quarkc";
+import { QuarkElement, customElement, state} from "quarkc"
 
 @customElement({ tag: "quark-count" })
 export default class Count extends QuarkElement {
-   @state()
-   count = 0
+  @state()
+  count = 0
 
-   click = () => {
-     this.count += 1;
-   }
+  click = () => {
+    this.count += 1
+  }
 
   render() {
     return (
@@ -71,25 +72,17 @@ export default class Count extends QuarkElement {
 
 针对有些组件需要传递复杂数据类型的场景，可采用如下方式：
 
-组件内部暴露一个 `setColumns` 方法。
+组件内部暴露一个 `setData` 方法。
 
 ```tsx
-import { QuarkElement, customElement } from "quarkc";
+import { QuarkElement, customElement } from "quarkc"
 
-export interface PickerColumn { text: string; children: PickerColumn[] }
+@customElement({tag: "my-picker"})
+class MyPicker extends QuarkElement {
+  data = [];
 
-@customElement({tag: "quark-cascade-picker"})
-class QuarkCascadePicker extends QuarkElement {
-  constructor() {
-    super();
-  }
-  columns: PickerColumn[] = [];
-
-  setColumns(columns: PickerColumn[]) {
-    if (!columns || columns.length < 1) {
-      return;
-    }
-    this.columns = columns;
+  setData(data) {
+    this.data = data;
   }
 
   render() {
@@ -99,27 +92,23 @@ class QuarkCascadePicker extends QuarkElement {
   }
 }
 
-export default QuarkCascadePicker;
+export default MyPicker;
 ```
 
-使用时，通过 `ref` 拿到组件的实例，然后调用暴露的 `setColumns` 方法即可完成复杂数据类型的传递。
+使用时，通过 `ref` 拿到组件的实例，然后调用暴露的 `setData` 方法即可完成复杂数据类型的传递。
 
 ```tsx
+// React 示例：
 export default () => {
   const pickerRef = useRef(null);
 
   useEffect(() => {
-    const { current: pickerCurrent } = pickerRef;
-      pickerCurrent.setColumns([]);
+
+    pickerRef.current.setData([]);
+
   }, []);
 
-  return (
-    <div>
-      <quark-cascade-picker
-        ref={pickerRef}
-      />
-    </div>
-  );
+  return <my-picker ref={pickerRef} />
 };
 ```
 

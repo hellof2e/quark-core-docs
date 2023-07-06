@@ -72,23 +72,18 @@ export default class Count extends QuarkElement {
 
 ```tsx
 import { QuarkElement, customElement } from "quarkc";
-export interface PickerColumn {
-  text: string;
-  children: PickerColumn[];
-}
+
 @customElement({tag: "quark-cascade-picker"})
 class QuarkCascadePicker extends QuarkElement {
-  constructor() {
-    super();
-  }
   columns: PickerColumn[] = [];
+
   setColumns(columns: PickerColumn[]) {
     if (!columns || columns.length < 1) {
       return;
     }
     this.columns = columns;
-
   }
+
   render() {
     return (
       /***/
