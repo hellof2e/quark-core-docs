@@ -1,7 +1,7 @@
 ## 安装
 
 ```js
-npx create-quark-app create project-name
+npm create quarkc@latest
 // 选择 component
 ```
 

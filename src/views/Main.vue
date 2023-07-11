@@ -37,7 +37,7 @@
             </a>
 
             <button class="install-btn" @click="copyPrompt">
-              npx create-quark-app create project-name
+              npm create quarkc@latest
               <div class="cta-icon">
                 <svg
                   :class="iconCopiedChange ? 'copy icon-copied' : 'copy'"
@@ -150,7 +150,7 @@
           <div class="how">
             <div class="bash-code">
               <pre class="language-bash">
-npx create-quark-app create project-name
+npm create quarkc@latest
 cd project-name
 
 npm install
@@ -290,7 +290,7 @@ export default defineComponent({
 
     let iconCopiedChange = ref(false);
     const copyPrompt = function () {
-      const text = "npx create-quark-app create project-name";
+      const text = "npm create quarkc@latest";
       if (navigator.clipboard) {
         // clipboard api 复制
         navigator.clipboard.writeText(text);
