@@ -17,7 +17,7 @@ Next-gen frontend component, it can be used in any framework or no framework.
 
 
 ## Documentation
-For full documentation, visit [https://quark.hellobike.com](https://quark.hellobike.com)
+For full documentation, visit [https://quarkc.hellobike.com](https://quarkc.hellobike.com)
 
 
 ## Developer guide
