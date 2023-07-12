@@ -1,8 +1,8 @@
 ## Development
 
-> 推荐使用：https://github.com/hellof2e/quark-cli 生成项目
+> Recommended use: generating project at https://github.com/hellof2e/quark-cli
 
-`quarkc` 支持 `TypeScript`，用 `quarkc` 编写一个组件，其代码结构大概如下：
+'quarkc' supports' TypeScript '. A component written in 'quarkc' would look like this:
 
 ```tsx
 import { QuarkElement, customElement, property } from "quarkc"
@@ -10,7 +10,7 @@ import style from './index.css'
 
 @customElement({ tag: "quark-text", style })
 class Text extends QuarkElement {
-  @property() // 外部传入属性
+  @property() // Externally passed properties
   text = false
 
   render() {
@@ -21,7 +21,7 @@ class Text extends QuarkElement {
 }
 ```
 
-外部使用
+External use
 ```html
 <quark-text text="hello world"></quark-text>
 ```
