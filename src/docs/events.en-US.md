@@ -1,6 +1,7 @@
 ## Events
-### 原生事件
-通过 `onXXX` 的方式监听原生事件。
+### Native events
+
+Listen to native events using `onXXX` approach.
 
 ```jsx
 import { QuarkElement, customElement } from "quarkc"
@@ -9,11 +10,11 @@ import { QuarkElement, customElement } from "quarkc"
 class Input extends QuarkElement {
 
   onClick = () => {
-    console.log("按钮被点击“)
+    console.log("button is clicked")
   }
 
   onInput = () => {
-    console.log("input 事件“)
+    console.log("input event“)
   }
 
   render() {
@@ -27,8 +28,9 @@ class Input extends QuarkElement {
 }
 ```
 
-### 自定义事件
-通过 `$emit` 发送事件。
+### Custom Events
+Send events using `$emit`.
+
 ```tsx
 import { QuarkElement, customElement } from "quarkc"
 
@@ -53,18 +55,19 @@ class Input extends QuarkElement {
 }
 ```
 
-然后在你的自定义元素上绑定事件：
+Then bind the event on your custom element:
 
 ```tsx
-/**Vue中*/
+/** In vue framework*/
 <quark-input @input="this.onInput" id="quark-input"/>
 ```
 
-或者
+
 
 ```tsx
-/**其它任何框架或者无框架中*/
+/** In any other framework or framework-less environment */
+
 const myInputElement = document.getElementById("quark-input")
 myInputElement.addEventListener('input', (evt) => {})
 ```
- 通过 `this.$emit` 触发自定义事件，`emit` 的第一个参数为事件名，第二个参数为传递的参数。可通过 `evt.detail` 获取到传递的数据。
+To triggering a custom event using `this.$emit`, The first parameter of `emit` method is the event name, and the second parameter is the data to be passed.The passed data can be accessed through `evt.detail`.
