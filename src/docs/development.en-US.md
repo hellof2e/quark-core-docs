@@ -2,7 +2,7 @@
 
 > Recommended use: generating project at https://github.com/hellof2e/quark-cli
 
-'quarkc' supports' TypeScript '. A component written in 'quarkc' would look like this:
+`quarkc` supports `TypeScript`. A component written in `quarkc` would look like this:
 
 ```tsx
 import { QuarkElement, customElement, property } from "quarkc"
