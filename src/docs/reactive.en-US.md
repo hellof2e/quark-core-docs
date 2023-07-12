@@ -1,14 +1,12 @@
 ## Reactive
 
-响应式状态。
+Reactive state.
 
-## 内部状态 State
+### Internal State
 
-组件内部 **响应式数据**。
+**Reactive data** within the component.
 
-<br />
-
-通过 `@state` 为你组件的内部状态增加响应式特性。
+Use the `@state` decorator to add reactivity to your component's internal state.
 
 ```tsx
 import { QuarkElement, customElement, state} from "quarkc"
@@ -30,11 +28,11 @@ class Count extends QuarkElement {
 }
 ```
 
-点击按钮后，组件将自动更新。
+After clicking the button, the component will automatically update.
 
-### 内部不需要响应式？
+### No need for internal reactivity?
 
-当你不需要响应式变量的时候，也可以直接使用 [ES6 中的 Class 类的私有变量](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Classes)。示例：
+When you don't need reactive variables, you can also use [private variables in ES6 Class](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Classes). Example:
 
 ```js
 @customElement({ tag: "quark-count" })
@@ -51,14 +49,11 @@ class Count extends QuarkElement {
 }
 ```
 
+### External State (Props)
 
-## 外部状态 Props
+**Reactive data** passed into the component through attributes.
 
-组件通过属性从外部传入的 **响应式数据**。
-
-<br />
-
-通过 `@property` 装饰器可以为你的组件属性增加响应式属性，`@property` 支持通过参数 `type` 来标注属性类型，通过参数 `attribute` 来标记属性名
+Use the `@property` decorator to add reactive properties to your component. The `@property` decorator supports the `type` parameter to annotate property types and the `attribute` parameter to mark attribute names.
 
 ```tsx
 import { QuarkElement, customElement, property} from "quarkc"
@@ -97,42 +92,42 @@ class Count extends QuarkElement {
 ```
 
 ```html
-<quark-count count-number="6" text="我是 Quark 计算器" disabled/>
+<quark-count count-number="6" text="I'm a Quark calculator" disabled/>
 ```
 
-当 `count-number`、`text` 或者 `disabled` 属性变更后，组件将自动更新。
+When the `count-number`, `text`, or `disabled` attributes change, the component will automatically update.
 
-- 由于 `HTML` 元素的属性只能是字符串，因此组件内部的属性需要正确标记类型，这样 `Quark` 底层会帮助做类型转换，默认 String 类型
+- Since HTML element attributes can only be strings, the component's internal properties need to be correctly marked with types, so Quark will help with type conversion. The default type is String.
 
+Since HTML element attributes are case-insensitive, Quarkc supports two ways to write component attributes:
 
-由于 `HTML` 元素的属性是大小写不敏感的，Quarkc 支持以下两种方式来书写组件属性
+1. Use the `attribute` parameter to mark attribute names:
 
-第一种方式：通过 attribute 来标记属性名
 ```tsx
   @property({
-    attribute: 'count-number' // 标记属性名
+    attribute: 'count-number' // Mark attribute name
   })
-  countNumber = 0 // 组件内部仍可以采用驼峰命名
+  countNumber = 0 // The component's internal property can still use camelCase
 
-  // 使用时通过 count-number 传递属性
+  // Use count-number to pass the attribute when using the component
   <quark-count count-number="6" />
 ```
 
-第二种方式：采用单词拼接方式
+2. Use word concatenation:
+
 ```tsx
   @property()
-  countnumber = 0 // 组件内部属性采用单词拼接，不可使用驼峰
+  countnumber = 0 // The component's internal property uses word concatenation, not camelCase
 
-  // 使用时通过 countnumber 传递属性，即跟组件内部属性变量名保持一致
+  // Use countnumber to pass the attribute when using the component, keeping the attribute name consistent with the internal property variable name
   <quark-count countnumber="6" />
 ```
 
+### Advanced Techniques
 
-### 高级技巧
+For scenarios where some components need to pass complex data types, you can use the following method:
 
-针对有些组件需要传递复杂数据类型的场景，可采用如下方式：
-
-组件内部暴露一个 `setData` 方法。
+Expose a `setData` method within the component.
 
 ```tsx
 import { QuarkElement, customElement } from "quarkc"
@@ -153,10 +148,10 @@ class MyPicker extends QuarkElement {
 }
 ```
 
-使用时，通过 `ref` 拿到组件的实例，然后调用暴露的 `setData` 方法即可完成复杂数据类型的传递。
+When using the component, get the component instance through `ref`, and then call the exposed `setData` method to complete the complex data type transfer.
 
 ```tsx
-// React 示例：
+// React example:
 () => {
   const pickerRef = useRef(null)
 
@@ -170,4 +165,4 @@ class MyPicker extends QuarkElement {
 }
 ```
 
-[更多使用技巧参考](https://github.com/hellof2e/quark-design/blob/main/packages/quarkd/src/cascadepicker/index.tsx)
+[For more usage techniques, refer to this example](https://github.com/hellof2e/quark-design/blob/main/packages/quarkd/src/cascadepicker/index.tsx)
