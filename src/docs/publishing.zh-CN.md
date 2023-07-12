@@ -61,4 +61,4 @@ import "you-component"
 | @hellof2e  | https://github.com/hellof2e/quark-doc-header | ![1685501041275](https://github.com/hellof2e/quark/assets/14307551/24dd5626-e6a9-452c-9c95-c2cdb8891573) https://quarkc.hellobike.com/#/ |
 | @xsf0105  | https://github.com/xsf0105/dark-light-element |  https://unpkg.com/dark-light-element@latest/demo.html |
 | @dyf19118  | https://github.com/dyf19118/quark-ui-rate |  ![image](https://github.com/hellof2e/quark-cli/assets/14307551/e11e6c49-4c18-4bca-adc3-01a7198ab2e2) |
-| @xsf0105  | https://github.com/hellof2e/quark-doc-home |  https://vue-quarkdesign.hellobike.com  |
+| @xsf0105  | https://github.com/hellof2e/quark-doc-home |  https://vue-quarkd.hellobike.com  |
