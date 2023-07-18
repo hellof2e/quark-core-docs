@@ -8,7 +8,7 @@
 | `componentDidUpdate`         | `attributeChangedCallback` 触发, `render` 执行后触发，此时可拿到更新后的 `dom` 做相关操作         |
 | `componentWillUnmount`         | `disconnectedCallback` 触发时、`dom` 移除前执行,此时可做副作用移除相关操作     |
 
-其中 `connectedCallback`、`attributeChangedCallback`、`disconnectedCallback` 均为 `Web Compoents` 组件原生生命周期，可[参考](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements#using_the_lifecycle_callbacks)
+其中 `connectedCallback`、`attributeChangedCallback`、`disconnectedCallback` 均为 `Web Components` 组件原生生命周期，可[参考](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements#using_the_lifecycle_callbacks)
 
 举个例子:
 
