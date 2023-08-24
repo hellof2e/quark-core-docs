@@ -1,6 +1,6 @@
 ## Unsafe HTML
 
-渲染不安全的 HTML 结构。
+Rendering unsafe HTML structures.
 
 ```jsx
 class MyComponent extends QuarkElement {
