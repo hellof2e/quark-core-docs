@@ -194,6 +194,21 @@ npm start
         </p>
       </div>
     </section>
+
+    <section class="stack-blitz">
+      <div class="wrap">
+        <div class="window-controls">
+          <div class="window-buttons">
+            <span class="close"></span><span class="minimise"></span
+            ><span class="maximise"></span>
+          </div>
+          <span class="window-filename">BestCodingAppEver</span>
+        </div>
+        <iframe
+          src="https://stackblitz.com/edit/quarkc-vite?embed=1&file=src%2Findex.tsx"
+        ></iframe>
+      </div>
+    </section>
   </main>
 
   <div class="footer-container">
