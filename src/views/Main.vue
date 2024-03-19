@@ -205,7 +205,7 @@ npm start
           <span class="window-filename">BestCodingAppEver</span>
         </div>
         <iframe
-          src="https://stackblitz.com/edit/quarkc-vite?embed=1&file=src%2Findex.tsx"
+          src="https://stackblitz.com/edit/quarkc-vite-k6t2ge?file=src%2Findex.tsx"
         ></iframe>
       </div>
     </section>
