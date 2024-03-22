@@ -36,7 +36,7 @@ npm run build
 或者
 
 ```js
-import "your-component"
+import "./lib/index.js"
 ```
 
 ### 发布到 Npm 平台
