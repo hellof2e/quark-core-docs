@@ -25,15 +25,22 @@ npm run build
 └── index.umd.js
 ```
 
-### 直接项目中使用
+### 直接项目中使用：
 
-直接拷贝产物 `index.js` 到您的项目，然后直接按照路径导入即可使用。
+当然，你也可以在项目中直接引用产物。直接拷贝产物 `index.js` 到您的项目，然后直接按照路径导入即可使用。
+
+
+```js
+<script src="./lib/index.js">
+```
+
+或者
 
 ```js
 import "your-component"
 ```
 
-### 发布到 Npm 平台
+### 发布到 Npm 使用：
 
 或者，打包结束，也可将你的产物发布到 npm。[npm Docs](https://docs.npmjs.com/packages-and-modules/contributing-packages-to-the-registry)。
 
@@ -49,7 +56,6 @@ import "you-component"
 <script src="https://fastly.jsdelivr.net/npm/quarkc@latest"></script>
 <script src="https://fastly.jsdelivr.net/npm/your-published-component@latest"></script>
 ```
-
 
 ### 优秀案例
 
