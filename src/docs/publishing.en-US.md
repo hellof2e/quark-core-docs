@@ -1,12 +1,12 @@
 ## Publishing
 
-> 推荐使用：https://github.com/hellof2e/quark-cli 生成项目
+> 推荐使用：npm create quarkc@latest 生成模版工程
 
 当你使用 `quarkc` 编写完组件，就可以发布你自己的无框架组件啦。
 
 <br/>
 
-quark-cli 生成的项目已经附带了打包配置，执行
+模版工程中已经附带了打包配置，执行：
 
 ```shell
 npm run build
