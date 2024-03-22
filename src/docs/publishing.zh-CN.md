@@ -6,7 +6,7 @@
 
 <br/>
 
-quark-cli 生成的项目已经附带了打包配置，执行
+模版工程中已经附带了打包配置，执行：
 
 ```shell
 npm run build
