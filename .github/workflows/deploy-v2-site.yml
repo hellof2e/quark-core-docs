@@ -32,7 +32,7 @@ jobs:
           clean: true
           repository-name: quark-ecosystem/quarkc-docs
           token: ${{ secrets.GIT_ACTION }}
-          target-folder: quark/
+          target-folder: /
 
       # 部署到当前仓库的 gh-pages 分支
       # - name: Deploy
