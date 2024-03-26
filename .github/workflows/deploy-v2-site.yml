@@ -1,0 +1,45 @@
+name: sync to quark-ecosystem/quarkd-docs
+
+on:
+  # 触发条件1
+  push:
+    branches:
+      - main # default branch
+    paths:
+      - ".github/workflows/**"
+      - "**"
+
+  # 触发条件2
+  repository_dispatch:
+    types: [my-event]
+
+jobs:
+  publish-site:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3 # 检出仓库
+      - uses: actions/setup-node@v3 # 设置node版本
+        with:
+          node-version: 16
+      - run: pnpm install
+      - run: pnpm run build
+
+      - name: Sync
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: main # action 应该部署到的分支。
+          folder: dist # 操作应该部署的文件夹。
+          clean: true
+          repository-name: quark-ecosystem/quarkd-docs
+          token: ${{ secrets.GIT_ACTION }}
+          target-folder: quark/
+
+      # 部署到当前仓库的 gh-pages 分支
+      # - name: Deploy
+      #   uses: peaceiris/actions-gh-pages@v3 # 使用部署到 GitHub pages 的 action
+      #   with:
+      #     publish_dir: ./dist # 部署打包后的 dist 目录
+      #     github_token: ${{ secrets.GITHUB_TOKEN }} # secret 名
+      #     # user_name: ${{ secrets.MY_USER_NAME }}
+      #     # user_email: ${{ secrets.MY_USER_EMAIL }}
+      #     # commit_message: 自动部署 # 部署时的 git 提交信息，自由填写
