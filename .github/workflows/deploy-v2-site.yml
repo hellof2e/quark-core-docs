@@ -30,7 +30,7 @@ jobs:
           branch: main # action 应该部署到的分支。
           folder: dist # 操作应该部署的文件夹。
           clean: true
-          repository-name: quark-ecosystem/quarkd-docs
+          repository-name: quark-ecosystem/quarkc-docs
           token: ${{ secrets.GIT_ACTION }}
           target-folder: quark/
 
