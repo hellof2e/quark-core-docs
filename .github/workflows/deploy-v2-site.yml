@@ -21,8 +21,8 @@ jobs:
       - uses: actions/setup-node@v3 # 设置node版本
         with:
           node-version: 16
-      - run: pnpm install
-      - run: pnpm run build
+      - run: npm install
+      - run: npm run build
 
       - name: Sync
         uses: JamesIves/github-pages-deploy-action@v4
