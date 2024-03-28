@@ -15,16 +15,11 @@ export default defineConfig({
     open: "/",
   },
   resolve: {
-    alias: [{ find: "@", replacement: resolve(__dirname, "./src") }],
+    alias: [{ find: "@", replacement: resolve(__dirname, "src") }],
   },
   plugins: [
     vue({
       include: [/\.vue$/, /\.md$/],
-      // template: {
-      //   compilerOptions: {
-      //     isCustomElement: (tag) => ["dark-", "quark-"].includes(tag),
-      //   },
-      // },
     }),
     Markdown({
       // default options passed to markdown-it

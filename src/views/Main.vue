@@ -1,5 +1,6 @@
 <template>
-  <quark-doc-header from="quarkc"></quark-doc-header>
+  <!-- <quark-doc-header from="quarkc"></quark-doc-header> -->
+  <Header></Header>
 
   <main class="home-main">
     <section class="home-section">
@@ -231,9 +232,10 @@ import {
   onUnmounted,
 } from "vue";
 import { useI18n } from "vue-i18n";
+import Header from "@/components/Header.vue";
 
 import "quarkd/lib/button";
-import "quark-doc-header";
+// import "quark-doc-header";
 
 export default defineComponent({
   name: "Main",
