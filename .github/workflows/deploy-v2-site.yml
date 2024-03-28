@@ -5,9 +5,6 @@ on:
   push:
     branches:
       - main # default branch
-    paths:
-      - ".github/workflows/**"
-      - "**"
 
   # 触发条件2
   repository_dispatch:
