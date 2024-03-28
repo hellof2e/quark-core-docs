@@ -1,4 +1,4 @@
-# Quark ECOSYSTEM
+# Quarkc Website
 
 
 <p align="center">
@@ -7,7 +7,7 @@
   </a>
 </p>
 
-<h1 align="center">Quark everything</h1>
+<h1 align="center">Quark Core(Quarkc)</h1>
 
 <div align="center">
 
@@ -17,7 +17,7 @@ Next-gen frontend component, it can be used in any framework or no framework.
 
 
 ## Documentation
-For full documentation, visit [https://quarkc.hellobike.com](https://quarkc.hellobike.com)
+For full documentation, visit [https://quark-ecosystem.github.io/quarkc-docs](https://quark-ecosystem.github.io/quarkc-docs/#/)
 
 
 ## Developer guide
