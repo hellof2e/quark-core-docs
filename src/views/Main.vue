@@ -249,7 +249,7 @@ export default defineComponent({
       activeTab: "Vue",
       tabIndex: 1,
       framework: ["Vue2.x", "Vue3.x", "React", "Angular", "Svelte", "JQuery"],
-      quarkdLink: `https://vue-quarkd.hellobike.com/#/${
+      quarkdLink: `https://quark-ecosystem.github.io/quarkd-docs/vue/#//#/${
         localStorage.getItem("language")
           ? localStorage.getItem("language")
           : "zh-CN"
