@@ -26,10 +26,14 @@ jobs:
         with:
           branch: main # action 应该部署到的分支。
           folder: dist # 操作应该部署的文件夹。
-          clean: true
           repository-name: quark-ecosystem/quarkc-docs
           token: ${{ secrets.GIT_ACTION }}
           target-folder: /
+          single-commit: true
+          clean: true
+          clean-exclude: |
+            playground/*
+
 
       # 部署到当前仓库的 gh-pages 分支
       # - name: Deploy
