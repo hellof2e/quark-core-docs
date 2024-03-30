@@ -33,6 +33,7 @@ jobs:
           clean: true
           clean-exclude: |
             playground/*
+            playground/*/**
 
 
       # 部署到当前仓库的 gh-pages 分支
