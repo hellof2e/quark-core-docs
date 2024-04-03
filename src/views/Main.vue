@@ -234,7 +234,7 @@ import {
 import { useI18n } from "vue-i18n";
 import Header from "@/components/Header.vue";
 
-import "quarkd/lib/button";
+// import "quarkd/lib/button";
 // import "quark-doc-header";
 
 export default defineComponent({

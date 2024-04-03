@@ -201,6 +201,57 @@
                 </div>
               </div>
             </div>
+            <div class="nav-item flyout">
+              <button type="button">
+                <span>{{ ecosystemLangs.domesticMirror }}</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                  class="flyout-button-text-icon"
+                >
+                  <path
+                    d="M12,16c-0.3,0-0.5-0.1-0.7-0.3l-6-6c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l5.3,5.3l5.3-5.3c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-6,6C12.5,15.9,12.3,16,12,16z"
+                  ></path>
+                </svg>
+              </button>
+
+              <div class="flyout-menu">
+                <div class="menu-wrap">
+                  <div class="menu-items">
+                    <div class="menu-item-group">
+                      <p class="menu-group-title">
+                        {{ ecosystemLangs.mirrorAddress }}
+                      </p>
+                      <a
+                        v-for="item in ecosystemLangs.mirrors"
+                        :key="item"
+                        class="link menu-link"
+                        :href="`https://quark-ecosystem.${item.toLocaleLowerCase()}.io/quarkc-docs`"
+                        rel="noopener noreferrer"
+                      >
+                        {{ item }} {{ isZhLang ? "镜像" : "Mirror" }}
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          aria-hidden="true"
+                          focusable="false"
+                          height="24px"
+                          viewBox="0 0 24 24"
+                          width="24px"
+                          class="link-icon"
+                        >
+                          <path d="M0 0h24v24H0V0z" fill="none"></path>
+                          <path
+                            d="M9 5v2h6.59L4 18.59 5.41 20 17 8.41V15h2V5H9z"
+                          ></path>
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div class="translations">
@@ -310,6 +361,9 @@ const langs = {
     help: "帮助",
     gitHubDiscussions: "GitHub 论坛",
     stacks: ["Vue", "React", "Vanilla", "Svelte", "Angular"],
+    domesticMirror: "国内镜像",
+    mirrorAddress: "镜像地址",
+    mirrors: ["Github", "Gitee"],
   },
   "en-US": {
     ecosystem: "Ecosystem",
@@ -325,6 +379,9 @@ const langs = {
     help: "HELP",
     gitHubDiscussions: "GitHub Discussions",
     stacks: ["Vue", "React", "Vanilla", "Svelte", "Angular"],
+    domesticMirror: "Domestic Mirror",
+    mirrorAddress: "Mirror Address",
+    mirrors: ["Github", "Gitee"],
   },
 };
 
