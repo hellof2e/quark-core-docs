@@ -35,6 +35,13 @@ jobs:
             playground/*
             playground/*/**
 
+      - uses: BobAnkh/auto-generate-changelog@v1.2.5
+        with:
+          REPO_NAME: 'hellof2e/quark-core-docs'
+          ACCESS_TOKEN: ${{secrets.GIT_ACTION}}
+          PATH: 'CHANGELOG.md'
+          COMMIT_MESSAGE: 'docs(CHANGELOG): update release notes'
+          TYPE: 'feat:Feature,fix:Bug Fixes,docs:Documentation,refactor:Refactor,perf:Performance Improvements'
 
       # 部署到当前仓库的 gh-pages 分支
       # - name: Deploy
