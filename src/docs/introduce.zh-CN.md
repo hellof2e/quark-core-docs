@@ -4,15 +4,13 @@
     <img width="350" src="https://m.hellobike.com/resource/helloyun/13459/Dc16h_quarkc-dark.png?x-oss-process=image/quality,q_80">
   </a>
 </p>
-<h2 align="center"> Quarkc，构建下一代前端组件！ </h2>
+<!-- <h2 align="center"> Quarkc，构建下一代前端组件！ </h2> -->
 
-### 介绍
+<!-- ### 介绍 -->
 
-Quarkc (Quark core 缩写) 是由哈啰平台前端团队开发的一套面向未来的  无框架  组件构建工具！它可以让你实现低成本/高效开发标准的 跨框架组件 或者 构建整个应用，底层基于浏览器原生 API: Web components。
+<h1>What is Quarkc?</h1>
 
-无需 AST，无需黑魔法，Quarkc 可以让你低成本实现 Write once, run anywhere！
-
-核心：让组件实现技术栈无关！
+Quarkc (Quark core 缩写) 是由哈啰平台前端团队开发的一套面向未来的 Web components 构建工具。
 
 ### Why Quarkc?
 

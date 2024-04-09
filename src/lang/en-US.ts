@@ -1,6 +1,6 @@
 export default {
   homeTitle: "Quarkc, born for cross technology stack!",
-  homeSubtitle2: "Components can be run on",
+  homeSubtitle: "Web Components Framework",
   getStarted: "Get Started",
   getStartedQuarkc: "Build your component",
   getStartedQuarkd: "Components Docs",
@@ -16,13 +16,13 @@ export default {
   advantage: "Advantages",
   box1Title: "Small size",
   box1Desc:
-    "The built components do not need to rely on third-party runtimes, and the average volume of each component is about 1kb ~ 2kb.",
+    "The built components do not need to rely on third-party runtimes, and the average volume of each page or component is about 1kb ~ 2kb.",
   box2Title: "Browser native",
   box2Desc:
     "Relying on Web components technology, components can be used by any front-end framework.",
   box3Title: "Future oriented",
   box3Desc:
-    "Unlike other third-party component building methods, Quark components do not rely on front-end frameworks, and do not need to be updated with technology stack updates.",
+    "Unlike other third-party component building methods, Quark do not rely on front-end frameworks, and do not need to be updated with technology stack updates.",
   whatDesc1:
     "Quarkc (Quark core): A Web Components compiler. It allows you to implement a custom cross-stack/frame-free native component with minimal cost and efficiency.",
   whatDesc2:

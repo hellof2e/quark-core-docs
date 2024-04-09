@@ -1,6 +1,6 @@
 export default {
   homeTitle: "Quarkc，为跨技术栈而生！",
-  homeSubtitle2: "组件可以被运行在",
+  homeSubtitle: "Web Components 框架",
   getStarted: "Get Started",
   getStartedQuarkc: "构建你的 Web 组件",
   getStartedQuarkd: "组件库文档",
@@ -13,12 +13,12 @@ export default {
   advantage: "有什么优势",
   box1Title: "体积小",
   box1Desc:
-    "用 Quarkc 构建的组件无需依赖第三方 runtime，平均每个组件体积 1kb ~ 2kb 左右。",
+    "用 Quarkc 构建的组件无需依赖第三方 runtime，平均每个页面/组件体积 1kb ~ 2kb 左右。",
   box2Title: "浏览器原生",
-  box2Desc: "依托于 Web components 技术，组件可以被任何前端框架使用。",
+  box2Desc: "依托于 Web components 技术，构建产物可以被任何前端框架使用。",
   box3Title: "面向未来",
   box3Desc:
-    "不同于其它组件构建方式，Quark 组件不依赖前端框架，无需随着技术栈更新而更新。",
+    "不同于其它页面/组件的构建方式，Quark 不依赖前端框架，无需随着技术栈更新而更新。",
   whatDesc1:
     "Quarkc (Quark core): 一个 Web Components 编译器。通过它可以让您最低成本，高效的实现一个自定义跨技术栈/无框架的原生组件。",
   whatDesc2:
