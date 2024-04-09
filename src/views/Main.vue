@@ -14,7 +14,7 @@
 
           <div class="actions">
             <a
-              class="get-started"
+              class="link-btn get-started"
               :href="`${
                 isZhLang ? `#/zh-CN/docs/introduce` : `#/en-US/docs/introduce`
               }`"

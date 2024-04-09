@@ -83,23 +83,24 @@
   padding-top: 32px;
 }
 
-.get-started {
+.link-btn {
   display: flex;
   align-items: center;
   text-align: center;
   padding: 0 1.25rem;
   border-radius: 100px;
   font-size: 16px;
-  background-color: var(--vp-button-brand-bg);
-  color: #fff;
   font-weight: 600;
   transition: background-color .2s ease-out;
+}
+.get-started {
+  background-color: var(--vp-button-brand-bg);
+  color: #fff;
 
   &:hover{
     background-color: var(--vp-button-brand-hover-bg);
     border-color: var(--vp-button-brand-hover-border);
     color: var(--vp-button-brand-hover-text);
-    background-color: var(--vp-button-brand-hover-bg);
   }
 }
 

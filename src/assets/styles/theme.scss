@@ -25,6 +25,12 @@
   --text-code-font-color: #476582;
 
   animation: rainbow 40s linear infinite;
+
+  --vp-c-white: #ffffff;
+  --vp-c-black: #000000;
+  --vp-c-neutral: var(--vp-c-black);
+  --vp-c-neutral-inverse: var(--vp-c-white);
+
   --vp-nav-height: 64px;
   --vp-button-brand-bg: var(--vp-c-brand-1);
   --vp-home-hero-name-color: transparent;
@@ -32,7 +38,12 @@
   --vp-home-hero-image-background-image: linear-gradient(-45deg, var(--vp-c-brand-1) 30%, var(--vp-c-brand-next));
   --vp-home-hero-image-filter: blur(80px);
 
-
+  --vp-c-brand-1: #00a98e;
+  --vp-c-brand-light: #4ad1b4;
+  --vp-c-brand-lighter: #78fadc;
+  --vp-c-brand-dark: #008269;
+  --vp-c-brand-darker: #005d47;
+  --vp-c-brand-next: #009ff7;
   --vp-button-brand-border: var(--vp-c-brand-light);
   --vp-button-brand-text: var(--vp-c-white);
   --vp-button-brand-hover-border: var(--vp-c-brand-light);
