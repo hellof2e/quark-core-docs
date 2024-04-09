@@ -192,9 +192,6 @@
       height: 40px;
       color: rgb(255 255 255 / 1);
       background-color: rgb(0 0 0 / .2);
-      // text-align: center;
-      // line-height: 40px;
-      // border-radius: 20px;
 
       font-size: 16px;
       --button-icon-hspacing: 6px;
@@ -269,15 +266,20 @@
   grid-template-columns: repeat(6, 1fr);
   grid-template-areas:
     "one one two two three three"
-    "what what what how how how";
+    "four four five five six six";
 
-  >div {
+  >div,
+  a {
     padding: 2em;
-    display: flex;
-    flex-direction: column;
-    border-bottom: none;
-    border-radius: 6px;
+    display: block;
+    border: 1px solid var(--vp-c-bg-soft);
+    border-radius: 12px;
+    height: 100%;
+    background-color: var(--vp-c-bg-soft);
+    transition: border-color .25s, background-color .25s;
+
     h2 {
+      display: flex;
       padding: 0;
       margin: 0 0 0.5em 0;
       font-size: 24px;
@@ -285,14 +287,45 @@
     }
   }
 
+  .link-box {
+    cursor: pointer;
+  }
+  .link-box:hover {
+    border-color: var(--vp-c-brand-1);
+  }
+
+  .box-link {
+    padding-top: 8px;
+
+    .box-link-text {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--vp-c-brand-1);
+
+      svg {
+        display: inline-block;
+        margin-left: 6px;
+        width: 14px;
+        height: 14px;
+        fill: currentColor
+      }
+    }
+  }
+
   .box1,
   .box2,
-  .box3 {
+  .box3,
+  .box4,
+  .box5,
+  .box6,
+  {
     background-color: #f6f6f7;
-    p{
-      font-size: 16px;
-      color: var(--vp-c-text-2, rgba(60, 60, 67, .78));
-    }
+    // p{
+    //   font-size: 16px;
+    //   color: var(--vp-c-text-2, rgba(60, 60, 67, .78));
+    // }
   }
 
   .box1 {
@@ -304,47 +337,14 @@
   .box3 {
     grid-area: three / three / three / three;
   }
-  .what {
-    grid-area: what;
-    >div {
-      padding: 0;
-    }
-    p{
-      font-size: 19px;
-      margin: 0 0 10px 0;
-      line-height: 36px;
-    }
-    a {
-      color: #646cff;
-      text-decoration-line: underline;
-    }
-    a:hover {
-      color: #bcc0ff;
-    }
+  .box4 {
+    grid-area: four / four / four / four;
   }
-  .how {
-    grid-area: how;
-
-    .bash-code {
-      grid-area: start;
-      display: flex;
-      flex-direction: column;
-      min-width: 0;
-
-      background-color: #141f31;
-      background-color: #f6fafd;
-
-      border: 1px solid rgba(68, 68, 68, .12);
-      border-radius: 4px;
-    }
-
-    pre {
-      padding: 20px;
-    }
-
-    .language-bash {
-      margin: 0 0 1em 0; min-width: 0; min-height: 0
-    }
+  .box5 {
+    grid-area: five / five /five /five;
+  }
+  .box6 {
+    grid-area: six / six / six / six;
   }
 }
 

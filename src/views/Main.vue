@@ -73,7 +73,6 @@
         </div>
       </div>
       <div class="home-logo">
-        <!-- <img src="/src/assets/images/logo.png" alt="" /> -->
         <div class="image-bg"></div>
         <div class="logo-bg"></div>
       </div>
@@ -82,17 +81,71 @@
     <section class="advantage" id="advantage" ref="scrollToThisRef">
       <div class="wrap">
         <div class="box-group">
-          <div class="box1">
-            <h2>{{ t("box1Title") }}</h2>
+          <a
+            class="box1 link-box"
+            target="_blank"
+            href="https://github.com/hellof2e/quark-core/tree/main/packages/create-quarkc/template-quarkc-app-ts"
+          >
+            <h2>
+              {{ t("box1Title") }}
+            </h2>
             <p>{{ t("box1Desc") }}</p>
-          </div>
-          <div class="box2">
+
+            <div class="box-link">
+              <div class="box-link-text">
+                Getting Started
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  class="link-text-icon"
+                  data-v-ee984185=""
+                >
+                  <path
+                    d="M19.9,12.4c0.1-0.2,0.1-0.5,0-0.8c-0.1-0.1-0.1-0.2-0.2-0.3l-7-7c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l5.3,5.3H5c-0.6,0-1,0.4-1,1s0.4,1,1,1h11.6l-5.3,5.3c-0.4,0.4-0.4,1,0,1.4c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l7-7C19.8,12.6,19.9,12.5,19.9,12.4z"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </a>
+          <a
+            class="box2 link-box"
+            target="_blank"
+            href="https://github.com/hellof2e/quark-core/tree/main/packages/create-quarkc/template-quarkc-component-ts"
+          >
             <h2>{{ t("box2Title") }}</h2>
             <p>{{ t("box2Desc") }}</p>
-          </div>
+
+            <div class="box-link">
+              <p class="box-link-text">
+                Getting Started
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  class="link-text-icon"
+                  data-v-ee984185=""
+                >
+                  <path
+                    d="M19.9,12.4c0.1-0.2,0.1-0.5,0-0.8c-0.1-0.1-0.1-0.2-0.2-0.3l-7-7c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l5.3,5.3H5c-0.6,0-1,0.4-1,1s0.4,1,1,1h11.6l-5.3,5.3c-0.4,0.4-0.4,1,0,1.4c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3l7-7C19.8,12.6,19.9,12.5,19.9,12.4z"
+                  ></path>
+                </svg>
+              </p>
+            </div>
+          </a>
           <div class="box3">
             <h2>{{ t("box3Title") }}</h2>
             <p>{{ t("box3Desc") }}</p>
+          </div>
+          <div class="box4">
+            <h2>{{ t("box4Title") }}</h2>
+            <p>{{ t("box4Desc") }}</p>
+          </div>
+          <div class="box5">
+            <h2>{{ t("box5Title") }}</h2>
+            <p>{{ t("box5Desc") }}</p>
+          </div>
+          <div class="box6">
+            <h2>{{ t("box6Title") }}</h2>
+            <p>{{ t("box6Desc") }}</p>
           </div>
         </div>
       </div>
@@ -132,18 +185,6 @@ export default defineComponent({
     let darkMode = ref(false);
     const scrollToThisRef = ref(null);
 
-    const data = reactive({
-      tabs: ["Vue", "React", "Angular", "Html"],
-      activeTab: "Vue",
-      tabIndex: 1,
-      framework: ["Vue2.x", "Vue3.x", "React", "Angular", "Svelte", "JQuery"],
-      quarkdLink: `https://quark-ecosystem.github.io/quarkd-docs/vue/#//#/${
-        localStorage.getItem("language")
-          ? localStorage.getItem("language")
-          : "zh-CN"
-      }/component/button`,
-    });
-
     const state = reactive({
       timeInter: null, //定义定时器
     });
@@ -153,10 +194,6 @@ export default defineComponent({
         darkMode.value = true;
       }
     });
-
-    const handleTabSwitch = (tab) => {
-      data.activeTab = tab;
-    };
 
     onUnmounted(() => {
       state.timeInter = null;
@@ -192,12 +229,16 @@ export default defineComponent({
       }, 2000);
     };
 
+    const handleLinkToTemplate = () => {
+      location.href =
+        "https://github.com/hellof2e/quark-core/tree/main/packages/create-quarkc/template-quarkc-app-ts";
+    };
+
     return {
       isZhLang: localStorage.getItem("language") === "zh-CN",
       t,
       darkMode,
-      ...toRefs(data),
-      handleTabSwitch,
+      handleLinkToTemplate,
       scrollToThisRef,
       copyPrompt,
       iconCopiedChange,
