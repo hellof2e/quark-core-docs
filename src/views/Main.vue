@@ -3,83 +3,85 @@
 
   <main class="home-main">
     <section class="home-section">
-      <div class="home-text">
-        <div>
-          <span class="home-title">Quarkc</span>
+      <div class="container">
+        <div class="home-text">
+          <div>
+            <span class="home-title">Quarkc</span>
 
-          <p class="home-subtitle">
-            {{ t("homeSubtitle") }}
-          </p>
-          <p class="tagline">WebComponents · JSX/TSX</p>
+            <p class="home-subtitle">
+              {{ t("homeSubtitle") }}
+            </p>
+            <p class="tagline">WebComponents · JSX/TSX</p>
 
-          <div class="actions">
-            <a
-              class="link-btn get-started"
-              :href="`${
-                isZhLang ? `#/zh-CN/docs/introduce` : `#/en-US/docs/introduce`
-              }`"
-            >
-              Get started →
-            </a>
+            <div class="actions">
+              <a
+                class="link-btn get-started"
+                :href="`${
+                  isZhLang ? `#/zh-CN/docs/introduce` : `#/en-US/docs/introduce`
+                }`"
+              >
+                Get started →
+              </a>
 
-            <button class="btn install-btn" @click="copyPrompt">
-              npm create quarkc@latest
-              <div class="cta-icon">
-                <svg
-                  :class="iconCopiedChange ? 'copy icon-copied' : 'copy'"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  fill="none"
-                  aria-label="copy icon"
-                >
-                  <path
-                    stroke="#73849A"
-                    stroke-linejoin="round"
-                    d="M12.72 4H5.78C4.8 4 4 4.8 4 5.78v6.94c0 .98.8 1.78 1.78 1.78h6.94c.98 0 1.78-.8 1.78-1.78V5.78c0-.98-.8-1.78-1.78-1.78Z"
-                  ></path>
-                  <path
-                    stroke="#73849A"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="m11.98 4 .02-.75a1.75 1.75 0 0 0-1.75-1.75H3.5a2 2 0 0 0-2 2v6.75A1.76 1.76 0 0 0 3.25 12H4"
-                  ></path>
-                </svg>
-
-                <svg
-                  :class="
-                    iconCopiedChange ? 'checkmark icon-copied' : 'checkmark'
-                  "
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="16"
-                  height="16"
-                  viewBox="0 0 512 512"
-                  aria-label="checkmark icon"
-                >
-                  <path
+              <button class="btn install-btn" @click="copyPrompt">
+                npm create quarkc@latest
+                <div class="cta-icon">
+                  <svg
+                    :class="iconCopiedChange ? 'copy icon-copied' : 'copy'"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
                     fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="32"
-                    d="M416 128L192 384l-96-96"
-                  ></path>
-                </svg>
-              </div>
-            </button>
+                    aria-label="copy icon"
+                  >
+                    <path
+                      stroke="#73849A"
+                      stroke-linejoin="round"
+                      d="M12.72 4H5.78C4.8 4 4 4.8 4 5.78v6.94c0 .98.8 1.78 1.78 1.78h6.94c.98 0 1.78-.8 1.78-1.78V5.78c0-.98-.8-1.78-1.78-1.78Z"
+                    ></path>
+                    <path
+                      stroke="#73849A"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m11.98 4 .02-.75a1.75 1.75 0 0 0-1.75-1.75H3.5a2 2 0 0 0-2 2v6.75A1.76 1.76 0 0 0 3.25 12H4"
+                    ></path>
+                  </svg>
 
-            <button class="btn">Playground</button>
+                  <svg
+                    :class="
+                      iconCopiedChange ? 'checkmark icon-copied' : 'checkmark'
+                    "
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 512 512"
+                    aria-label="checkmark icon"
+                  >
+                    <path
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="32"
+                      d="M416 128L192 384l-96-96"
+                    ></path>
+                  </svg>
+                </div>
+              </button>
+
+              <button class="btn">Playground</button>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="home-logo">
-        <div class="image-bg"></div>
-        <div class="logo-bg"></div>
+        <div class="home-logo">
+          <div class="image-bg"></div>
+          <div class="logo-bg"></div>
+        </div>
       </div>
     </section>
 
     <section class="advantage" id="advantage" ref="scrollToThisRef">
-      <div class="wrap">
+      <div class="container">
         <div class="box-group">
           <a
             class="box box1 link-box"
@@ -154,10 +156,8 @@
 
   <footer class="main-footer">
     <div class="container">
-      <p class="message" data-v-8c8dec7c="">Released under the MIT License.</p>
-      <p class="copyright" data-v-8c8dec7c="">
-        Copyright © 2021-PRESENT Hellof2e
-      </p>
+      <p class="message">Released under the MIT License.</p>
+      <p class="copyright">Copyright © 2021-PRESENT Hellof2e</p>
     </div>
   </footer>
 </template>

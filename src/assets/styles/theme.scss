@@ -20,6 +20,10 @@
 
   --main-shadow: 0 12px 32px rgba(0, 0, 0, .1), 0 2px 6px rgba(0, 0, 0, .08);
 
+  --vp-c-divider: #e2e2e3;
+  --vp-c-gutter: var(--vp-c-divider);
+
+
   --text-font-color: rgb(34, 45, 58);
   --text-font-color: rgba(60, 60, 67);
   --text-code-font-color: #476582;
@@ -37,6 +41,7 @@
   --vp-c-neutral-inverse: var(--vp-c-white);
 
   --vp-nav-height: 64px;
+  --vp-nav-bg-color: var(--vp-c-bg);
   --vp-button-brand-bg: var(--vp-c-brand-1);
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(120deg, var(--vp-c-brand-1) 30%, var(--vp-c-brand-next));
@@ -188,7 +193,7 @@ html.dark {
       background: #202127;
       border: 1px solid #202127;
     }
-    a:hover{ 
+    a:hover{
       border:1px solid var(--vp-button-brand-bg);
     }
     h2 {
