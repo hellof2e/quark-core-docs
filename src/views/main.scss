@@ -10,15 +10,6 @@
 .home-section {
   display: flex;
   padding: calc(var(--vp-nav-height) + var(--vp-layout-top-height, 0px) + 80px) 64px 64px;
-  @media screen and (max-width: 960px) {
-    flex-direction: column-reverse;
-    .home-text > div {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-
 }
 
 .home-logo {
@@ -89,7 +80,8 @@
   font-weight: 700;
   white-space: pre-wrap;
   @media screen and (max-width: 800px) {
-    font-size: 40px;
+    text-align: center;
+    font-size: 34px;
   }
 }
 
@@ -98,15 +90,24 @@
   font-size: 24px;
   color: var(--vp-c-text-2, rgba(60, 60, 67, .78));
   @media screen and (max-width: 800px) {
+    text-align: center;
     font-size: 20px;
   }
 }
 
 .actions{
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: no-wrap;
   gap: 0.5rem;
   padding-top: 32px;
+  @media screen and (max-width: 800px) {
+    text-align: center;
+    gap: 0.1rem;
+    a, button {
+      transform: scale(0.9);
+      padding: 0.3rem 0.5rem;
+    }
+  }
 }
 
 .link-btn {
@@ -195,6 +196,14 @@
   max-width: 1152px;
   flex-direction: row;
   width: 100%;
+  @media screen and (max-width: 960px) {
+    flex-direction: column-reverse;
+    .home-text > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
 }
 
 .box-group {
@@ -242,7 +251,7 @@
     cursor: pointer;
   }
   .link-box:hover {
-    border-color: var(--vp-c-brand-1);
+    border: 1px solid var(--vp-c-brand-1);
   }
 
   .box-link {

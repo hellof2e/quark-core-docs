@@ -244,15 +244,13 @@ html.dark {
   }
 
   .install-btn {
-    background: #1e1e20;
-    color: #ddd;
+    color: #e2e3dc;
+    background-color: #33363f;
     border: 1px solid #33363f;
     transition: all .2s ease-out;
 
     &:hover {
-      background: #1e1e20;
-      border: 1px solid #575a62;
-      transition: all .2s ease-out;
+      background: #414853;
     }
 
   }
