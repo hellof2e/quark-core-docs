@@ -20,6 +20,10 @@
 
   --main-shadow: 0 12px 32px rgba(0, 0, 0, .1), 0 2px 6px rgba(0, 0, 0, .08);
 
+  --vp-c-divider: #e2e2e3;
+  --vp-c-gutter: var(--vp-c-divider);
+
+
   --text-font-color: rgb(34, 45, 58);
   --text-font-color: rgba(60, 60, 67);
   --text-code-font-color: #476582;
@@ -37,6 +41,7 @@
   --vp-c-neutral-inverse: var(--vp-c-white);
 
   --vp-nav-height: 64px;
+  --vp-nav-bg-color: var(--vp-c-bg);
   --vp-button-brand-bg: var(--vp-c-brand-1);
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(120deg, var(--vp-c-brand-1) 30%, var(--vp-c-brand-next));
@@ -171,14 +176,48 @@ html.dark {
   .flyout-menu .menu-group-title {
     color: rgba(235, 235, 235, .38);
   }
-
+  .btn {
+    border: none;
+    color: #e2e3dc;
+    background-color: #33363f;
+    transition: .2s ease;
+    &:hover {
+      background: #414853;
+    }
+  }
+  .tagline {
+    color: rgba(235, 235, 245, .6);
+  }
+  .box-group {
+    .box {
+      background: #202127;
+      border: 1px solid #202127;
+    }
+    a:hover{
+      border:1px solid var(--vp-button-brand-bg);
+    }
+    h2 {
+      color: #e0e0d9
+    }
+    p{
+      color: #9a9aa3
+    }
+    .box-link-text {
+      color: #e7e7df
+    }
+  }
   .flyout-menu .menu-link {
     color: rgba(255, 255, 255, .87);
     &:hover {
       color: #646cff;
     }
   }
-
+  .main-footer {
+    background-color: #1e1e20;
+    p {
+      color: rgba(235, 235, 245, .5);
+    }
+  }
   .nav-item a:hover,
   .nav-item button:hover {
     color: var(--nav-link-color);
@@ -205,15 +244,13 @@ html.dark {
   }
 
   .install-btn {
-    background: #000000;
-    color: #ddd;
-    border-color: #222;
+    color: #e2e3dc;
+    background-color: #33363f;
+    border: 1px solid #33363f;
     transition: all .2s ease-out;
 
     &:hover {
-      color: #fff;
-      background: #111;
-      transition: all .2s ease-out;
+      background: #414853;
     }
 
   }

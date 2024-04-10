@@ -1,25 +1,22 @@
-
-p {
-  margin: 0;
-}
-
-a {
-  transition: all 0.25s;
-}
-
-button {
-  background-color: transparent;
-  cursor: pointer;
-}
-
 .header {
-  z-index: 30;
-  top: 0px;
-  position: sticky;
-  min-width: 860px;
   width: 100%;
-  background: #fff;
+  height: var(--vp-nav-height);
+  padding: 0 32px;
+  position: fixed;
+  top: var(--vp-layout-top-height, 0px);
+  left: 0;
+  z-index: var(--vp-z-index-nav, 1);
+  transition: background-color .5s;
+
+  display: flex;
+  justify-content: space-between;
 }
+
+header.scrolled {
+  background-color: var(--vp-nav-bg-color);
+  border-bottom: 1px solid var(--vp-nav-border-color, #e2e2e3);;
+}
+
 .toper-bar,
 .left-bar {
   display: flex;
@@ -40,21 +37,6 @@ button {
 
 .left-bar img {
   height: 2rem;
-}
-
-.header > div {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.header .container {
-  margin: 0 auto;
-  padding: 1.25rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid var(--line-light);
-  background-color: var(--main-bg);
 }
 
 .nav-item a {
