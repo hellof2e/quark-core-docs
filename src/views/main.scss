@@ -10,6 +10,15 @@
 .home-section {
   display: flex;
   padding: calc(var(--vp-nav-height) + var(--vp-layout-top-height, 0px) + 80px) 64px 64px;
+  @media screen and (max-width: 960px) {
+    flex-direction: column-reverse;
+    .home-text > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
 }
 
 .home-logo {
@@ -29,6 +38,10 @@
   background-image: var(--vp-home-hero-image-background-image);
   transform: translate(-50%, -50%);
   mask: url(https://m.hellobike.com/resource/helloyun/13459/tOd8H_logo.png?x-oss-process=image/quality,q_80) no-repeat center 100% / 100%;
+  @media screen and (max-width: 800px) {
+    width: 180px;
+    height: 180px;
+  }
 }
 
 .logo-bg {
@@ -42,6 +55,10 @@
   filter: var(--vp-home-hero-image-filter);
   opacity: .45;
   transition: opacity 1s ease;
+  @media screen and (max-width: 800px) {
+    width: 270px;
+    height: 270px;
+  }
 }
 
 .logo-bg:hover {
@@ -59,6 +76,9 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: var(--vp-home-hero-name-color);
+  @media screen and (max-width: 800px) {
+    font-size: 3.8rem;
+  }
 }
 
 .home-subtitle {
@@ -68,12 +88,18 @@
   display: flex;
   font-weight: 700;
   white-space: pre-wrap;
+  @media screen and (max-width: 800px) {
+    font-size: 40px;
+  }
 }
 
 .tagline {
   line-height: 36px;
   font-size: 24px;
   color: var(--vp-c-text-2, rgba(60, 60, 67, .78));
+  @media screen and (max-width: 800px) {
+    font-size: 20px;
+  }
 }
 
 .actions{
@@ -87,7 +113,8 @@
   display: flex;
   align-items: center;
   text-align: center;
-  padding: 0 1.25rem;
+  
+  padding: 1rem 1.25rem;
   border-radius: 100px;
   font-size: 16px;
   font-weight: 600;
@@ -159,7 +186,7 @@
 }
 
 .wrap {
-  padding: calc(var(--vp-nav-height) + var(--vp-layout-top-height, 0px) + 80px) 64px 64px;
+  padding: calc(var(--vp-nav-height) + var(--vp-layout-top-height, 0px)) 64px 64px;
 }
 
 .code-demo-tab-group {
@@ -258,15 +285,27 @@
     background-color: #141f31;
   }
 }
-
 .box-group {
   display: grid;
   grid-column-gap: 1em;
   grid-row-gap: 5em;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-areas:
-    "one one two two three three"
-    "four four five five six six";
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  @media (min-width: 920px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  /* 768px 到 640px 宽度，每行显示 2 个盒子 */
+  @media (min-width: 690px) and (max-width: 920px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* 640px 以下宽度，每行显示 1 个盒子 */
+  @media (max-width: 690px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  // grid-template-areas:
+  //   "one one two two three three"
+  //   "four four five five six six";
 
   >div,
   a {
@@ -295,7 +334,7 @@
   }
 
   .box-link {
-    padding-top: 8px;
+    padding-top: 14px;
 
     .box-link-text {
       display: flex;
@@ -328,24 +367,24 @@
     // }
   }
 
-  .box1 {
-    grid-area: one / one / one / one;
-  }
-  .box2 {
-    grid-area: two / two / two / two;
-  }
-  .box3 {
-    grid-area: three / three / three / three;
-  }
-  .box4 {
-    grid-area: four / four / four / four;
-  }
-  .box5 {
-    grid-area: five / five /five /five;
-  }
-  .box6 {
-    grid-area: six / six / six / six;
-  }
+  // .box1 {
+  //   grid-area: one / one / one / one;
+  // }
+  // .box2 {
+  //   grid-area: two / two / two / two;
+  // }
+  // .box3 {
+  //   grid-area: three / three / three / three;
+  // }
+  // .box4 {
+  //   grid-area: four / four / four / four;
+  // }
+  // .box5 {
+  //   grid-area: five / five /five /five;
+  // }
+  // .box6 {
+  //   grid-area: six / six / six / six;
+  // }
 }
 
 .main-footer {

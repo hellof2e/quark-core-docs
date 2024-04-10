@@ -82,7 +82,7 @@
       <div class="wrap">
         <div class="box-group">
           <a
-            class="box1 link-box"
+            class="box box1 link-box"
             target="_blank"
             href="https://github.com/hellof2e/quark-core/tree/main/packages/create-quarkc/template-quarkc-app-ts"
           >
@@ -108,7 +108,7 @@
             </div>
           </a>
           <a
-            class="box2 link-box"
+            class="box box2 link-box"
             target="_blank"
             href="https://github.com/hellof2e/quark-core/tree/main/packages/create-quarkc/template-quarkc-component-ts"
           >
@@ -131,19 +131,19 @@
               </p>
             </div>
           </a>
-          <div class="box3">
+          <div class="box box3">
             <h2>{{ t("box3Title") }}</h2>
             <p>{{ t("box3Desc") }}</p>
           </div>
-          <div class="box4">
+          <div class="box box4">
             <h2>{{ t("box4Title") }}</h2>
             <p>{{ t("box4Desc") }}</p>
           </div>
-          <div class="box5">
+          <div class="box box5">
             <h2>{{ t("box5Title") }}</h2>
             <p>{{ t("box5Desc") }}</p>
           </div>
-          <div class="box6">
+          <div class="box box6">
             <h2>{{ t("box6Title") }}</h2>
             <p>{{ t("box6Desc") }}</p>
           </div>
