@@ -224,10 +224,6 @@
   @media (max-width: 690px) {
     grid-template-columns: repeat(1, 1fr);
   }
-  // grid-template-areas:
-  //   "one one two two three three"
-  //   "four four five five six six";
-
   >div,
   a {
     padding: 2em;
