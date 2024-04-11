@@ -1,4 +1,4 @@
-## Development
+## 开发
 
 > 推荐使用：https://github.com/hellof2e/quark-cli 生成项目
 

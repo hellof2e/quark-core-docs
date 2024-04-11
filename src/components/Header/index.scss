@@ -6,15 +6,17 @@
   top: var(--vp-layout-top-height, 0px);
   left: 0;
   z-index: var(--vp-z-index-nav, 1);
-  transition: background-color .5s;
+  // transition: background-color .25s;
 
   display: flex;
   justify-content: space-between;
+  background-color: var(--main-bg);
 }
 
 header.scrolled {
-  background-color: var(--vp-nav-bg-color);
-  border-bottom: 1px solid var(--vp-nav-border-color, #e2e2e3);;
+  // background-color: var(--vp-nav-bg-color);
+  // border-bottom: 1px solid var(--vp-nav-border-color, #e2e2e3);;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .toper-bar,

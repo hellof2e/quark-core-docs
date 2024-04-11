@@ -1,4 +1,4 @@
-## Defining a component
+## Component definition
 Define a class that inherits from `QuarkElement` and then use the `@customElement` decorator.
 
 ```tsx

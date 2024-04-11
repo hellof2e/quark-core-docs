@@ -1,4 +1,4 @@
-## Defining a component
+## 组件定义
 自定义一个继承自 `QuarkElement` 的类， 然后使用 `@customElement` 装饰器修饰。
 
 ```tsx

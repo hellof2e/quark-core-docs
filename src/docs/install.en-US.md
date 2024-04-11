@@ -1,4 +1,4 @@
-## 安装
+## Install
 
 ```js
 npm create quarkc@latest

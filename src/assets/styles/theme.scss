@@ -141,6 +141,12 @@
   color: var(--text-font-color);
 }
 
+html {
+  font-family: var(--font-family-base);
+  color: var(--link-font-color-dark);
+  background-color: var(--main-bg);
+  // transition: background-color .25s;
+}
 
 html.dark {
   --link-font-color-dark: rgba(255, 255, 255, 0.87);
@@ -158,10 +164,6 @@ html.dark {
   --nav-link-color: #fff;
 
   --logo-dark-mode: url(https://m.hellobike.com/resource/helloyun/13459/H3kyK_quarkc-light.png?x-oss-process=image/quality,q_80);
-
-  font-family: var(--font-family-base);
-  color: var(--link-font-color-dark);
-  background-color: var(--main-bg);
 
   pre {
     color: #1e1e20;

@@ -23,10 +23,14 @@
 
 以上背景，决定了 前端通用型组件 的开发和维护成本比较高。
 
-### 特性
+### Features
 
 - Web Components, Simble, Fast！
 - 浏览器原生API，组件可以跨技术栈使用
 - 没有前端框架 Runtime，Web 组件体积小到极致
 - 高性能设计，Shadow DOM 与 Virtual DOM 融合
 - 组件直接解耦，独立打磨，按需引用
+
+### Goals
+
+Make web development experience more closer to native and framework independent!
