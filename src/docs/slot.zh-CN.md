@@ -42,7 +42,7 @@ class Count extends QuarkElement {
 ```
 
 ```html
-<quark-count slot="abc">我是具名插槽</quark-count>
+<quark-count><span slot="abc">我是具名插槽</span></quark-count>
 ```
 ### 高级技巧
 

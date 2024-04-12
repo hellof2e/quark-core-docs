@@ -1,7 +1,7 @@
 ## Lifecycle
-`Quarkc` 对外提供了如下几个生命周期：
+`Quarkc` provides lifecycle methods to help you manage the component.
 
-| 生命周期方法                         | 调用时机                                                                                                                                                                                                                                                                                      |
+| Method Name                          | Trigger Timing                                                                                                                                                                                                                                                                                |
 | ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `componentDidMount`                  | Invoked after `connectedCallback` triggered and the component finishes first rendering (mounted, inserted into th e `dom` tree). You can access the `dom` at this time.                                                                                                                       |
 | `shouldComponentUpdate`              | Invoked after `attributeChangedCallback` triggered and before the component rendering. You can decide whether to update the component or not by letting this method return `true` or `false`. *（⚠️ deprecated from v2.0.0 and is not recommended，it will be removed in next major version）* |

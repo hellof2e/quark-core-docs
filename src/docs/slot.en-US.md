@@ -1,5 +1,5 @@
-## Slot 插槽
-### 默认插槽
+## Slot
+### Default Slot
 
 ```tsx
 import { QuarkElement, customElement } from "quarkc"
@@ -18,12 +18,11 @@ class Count extends QuarkElement {
 ```
 
 ```html
-<quark-count>默认插槽</quark-count>
+<quark-count>default slot</quark-count>
 ```
 
-### 具名插槽
-
-组件内部给 `slot` 添加 `name`，外部使用时指定 `name`。
+### Named Slot
+Add `name` property to `slot` element in the component, and specify which slot to use by `slot` property.
 
 ```tsx
 import { QuarkElement, customElement } from "quarkc"
@@ -42,11 +41,10 @@ class Count extends QuarkElement {
 ```
 
 ```html
-<quark-count slot="abc">我是具名插槽</quark-count>
+<quark-count><span slot="abc">my named slot</span></quark-count>
 ```
-### 高级技巧
-
-可以通过 `onslotchange` 事件获取到 `slot` 挂载完成时机。
+### Advanced Usage
+You can access the slot dom instance by `ref` and `onslotchange` event.
 
 ```tsx
 import { QuarkElement, customElement, createRef } from "quarkc"
@@ -58,7 +56,7 @@ class Count extends QuarkElement {
   slotRef = createRef()
 
   onSlotChange = () => {
-    // 此处已获取到 slot 的 dom 实例。
+    // got slot dom instance.
     const { current } = this.slotRef
   }
 
@@ -72,4 +70,4 @@ class Count extends QuarkElement {
 }
 ```
 
-更多 `slot` 插槽使用可参考[Slot](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_templates_and_slots)
+For more exmaples of `slot` you can refer to [this article](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_templates_and_slots).

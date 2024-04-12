@@ -29,7 +29,7 @@ class Count extends QuarkElement {
 }
 ```
 
-### 计算属性
+### Computed
 Create a new property computed from reactive states or properties by `@computed` directive. Different from normal `getter` methods, computed properties will track the changes of its dependencies and updates automatically. As long as its dependecies are not changed, cached value will be used and no computation will be triggered.
 
 ```tsx
