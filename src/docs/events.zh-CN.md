@@ -1,19 +1,19 @@
-## Events
+## 事件处理
 ### 原生事件
-通过 `onXXX` 的方式监听原生事件。
+通过在原生事件名前添加 `on` 前缀来绑定原生事件。
 
-```jsx
+```tsx
 import { QuarkElement, customElement } from "quarkc"
 
 @customElement({ tag: "quark-input", style })
 class Input extends QuarkElement {
 
   onClick = () => {
-    console.log("按钮被点击“)
+    console.log("按钮被点击")
   }
 
   onInput = () => {
-    console.log("input 事件“)
+    console.log("input事件")
   }
 
   render() {
@@ -28,7 +28,8 @@ class Input extends QuarkElement {
 ```
 
 ### 自定义事件
-通过 `$emit` 发送事件。
+通过使用实例方法 `$emit`来发送自定义事件。第一个参数是事件的名称，第二个参数是传递的数据。传递的数据可以通过 `event.detail` 获取。
+
 ```tsx
 import { QuarkElement, customElement } from "quarkc"
 
@@ -36,35 +37,76 @@ import { QuarkElement, customElement } from "quarkc"
 class Input extends QuarkElement {
 
   onInput = () => {
-    this.$emit("input", {
-      detail: {
-        value: 'xxx',
-      },
+    // ❗ 如果你的自定义元素只会作为 Quarkc 内部组件使用，
+    // 你应该避免使用诸如 `custom-event` 的事件名称
+    const data = {}
+    this.$emit("customEvent", {
+      detail: data,
+      // ...其他事件属性，例如 `bubbles` 等等...
     })
   }
 
   render() {
     return (
-      <div>
-        <input onInput={this.onInput}></input>
-      </div>
+      <input onInput={this.onInput}></input>
     )
   }
 }
 ```
 
-然后在你的自定义元素上绑定事件：
+然后在自定义元素上绑定事件监听器：
 
-```tsx
-/**Vue中*/
-<quark-input @input="this.onInput" id="quark-input"/>
+#### Vue
+```html
+<template>
+  <quark-input @custom-event="handler" id="quark-input" />
+</template>
+<script>
+  export default {
+    methods: {
+      handler(e) {
+        console.log(e.detail.value);
+      },
+    },
+  };
+</script>
 ```
 
-或者
-
+#### React
 ```tsx
-/**其它任何框架或者无框架中*/
+function App() {
+  const handler = (e) => {
+    console.log(e.detail.value);
+  };
+  return <quark-input onCustomEvent={handler} id="quark-input" />;
+}
+```
+
+#### Quarkc
+❗不同于Vue，在底层（使用`$emit`时）不支持带有连字符的自定义事件名。
+
+❗与原生事件不同，自定义事件名不会被首字母小写化处理。
+```tsx
+@customElement({ tag: "quark-input-parent", style })
+class QuarkInputParent extends QuarkElement {
+  handler = (e) => {
+    console.log(e.detail.value)
+  }
+
+  render() {
+    // onCustomEvent ❌ 这种情况需要将`CustomEvent`作为$emit的事件名
+    return (
+      <quark-input id="quark-input" oncustomEvent={this.handler} />
+    )
+  }
+}
+```
+
+#### Pure JS
+
+```ts
 const myInputElement = document.getElementById("quark-input")
-myInputElement.addEventListener('input', (evt) => {})
+myInputElement.addEventListener('customEvent', (e) => {
+  console.log(e.detail.value)
+})
 ```
- 通过 `this.$emit` 触发自定义事件，`emit` 的第一个参数为事件名，第二个参数为传递的参数。可通过 `evt.detail` 获取到传递的数据。

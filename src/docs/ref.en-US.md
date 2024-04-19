@@ -1,7 +1,7 @@
 
 ## Ref
 
-通过 `ref` 获取 `dom` 节点实例。
+Access `dom` instance by `ref`.
 
 ```tsx
 import { QuarkElement, customElement, property, state, createRef } from "quarkc"
@@ -13,14 +13,15 @@ class MyComponent extends QuarkElement {
   inputRef: any = createRef()
 
   handleFocus = () => {
-    this.inputRef.current.focus() // 点击手动聚焦 input 框
+    // click to focus on input manually
+    this.inputRef.current.focus()
   }
 
   render() {
     return (
       <div>
         <input ref={this.inputRef}></input>
-        <button onClick={this.handleFocus}>自己输入框聚焦</button>
+        <button onClick={this.handleFocus}>manually focus on input</button>
       </div>
     )
   }
@@ -28,7 +29,7 @@ class MyComponent extends QuarkElement {
 ```
 
 
-好了，至此您已经学完了有关于 Quarkc 的相关用法。赶紧去试一试吧～
+🎉Congratulations! You have got all the basics of Quark. Let us have a try ~
 
 
-[优秀案例参考](#/zh-CN/docs/example)
+[Great Examples](#/zh-CN/docs/example)

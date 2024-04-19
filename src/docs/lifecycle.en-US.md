@@ -1,16 +1,17 @@
 ## Lifecycle
-`Quarkc` 对外提供了如下几个生命周期：
+`Quarkc` provides lifecycle methods to help you manage the component.
 
-| 生命周期方法               | 调用时机            |
-| ------------------ | ---------------- |
-| `componentDidMount`              | `connectedCallback` 触发时执行，此时组件 `dom` 已渲染完毕         |
-| `shouldComponentUpdate`            | `attributeChangedCallback` 触发时执行，用于控制当前属性变化是否导致组件更新渲染         |
-| `componentDidUpdate`         | `attributeChangedCallback` 触发, `render` 执行后触发，此时可拿到更新后的 `dom` 做相关操作         |
-| `componentWillUnmount`         | `disconnectedCallback` 触发时、`dom` 移除前执行,此时可做副作用移除相关操作     |
+| Method Name                          | Trigger Timing                                                                                                                                                                                                                                                                                |
+| ------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `componentDidMount`                  | Invoked after `connectedCallback` triggered and the component finishes first rendering (mounted, inserted into th e `dom` tree). You can access the `dom` at this time.                                                                                                                       |
+| `shouldComponentUpdate`              | Invoked after `attributeChangedCallback` triggered and before the component rendering. You can decide whether to update the component or not by letting this method return `true` or `false`. *（⚠️ deprecated from v2.0.0 and is not recommended，it will be removed in next major version）* |
+| `componentDidUpdate`                 | Invoked everytime `attributeChangedCallback` was triggered and the component finishes rendering. You can access the `dom` at this time. *（⚠️ from v2.0.0, when `componentDidMount` is also defined, it will not be invoked at mount phase）*                                                  |
+| `componentUpdated` *（new⭐️ v2.0.0）* | Distinct from `componentDidUpdate`, it will be invoked after all of the component's props and states' updates finished. You can access the `dom` at this time.                                                                                                                                |
+| `componentWillUnmount`               | Invoked after `disconnectedCallback` triggered and before the `dom` removed. You can clean up the side effects here.                                                                                                                                                                          |
 
-其中 `connectedCallback`、`attributeChangedCallback`、`disconnectedCallback` 均为 `Web Components` 组件原生生命周期，可[参考](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements#using_the_lifecycle_callbacks)
+Among them, `connectedCallback`、`attributeChangedCallback`、`disconnectedCallback` are all native `Web Components`'s lifecycle method，you can refer to [this article](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements#using_the_lifecycle_callbacks) for more details.
 
-举个例子:
+### example
 
 ```tsx
 
@@ -31,22 +32,26 @@ class QuarkCount extends QuarkElement {
 
   shouldComponentUpdate(propName, oldValue, newValue) {
     if (propName === "xxx") {
-      // 阻止更新
+      // prevent update
       return false
     }
     return true
   }
 
   componentDidUpdate(propName, oldValue, newValue) {
-    // 已更新
+    // invoked everytime any of the props or states updated
+  }
+
+  componentUpdated() {
+    // access the updated states or props
+    console.log(this.count)
   }
 
   componentWillUnmount() {
-    // 清除副作用
+    // clean the side effects
     clearInterval(this.interval)
   }
 
-  // 自定义事件建议使用箭头函数
   tick = () => {
     this.count++
   }

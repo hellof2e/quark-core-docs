@@ -32,3 +32,7 @@ Quarkc (Quark core 缩写) 是由哈啰平台前端团队开发的一套面向�
 - 没有前端框架 Runtime，Web 组件体积小到极致
 - 高性能设计，Shadow DOM 与 Virtual DOM 融合
 - 组件直接解耦，独立打磨，按需引用
+
+### 目标
+
+让 Web 构建贴近原生，技术栈无关！

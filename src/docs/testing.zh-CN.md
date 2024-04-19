@@ -1,4 +1,4 @@
-## Testing
+## 测试
 
 如您需要对您的组件编写单元测试，我们推荐 [@open-wc/testing](https://open-wc.org/docs/testing/testing-package/) 作为 Web components 的测试框架，`@open-wc/testing`是一个专门针对 Web components 的测试库。
 

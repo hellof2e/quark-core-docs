@@ -7,7 +7,7 @@
         <router-link
           v-for="subItem in item.children"
           :key="subItem"
-          :to="subItem.name.toLowerCase()"
+          :to="subItem.name.toLowerCase().replace(/[^\w]/g, '_')"
         >
           {{ isZhLang ? subItem.cName : subItem.name }}
         </router-link>
@@ -64,9 +64,9 @@ export default defineComponent({
   position: fixed;
   overflow: scroll;
   height: 100%;
-  padding: 32px 40px 0;
+  padding: var(--vp-nav-height) 40px 0;
 }
-.nav-wrap ::-webkit-scrollbar {
+.nav-wrap::-webkit-scrollbar {
   display: none;
 }
 </style>

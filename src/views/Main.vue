@@ -69,7 +69,7 @@
                 </div>
               </button>
 
-              <button class="btn">Playground</button>
+              <button @click="goToPlayground" class="btn">Playground</button>
             </div>
           </div>
         </div>
@@ -230,8 +230,23 @@ export default defineComponent({
     };
 
     const handleLinkToTemplate = () => {
-      location.href =
-        "https://github.com/hellof2e/quark-core/tree/main/packages/create-quarkc/template-quarkc-app-ts";
+      if (location.hostname.includes("github")) {
+        window.open(
+          "https://github.com/hellof2e/quark-core/tree/main/packages/create-quarkc/template-quarkc-app-ts"
+        );
+      } else {
+        window.open(
+          "https://gitee.com/hellof2e/quark-core/tree/main/packages/create-quarkc/template-quarkc-app-ts"
+        );
+      }
+    };
+
+    const goToPlayground = () => {
+      if (location.hostname.includes("github")) {
+        window.open("https://quark-ecosystem.github.io/quarkc-docs/playground");
+      } else {
+        window.open("https://quark-ecosystem.gitee.io/quarkc-docs/playground");
+      }
     };
 
     return {
@@ -242,6 +257,7 @@ export default defineComponent({
       scrollToThisRef,
       copyPrompt,
       iconCopiedChange,
+      goToPlayground,
     };
   },
 });

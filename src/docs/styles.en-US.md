@@ -1,8 +1,8 @@
 ## Styles
 
-### 独立 css 文件方式
+### Independent CSS File
 
-`Quarkc` 支持独立 `css` 文件的方式开发组件，只需要在 `@customElement` 传入 `style` 即可。
+`Quarkc` supports using independent `CSS` file to development, you only need to pass the `CSS` file's content as `style` property's value to `@customElement`.
 
 ```tsx
 import { QuarkElement, customElement, property } from "quarkc"
@@ -33,11 +33,10 @@ index.css：
 }
 ```
 
-你可能需要相关导入 `css` 文件的插件，比如 `rollup` 的 [rollup-plugin-import-css](https://www.npmjs.com/package/rollup-plugin-import-css)
+you may need a plugin to import `css` files, such as [rollup-plugin-import-css](https://www.npmjs.com/package/rollup-plugin-import-css)
 
 ### CSS In JS
-
-直接在组件内部书写样式。
+Write styles directly in the component.
 
 ```tsx
 import { QuarkElement, customElement } from "quarkc"
@@ -59,11 +58,11 @@ class Count extends QuarkElement {
 }
 ```
 
-推荐使用独立 `css` 文件的方式来开发。
+recommend using the independent `css` file to develop.
 
-### 主题
+### Theme
 
-可以使用 `css` [自定义属性](https://developer.mozilla.org/en-US/docs/Web/CSS/--*)的方式来自定义主题。
+You can use [custom properties](https://developer.mozilla.org/en-US/docs/Web/CSS/--*) to customize the theme.
 
 index.css：
 

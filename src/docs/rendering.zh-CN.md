@@ -1,4 +1,4 @@
-## Rendering
+## 渲染
 为你的自定义元素添加一个 `render` 方法。
 ```tsx
 import { QuarkElement, customElement } from "quarkc"

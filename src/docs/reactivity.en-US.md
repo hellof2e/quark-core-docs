@@ -1,4 +1,4 @@
-## Reactive
+## Reactivity
 
 Reactive state.
 
