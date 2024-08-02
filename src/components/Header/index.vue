@@ -2,10 +2,6 @@
   <header class="header">
     <div class="left-bar">
       <a href="/" class="logo"></a>
-      <div style="margin-left: 20px; display: flex">
-        <span style="margin-right: 4px"> (docs for Quarkc) </span>
-      </div>
-
       <div ref="searchRef" id="docsearch"></div>
     </div>
     <div class="toper-bar">
@@ -346,7 +342,7 @@ const langs = {
     ecosystem: "生态系统",
     docsTitle: "组件库文档",
     component: "组件",
-    docs: "组件库",
+    docs: "Quarkd组件库",
     guide: "指南",
     officialLibrary: "官方工具",
     stack: "用 Quark 构建跨技术栈组件",
