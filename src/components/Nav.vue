@@ -53,7 +53,7 @@ export default defineComponent({
   }
 
   .router-link-active {
-    color: #646cff;
+    color: #0da6e9;
   }
 
   section {
