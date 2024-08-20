@@ -3,20 +3,12 @@
 ```tsx
 import { QuarkElement, customElement } from "quarkc"
 
-import './my-header.js'
-import './my-body.js'
-import './my-footer.js'
-
 @customElement({ tag: "quark-count" })
 class Count extends QuarkElement {
   render() {
     return (
       <>
         <h1>Welcome to Quarkc！</h1>
-
-        <my-header></my-header>
-        <my-body></my-body>
-        <my-footer></my-footer>
       </>
     )
   }

@@ -1,4 +1,4 @@
-## Testing
+## 测试
 
 如您需要对您的组件编写单元测试，我们推荐 [@open-wc/testing](https://open-wc.org/docs/testing/testing-package/) 作为 Web components 的测试框架，`@open-wc/testing`是一个专门针对 Web components 的测试库。
 
@@ -25,30 +25,48 @@ class QuarkButton extends QuarkElement {
 
 其单测用例如下：
 ```tsx
-import { expect, fixture } from "@open-wc/testing"
-import sinon from "sinon"
-import "path/your-button-path"
+import { expect, fixture } from "@open-wc/testing";
+import "./lib/index";
 
 const data = {
-  type: "primary",
-}
-let el
+  count: 0,
+  text: 'test'
+};
 
-describe("<your-button>", async () => {
+let el;
 
-  it("type attribute", async () => {
+describe("<my-component />", async () => {
+  it("property text exist", async () => {
     el = await fixture(
-      `<your-button type=${data.type}>
-          ${data.slotText}
-        </your-button>`
-    )
+      `<my-component
+        text=${data.text}
+        >
+        </my-component>`
+    );
+    expect(el.text).to.equal(data.text);
+  });
 
-    expect(el.type).to.equal(data.type)
+  it("property count exist", async () => {
+    el = await fixture(
+      `<my-component
+          count=${data.count}
+        >
+        </my-component>`
+    );
+    expect(el.count).to.equal(data.count);
+  });
 
-  })
-
+  it("property count changed", async () => {
+    el = await fixture(
+      `<my-component
+        count=${data.count}
+        >
+        </my-component>`
+    );
+    el.add()
+    expect(el.count).to.equal(data.count + 1);
+  });
 })
-
 
 ```
 
