@@ -3,6 +3,7 @@ import vue from "@vitejs/plugin-vue";
 import Markdown from "vite-plugin-md";
 import path from "path";
 const hljs = require("highlight.js"); // https://highlightjs.org/
+import inspector from "vite-plugin-dev-inspector";
 
 const resolve = path.resolve;
 
@@ -21,6 +22,7 @@ export default defineConfig({
     vue({
       include: [/\.vue$/, /\.md$/],
     }),
+    inspector(),
     Markdown({
       // default options passed to markdown-it
       // see: https://markdown-it.github.io/markdown-it/

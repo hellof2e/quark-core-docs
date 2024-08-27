@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <div class="left-bar">
-      <a href="/" class="logo"></a>
+      <a href="https://quark-ecosystem.github.io/quarkc-docs" class="logo"></a>
       <div ref="searchRef" id="docsearch"></div>
     </div>
     <div class="toper-bar">
