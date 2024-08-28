@@ -43,4 +43,8 @@ class Dad extends QuarkElement {
 
 ```
 
-Live Demo：https://stackblitz.com/edit/vite-quarkc-internalprop?file=src%2Findex.tsx,src%2Fchild.tsx
+<p align="left">
+Live Demo:
+<a href="https://stackblitz.com/edit/vite-quarkc-internalprop?file=src%2Findex.tsx&file=src%2Fchild.tsx"><img src="https://developer.stackblitz.com/img/open_in_stackblitz.svg" alt=""></a>
+</p>
+
