@@ -79,6 +79,11 @@ export default {
             cName: "危险的HTML注入",
             show: true,
           },
+          {
+            name: "InnerProp",
+            cName: "内部复杂数据传递",
+            show: true,
+          },
         ],
       },
       {
